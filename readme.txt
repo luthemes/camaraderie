@@ -1,4 +1,4 @@
-Camaraderie WordPress Theme
+﻿Camaraderie WordPress Theme
 ================================================================================================
 Contributor: benlumia007
 Tags: custom-background, custom-header, left-sidebar, right-sidebar
@@ -95,7 +95,17 @@ Designer: Daniel Hernandez
 License: Sil Open Font License
 Source: https://fonts.google.com/specimen/Sanchez
 
+Author: Vojtech Okenka (https://www.pexels.com/u/vojtech-okenka-127162/)
+Source: https://www.pexels.com/photo/apple-business-computer-connection-392018/
+License: CC0 License (https://www.pexels.com/photo-license/)
 
+Author: Tookapic (https://www.pexels.com/u/tookapic/)
+Source: https://www.pexels.com/photo/desk-notebook-pencil-notes-73988/
+License: CC0 License (https://www.pexels.com/photo-license/)
+
+Author: freestocks.org (https://www.pexels.com/u/freestocks/)
+Source: https://www.pexels.com/photo/silhouette-of-woman-during-sunset-194446/
+License: CC0 License (https://www.pexels.com/photo-license/)
 
 
 
