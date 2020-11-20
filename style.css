@@ -1,75 +1,74 @@
 /*
-Theme Name:  Camaraderie
-Theme URI: https://www.benjlu.com/portfolio/camaraderie/
-Author: Benjamin Lu
-Author URI: https://www.benjlu.com/
-Description: Camaraderie is a fully functional mobile friendly WordPress theme that allows you to create amazing things such as photography portfolio or just a regular portfolio to your needs. It also includes theme options that allows you to create a home page with a template that allows you to set as static page to show your amazing work. WooCommerce is now supported.
-License: GNU General Public License v2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Tags: one-column, two-columns, left-sidebar, right-sidebar, custom-background, custom-header, post-formats, sticky-post, theme-options, threaded-comments, translation-ready, blog, photography, portfolio
-Version: 0.1.8
-Text Domain: camaraderie
-
-This theme, like WordPress, is licensed under the GPL.
-Use it to make something cool, have fun, and share what you've learned with others.
+============================================================================================================================
+Camaraderie - style.css
+============================================================================================================================
+Theme Name:     Camaraderie
+Author:         Benjamin Lu
+Description:    Camaraderie is a fully functional mobile friendly WordPress theme that allows you to create amazing portfolio for your needs. This theme also comes with a landing page when set as a static page to show your work in a creative format. Camaraderie also lets you set each page its own template allowing you to set each page differently with or without sidebars and of course full width pages.
+License:        GNU General Public License v2.0 or later
+License URI:    https://www.gnu.org/licenses/gpl-2.0.html
+Tags:           grid-layout, left-sidebar, one-column, right-sidebar, two-columns, custom-background, custom-header, featured-images, footer-widgets, post-formats, sticky-post, threaded-comments, blog, photography, portfolio
+Version:        1.0
+Text Domain:    camaraderie
+============================================================================================================================
 */
 
 /*
-================================================================================================
+============================================================================================================================
+Danger Zone
+============================================================================================================================
+Please do not make any modifications directly to this file nor any files within the theme, you will lose all modifictions
+when the theme is next updated if you do so. Please consider using a child theme based on this theme so that all of your 
+modifications will be save when the theme is updated. This theme's styles will automatically loaded for you when you activate
+this theme.
+============================================================================================================================
+*/
+
+/*
+============================================================================================================================
 Table of Content
-================================================================================================
+============================================================================================================================
  1.0 - Typography
  2.0 - Elements
  3.0 - Forms
  4.0 - Alignments
  5.0 - Accessibility
  6.0 - Clearings
- 7.0 - Basic Structure
- 8.0 - Navigation (Links)
- 9.0 - Navigation (Primary Navigation)
-10.0 - Navigation (Secondary Navigation)
-11.0 - Navigation (Pagination Navigation)
-12.0 - Navigation (Social Navigation)
-13.0 - Header Area (Header Image)
-14.0 - Header Area (Custom Image)
-15.0 - Content Area (Posts and Pages)
-16.0 - Content Area (Archives)
-17.0 - Content Area (Comments)
-18.0 - Content Area (Error 404)
-19.0 - Content Area (Search)
-20.0 - Content Area (Post Formats)
-21.0 - Section Area (Jetpack Portfolio)
-22.0 - Section Area (Blog Section)
-23.0 - Section Area (Jetpack Testimonials)
-24.0 - Section Area (Jetpack Contact Form)
-25.0 - Widget Area
-26.0 - Footer Area
-27.0 - Media Area (Captions)
-28.0 - Media Area (Galleries)
-29.0 - Media Queries (Mobile Small 30em (480px))
-30.0 - Media Queries (Mobile Medium 37.50em (600px))
-31.0 - Media Queries (Mobile Large 41.688em (667px))
-32.0 - Media Queries (Mobile Extra Large 46em (736px))
-33.0 - Media Queries (Tablet Small 48em (768px))
-34.0 - Media Queries (Tablet Medium 64em (1024px))
-35.0 - Media Queries (Table Large 64.063em (1025px))
-================================================================================================
+ 7.0 - Basic Structure (Header)
+ 8.0 - Basic Structure (Content)
+ 9.0 - Basic Structure (Aside)
+10.0 - Basic Structure (Footer)
+11.0 - Navigation (Links)
+12.0 - Navigation (Primary Navigation)
+13.0 - Navigation (Secondary Navigation)
+14.0 - Navigation (Pagination Navigation)
+15.0 - Navigation (Social Navigation)
+16.0 - Content (Posts and Pages)
+17.0 - Content (Comments)
+18.0 - Content (Archives)
+19.0 - Content (Search and 404)
+20.0 - Content (Post Formats)
+21.0 - Widgets
+22.0 - Captions
+23.0 - Galleries
+24.0 - Media Queries (Mobile Small 30em (480px))
+25.0 - Media Queries (Mobile Medium 37.5em (600px))
+26.0 - Media Queries (Mobile Large 41.688em (667px))
+27.0 - Media Queries (Mobile Extra Large 46em (736px))
+28.0 - Media Queries (Tablet Small 48em (768px))
+29.0 - Media Queries (Tablet Medium 64em (1024px))
+30.0 - Media Queries (Tablet Large 73.125em (1170px))
+============================================================================================================================
 */
 
 /*
-================================================================================================
+============================================================================================================================
  1.0 - Typography
-================================================================================================
+============================================================================================================================
 */
-body {
-    background: #eeeeee;
-    font-family: 'Merriweather', serif;
-    margin: 0;
-}
-
 h1 { 
     display: block;
-    font-family: 'Sanchez', serif;
+    font-family: 'Fira Sans', serif;
     font-size: 2em;
     font-weight: 700;
     margin: 0.67em 0;
@@ -77,7 +76,7 @@ h1 {
 
 h2 {
     display: block;
-    font-family: 'Sanchez', serif;
+    font-family: 'Fira Sans', serif;
     font-size: 1.5em;
     font-weight: 700;
     margin: 0.83em 0;
@@ -85,7 +84,7 @@ h2 {
 
 h3 { 
     display: block;
-    font-family: 'Sanchez', serif;
+    font-family: 'Fira Sans', serif;
     font-size: 1.17em;
     font-weight: 700;
     margin: 1em 0;
@@ -93,7 +92,7 @@ h3 {
 
 h4 { 
     display: block;
-    font-family: 'Sanchez', serif;
+    font-family: 'Fira Sans', serif;
     font-size: 1em;
     font-weight: 700;
     margin: 1.33em 0;
@@ -101,7 +100,7 @@ h4 {
 
 h5 { 
     display: block;
-    font-family: 'Sanchez', serif;
+    font-family: 'Fira Sans', serif;
     font-size: .83em;
     font-weight: 700;
     margin: 1.67em 0;
@@ -109,16 +108,16 @@ h5 {
 
 h6 { 
     display: block;
-    font-family: 'Sanchez', serif;
+    font-family: 'Fira Sans', serif;
     font-size: .67em;
     font-weight: 700;
     margin: 2.33em 0;
 }
 
 /*
-================================================================================================
+============================================================================================================================
  2.0 - Elements
-================================================================================================
+============================================================================================================================
 */
 html {
     box-sizing: border-box;
@@ -130,16 +129,14 @@ html {
 	box-sizing: inherit;
 }
 
+body {
+    background: #eeeeee;
+    font-family: 'Merriweather', serif;
+}
+
 img {
     height: auto;
     max-width: 100%;
-}
-
-pre {
-    background: #eeeeee;
-    font-family: monospace;
-    overflow: scroll;
-    padding: 0.5em;
 }
 
 figure {
@@ -148,114 +145,23 @@ figure {
     max-width: 100%;
 }
 
-.entry-content table {
-    border-collapse: collapse;
-    width: 100%;
-}
-
-.entry-content tr:nth-of-type(odd) {
-    background: #eeeeee;
-}
-
-.entry-content th {
-    background: #333333;
-    color: #ffffff;
-    font-weight: 700;
-}
-
-.entry-content th a {
-    color: #ffffff;
-    font-weight: 700;
-}
-
-.entry-content th, td {
-    border: 0.063em solid #cccccc;
-    text-align: left;
-    padding: 0.7em;
-}
-
-blockquote,
-q {
-	quotes: "" "";
-}
-
-blockquote {
-    font-size: 24px;
-    font-weight: bold;
-    line-height: 1.6em;
-    margin: 1.5em 2em 1.5em 2em;
-    position: relative;
-    text-align: center;
-}
-
-blockquote::before {
-    content: "\f10d";
-    font-size: 24px;
-    font-family: 'FontAwesome';
-    position: absolute;
-    left: -2em;
-    color: #000000;;
-}
-
-blockquote::after {
-    content: "\f10e";
-    font-size: 24px;
-    font-family: 'FontAwesome';
-    position: absolute;
-    right: -2em;
-    top: 0;
-    color: #000000;;
-}
-
-blockquote cite {
-    font-size: 14px;
-}
-
 /*
-================================================================================================
+============================================================================================================================
  3.0 - Forms
-================================================================================================
+============================================================================================================================
 */
-input[type="text"],
-input[type="email"],
-input[type="url"] {
-    border: 0.063em solid #cccccc;
-    padding: 0.6em;
-    width: 25em;
-}
-
-textarea {
-    border: 0.063em solid #cccccc;
-    padding: 0.6em;
-    width: 100%;
-}
-
-input[type="submit"] {
-    background: #ffffff;
-    border: 0.063em solid #cccccc;
-    display: inline-block;
-    font-family: 'Merriweather', serif;
-    line-height: 1.6em;
-    padding: 0.5em 1em;
-}
-
-input[type="submit"]:hover {
-    color: #666666;
-}
 
 /*
-================================================================================================
+============================================================================================================================
  4.0 - Alignments
-================================================================================================
+============================================================================================================================
 */
 .alignleft {
-	display: inline;
 	float: left;
 	margin-right: 1.5em;
 }
 
 .alignright {
-	display: inline;
 	float: right;
 	margin-left: 1.5em;
 }
@@ -267,10 +173,11 @@ input[type="submit"]:hover {
 	margin-right: auto;
 }
 
+
 /*
-================================================================================================
+============================================================================================================================
  5.0 - Accessibility
-================================================================================================
+============================================================================================================================
 */
 .screen-reader-text {
     clip: rect(0.063em, 0.063em, 0.063em, 0.063em);
@@ -288,24 +195,24 @@ input[type="submit"]:hover {
     color: #21759b;
     display: block;
     font-size: 0.875em;
-    font-weight: 700;
+    font-weight: bold;
     height: auto;
-    left: 0.313em;
+    left: 5px;
     line-height: normal;
-    padding: 0.938em 1.438em 0.875em;
+    padding: 0.938em 1.5em 0.938em;
     text-decoration: none;
-    top: 0.313em;
+    top: 5px;
     width: auto;
-    z-index: 100000; 
+    z-index: 100000;
 }
 
 /*
-================================================================================================
+============================================================================================================================
  6.0 - Clearings
-================================================================================================
+============================================================================================================================
 */
-.main-navigation:before,
-.main-navigation:after,
+.site-header:before,
+.site-header:after,
 .site-content:before,
 .site-content:after,
 .site-main:before,
@@ -314,62 +221,106 @@ input[type="submit"]:hover {
 .content-area:after,
 .entry-content:before,
 .entry-content:after,
-.widget-area:before,
-.widget-area:after, 
-.grid-column-two:before,
-.grid-column-two:after,
-.section-portfolio:before,
-.section-portfolio:after,
-.section-blog:before,
-.section-blog:after,
-.section-testimonial:before,
-.section-testimonial:after,
-.section-contact:before,
-.section-contact:after, 
-.site-footer:before,
-.site-footer:after,
-.post-navigation:before,
-.post-navigation:after,
 .posts-navigation:before,
 .posts-navigation:after,
-.related-items:before, 
-.related-items:after,
-.no-sidebar:before,
-.no-sidebar:after,
-.right-sidebar:before,
-.right-sidebar:after,
-.left-sidebar:before,
-.left-sidebar:after,
-.theme-meta:before,
-.theme-meta:after {
+.post-navigation:before,
+.post-navigation:after {
     clear: both;
     content: "";
-    display: table;:
+    display: table;
 }
 
 /*
-================================================================================================
- 7.0 - Basic Structure
-================================================================================================
+============================================================================================================================
+ 7.0 - Basic Structure (Header)
+============================================================================================================================
 */
-.site-content {
-
+.site-branding {
+    text-align: center;
 }
 
-.site-main {
-    margin: 0 auto;
-    padding: 1.125em; /* 18px */
-    max-width: 75.375em; /* 1206px */
-    /* 1206px - 36px = 1170px */
+.site-branding .site-title,
+.site-branding .site-description {
+    margin: 0;
+    padding: 0;
+}
+
+.site-branding .site-title a {
+    color: #ffffff;
+    font-size: 1.750em;
+    text-decoration: none;
+    text-shadow: 2px 2px #000000;
+}
+
+.site-branding .site-description {
+    color: #ffffff;
+    text-shadow: 2px 2px #000000;
 }
 
 /*
-================================================================================================
- 8.0 - Navigation (Links)
-================================================================================================
+============================================================================================================================
+ 8.0 - Basic Structure (Content)
+============================================================================================================================
+*/
+.site-main {
+    margin: 1.125em auto;
+    max-width: 73.125em;
+}
+
+.left-sidebar .content-area {
+    float: right;
+    width: 69.230769230769231%;
+}
+
+.right-sidebar .content-area {
+    float: left;
+    width: 69.230769230769231%; 
+}
+
+/*
+============================================================================================================================
+ 9.0 - Basic Structure (Aside)
+============================================================================================================================
+*/
+.left-sidebar .widget-area {
+    float: left;
+    width: 29.230769230769231%;
+}
+
+.right-sidebar .widget-area {
+    float: right;
+    width: 29.230769230769231%;
+}
+
+/*
+============================================================================================================================
+10.0 - Basic Structure (Footer)
+============================================================================================================================
+*/
+.site-footer {
+    background: #000000;
+    padding: 1.125em;
+    text-align: center;
+}
+
+.site-footer,
+.site-footer a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.site-info {
+    font-size: 0.875em;
+    line-height: 1.5em;
+}
+
+/*
+============================================================================================================================
+11.0 - Navigation (Links)
+============================================================================================================================
 */
 a {
-    color: #000000;
+    color: #111111;
     text-decoration: none;
 }
 
@@ -378,14 +329,10 @@ a:hover {
 }
 
 /*
-================================================================================================
- 9.0 - Navigation (Primary Navigation)
-================================================================================================
+============================================================================================================================
+12.0 - Navigation (Primary Navigation)
+============================================================================================================================
 */
-.main-navigation {
-    background: #000000;
-}
-
 .primary-navigation {
     display: block;
     width: 100%;
@@ -465,12 +412,12 @@ a:hover {
 	box-sizing: content-box;
     color: #ffffff;
     font-family: 'fontawesome';
-    height: 2.125em;
+    height: 2em;
     padding: 0;
     position: absolute;
-    right: 0.313em;
-    top: 0.313em;
-    width: 2.125em;
+    right: 0.250em;
+    top: 0.188em;
+    width: 2em;
 }
 
 .dropdown-toggle:after {
@@ -479,7 +426,7 @@ a:hover {
     left: 0;
     line-height: 1.875em;
     position: relative;
-    top: 0.063em;
+    top: 0;
     width: 1.875em;
 }
 
@@ -517,7 +464,7 @@ a:hover {
 
 .primary-navigation.toggled ul ul.toggled-on,
 .primary-navigation.toggled ul ul.toggled-on > ul {
-	display: block;
+    display: block;
 }
 
 .menu-toggle {
@@ -526,7 +473,6 @@ a:hover {
 	bottom: 1em;
 	color: #fff;
     display: none;
-	font-family: 'Sanchez', serif;
 	font-size: 1em;
 	left: 1em;
     padding: 0.4em;
@@ -549,15 +495,15 @@ a:hover {
 }
 
 /*
-================================================================================================
-10.0 - Navigation (Secondary Navigation)
-================================================================================================
+============================================================================================================================
+13.0 - Navigation (Secondary Navigation)
+============================================================================================================================
 */
 
 /*
-================================================================================================
-11.0 - Navigation (Pagination Navigation)
-================================================================================================
+============================================================================================================================
+14.0 - Navigation (Pagination Navigation)
+============================================================================================================================
 */
 .pagination {
     text-align: center;
@@ -627,7 +573,6 @@ a:hover {
 
 .posts-navigation .nav-links .nav-previous .post-previous,
 .post-navigation .nav-links .nav-previous .post-previous {
-    color: #000000;
     display: block;
     font-size: 0.9375em;
     font-weight: 700;
@@ -636,7 +581,6 @@ a:hover {
 
 .posts-navigation .nav-links .nav-next .post-next,
 .post-navigation .nav-links .nav-next .post-next {
-    color: #000000;
     display: block;
     font-size: 0.9375em;
     font-weight: 700;
@@ -658,12 +602,12 @@ a:hover {
 }
 
 /*
-================================================================================================
-12.0 - Navigation (Social Navigation)
-================================================================================================
+============================================================================================================================
+15.0 - Navigation (Social Navigation)
+============================================================================================================================
 */
 .site-social {
-    background: #474747;
+    background: #333333;
     padding: 0.5em;
 }
 
@@ -710,81 +654,18 @@ a:hover {
 .menu-social li a[href*="wordpress.org"]::before { content: '\f19a'; }
 
 /*
-================================================================================================
-13.0 - Header Area (Header Image)
-================================================================================================
+============================================================================================================================
+16.0 - Content (Posts and Pages)
+============================================================================================================================
 */
-.site-header {
-    background: #000000;
-    padding: 10em 0;
-}
-
-.site-branding {
-    text-align: center;
-}
-
-.site-title,
-.site-description {
-    margin: 0;
-    padding: 0;
-}
-
-.site-title a {
-    color: #ffffff;
-    font-size: 1.5em;
-    text-decoration: none;
-}
-
-.site-description {
-    color: #ffffff;
-}
-
-/*
-================================================================================================
-14.0 - Header Area (Custom Image)
-================================================================================================
-*/
-
-/*
-================================================================================================
-15.0 - Content Area (Posts and Pages)
-================================================================================================
-*/
-.right-sidebar .content-area {
-    float: left;
-    width: 71.28205128205128%;
-}
-
-.left-sidebar .content-area {
-    float: right;
-    width: 71.28205128205128%;
-}
-
 .content-area .post,
 .content-area .page,
-.content-area .jetpack-portfolio,
-.content-area .jetpack-testimonial,
-.recent-posts {
+.content-area .jetpack-portfolio {
     background: #ffffff;
     border: 0.063em solid #cccccc;
-    margin-bottom: 1.125em; /* 18px */
+    margin-bottom: 1.125em;
     min-height: 18.813em;
-    padding: 1.125em; /* 18px */
-}
-
-.content-area .post .entry-header,
-.content-area .page .entry-header,
-.content-area .jetpack-portfolio .entry-header,
-.content-area .jetpack-testimonial .entry-header {
-    text-align: center;
-}
-
-.content-area .post .entry-header .entry-title,
-.content-area .page .entry-header .entry-title,
-.content-area .jetpack-portfolio .entry-header .entry-title,
-.content-area .jetpack-testimonial .entry-header .entry-title {
-    margin: 0;
-    padding: 0;
+    padding: 1.125em;
 }
 
 .content-area .has-post-thumbnail {
@@ -798,134 +679,91 @@ a:hover {
     top: 0;
 }
 
-.recent-posts,
-.content-area .post .entry-excerpt,
-.content-area .post .entry-content,
-.content-area .page .entry-content,
-.content-area .jetpack-portfolio .entry-content,
-.section-blog .entry-content {
-    line-height: 1.6em;
-    margin: 1.125em 0;
-}
-
-.recent-posts .continue-reading,
-.content-area .post .entry-excerpt .continue-reading,
-.section-blog .entry-content .continue-reading {
+.content-area .post .entry-header,
+.content-area .page .entry-header {
     text-align: center;
 }
 
-.recent-posts .continue-reading a, 
-.content-area .post .entry-excerpt .continue-reading a,
-.section-blog .entry-content .continue-reading a {
-    background: #ffffff;
-    border: 0.063em solid #cccccc;
-    display: inline-block;
-    line-height: 1.6em;
-    padding: 0.5em 1em;
+.content-area .jetpack-portfolio .entry-header {
+    margin-bottom: 1.125em;
+    text-align: center;
 }
 
-.content-area .post .entry-metadata {
+.content-area .post .entry-header .entry-title,
+.content-area .page .entry-header .entry-title,
+.content-area .jetpack-portfolio .entry-header .entry-title {
+    margin: 0;
+    padding: 0;
+}
+
+.content-area .post .entry-content,
+.content-area .post .entry-excerpt,
+.content-area .page .entry-content,
+.content-area .page .entry-excerpt {
+    line-height: 1.7em;
+}
+
+.content-area .post .entry-metadata,
+.content-area .attachment .entry-metadata {
     background: #eeeeee;
+    border-left: 5px solid #21759b;
     margin: 1.250em 0;
     padding: 1em;
     text-align: center;
 }
 
-.content-area .post .entry-metadata .avatar {
+.content-area .post .entry-metadata .avatar,
+.content-area .attachment .entry-metadata .avatar {
     border: 0.500em solid #cccccc;
     border-radius: 50%;
     display: block;
     margin: 0 auto;
 }
 
-.content-area .post .entry-metadata .by-author {
+.content-area .post .entry-metadata .by-author,
+.content-area .attachment .entry-metadata .by-author {
     display: block;
-    font-family: 'Sanchez', serif;
     font-size: 1.250em;
 }
 
 .content-area .post .entry-metadata .published,
-.content-area .post .entry-metadata .entry-comments {
+.content-area .post .entry-metadata .entry-comments,
+.content-area .attachment .entry-metadata .published,
+.content-area .attachment .entry-metadata .entry-comments {
     display: block;
+    padding: 0.063em 0;
     font-size: 12px;
 }
 
-.updated:not(.published) {
-    display: none;
-}
-
-.content-area .sticky {
-    border: 0.063em solid #666666;
-}
-
-.recent-header {
-    text-align: center;
-}
-
-.recent-title {
-    margin: 0;
-    padding: 0;
-    text-align: center;
-}
-
-.grid-column-two {
-    margin: 1.125em 0;
-    padding: 0;
-}
-
-.grid-column-two ul {
-    float: left;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-.grid-column-two li:nth-of-type(1) {
-    float: left;
-    list-style: none;
-    margin: 0 0.563em 1.125em 0;
-    width: 49%;
-}
-
-.grid-column-two li:nth-of-type(2) {
-    float: right;
-    list-style: none;
-    margin: 0 0 1.125em 0.563em;
-    width: 49%;
-}
-
-.cat-link,
-.tag-link {
+.content-area .post .entry-taxonomies .cat-link,
+.content-area .post .entry-taxonomies .tag-link {
     display: block;
     font-size: 14px;
     margin-bottom: 5px;
 }
 
-.tag-link .fa-tags {
+.content-area .post .entry-taxonomies .tag-link .fa-tags {
     margin: 0;
 }
 
-.tag-list,
-.cat-list {
+.content-area .post .entry-taxonomies .tag-list,
+.content-area .post .entry-taxonomies .cat-list {
     font-size: 12px;
 }
 
-/*
-================================================================================================
-16.0 - Content Area (Archives)
-================================================================================================
-*/
-.archive-header {
-    background: #ffffff;
-    border: 0.063em solid #cccccc;
-    margin-bottom: 1.125em;
-    text-align: center;
+.content-area .post .entry-timestamp .updated:not(.published) {
+    display: none;
 }
 
+.content-area .sticky {
+    border: 0.063em solid #000000;
+}
+
+
 /*
-================================================================================================
-17.0 - Content Area (Comments)
-================================================================================================
+============================================================================================================================
+17.0 - Content (Comments)
+============================================================================================================================
 */
 .comments-area {
     background: #ffffff;
@@ -935,8 +773,9 @@ a:hover {
 }
 
 .comments-title {
-    margin-bottom: 20px;
-    text-align: center;
+    background: #999999;
+    margin: 0;
+    padding: 0;
 }
 
 .comment-list {
@@ -946,8 +785,8 @@ a:hover {
 
 .comment-body {
     border: 1px solid #cccccc;
-    margin-bottom: 20px;
-    padding: 10px;
+    margin-bottom: 1.125em;
+    padding: 1.125em;
 }
 
 .comments-area > ol  {
@@ -963,10 +802,11 @@ a:hover {
 }
 
 .comment-author .fn {
-    font-size: 1.3125em;
+    font-size: 1.313em;
     margin: 0;
     font-weight: bold;
     font-style: normal;
+    line-height: 1.6em;
     padding: 0;
 }
 
@@ -976,7 +816,8 @@ a:hover {
 
 .comment-content {
     display: block;
-    margin: 2em 0.5em 0 0.5em;
+    line-height: 1.7em;
+    margin: 2.625em 0.5em 0 0.5em;
 }
 
 
@@ -1036,24 +877,23 @@ ol.children {
 
 .bypostauthor > .comment-body {
     background: #f0f0f0; 
-    padding: 10px;
+    padding: 0.625em;
     position: relative;
 }
 
 .comment-reply-title {
-    font-size: 20px;
+    font-size: 1.250em;
     margin: 0;
     padding: 0;
-    padding-top: 10px;
 }
 
 .comment-form p {
-    margin-left: 0;
+    margin: 0 0 1.5em 0;
 }
 
 .required {
     color: #FF0000;
-    font-size: 10px;
+    font-size: 0.625em;
 }
 
 .comment-awaiting-moderation {
@@ -1065,7 +905,47 @@ ol.children {
 
 .form-allowed-tags {
     font-size: 0.813em;
-    width: 600px;
+    width: 37.5em;
+}
+
+.comment-form .comment-form-author {
+    float: left;
+    display: block;
+}
+
+.comment-form .comment-form-author:before {
+    font-family: 'fontawesome';
+    content: "\f007";
+    float: left;
+    margin-left: 0.063em;
+    margin-right: 0.250em;
+}
+
+.comment-form .comment-form-email {
+    float: right;
+    display: block;
+}
+
+.comment-form .comment-form-email:before {
+    font-family: 'fontawesome';
+    content: "\f0e0";
+    float: left;
+    margin-left: 0.063em;
+    margin-right: 0.250em;
+}
+
+
+.comment-form .comment-form-url {
+    margin-bottom: 1.3em;
+    width: 100%;
+}
+
+.comment-form .comment-form-url:before {
+    font-family: 'fontawesome';
+    content: "\f0ac";
+    float: left;
+    margin-left: 0.063em;
+    margin-right: 0.250em;
 }
 
 .comment-form .comment-form-comment label,
@@ -1074,6 +954,15 @@ ol.children {
 .comment-form .comment-form-url label {
     display: block;
     font-weight: 700;
+    margin-bottom: 0.250em;
+}
+
+.comment-form .comment-form-comment:before {
+    font-family: 'fontawesome';
+    content: "\f075";
+    float: left;
+    margin-left: 0.063em;
+    margin-right: 0.250em;
 }
 
 .comment-form .comment-form-comment textarea {
@@ -1085,17 +974,24 @@ ol.children {
 }
 
 .comment-form .comment-form-author input[type="text"],
-.comment-form .comment-form-email input[type="email"],
+.comment-form .comment-form-email input[type="email"] {
+    border: 0.063em solid #cccccc;
+    font-family: 'Merriewather', serif;
+    font-size: 1em;
+    padding: 0.6em;
+    width: 23em;
+}
+
 .comment-form .comment-form-url input[type="url"] {
     border: 0.063em solid #cccccc;
     font-family: 'Merriewather', serif;
     font-size: 1em;
     padding: 0.6em;
-    width: 20em;
+    width: 100%;
 }
 
 .comment-form .comment-notes {
-    font-size: 0.875em;
+    font-size: 12px;
 }
 
 p.comment-awaiting-moderation {
@@ -1108,377 +1004,37 @@ p.comment-awaiting-moderation {
     font-size: 0.875em;
 }
 
-
-/*
-================================================================================================
-18.0 - Content Area (Error 404)
-================================================================================================
-*/
-.content-area .search-form:before,
-.content-area .search-form:after {
-    clear: both;
-    content: "";
-    display: table;
+.comment-form .comment-form-cookies-consent {
+    font-size: 14px;
 }
 
-.content-area  .post .search-form {
-    padding: 0.938em;
-    background: #555;
-    max-width: 100%;
-}
-
-.content-area .search-field {
-    border: none;
-    float: left;
-    font-family: 'Merriweather', serif;
-    font-size: 1em;
-    padding: 0.5em;
-    width: 100%;
-}
-
-.content-area .search-submit {
-    border: none;
-    background: #d88f3c;
-    color: #ffffff;
-    float: right;
-    font-family: 'Merriweather', serif;
-    font-size: 1em;
-    display: none;
-    padding: 0.4em;
-    position: relative;
-    width: 10%;
+.comment-form .comment-form-cookies-consent input[type="checkbox"] {
+    margin-right: 0.250em;
 }
 
 /*
-================================================================================================
-19.0 - Content Area (Search)
-================================================================================================
+============================================================================================================================
+18.0 - Content (Archives)
+============================================================================================================================
 */
 
 /*
-================================================================================================
-20.0 - Content Area (Post Formats)
-================================================================================================
+============================================================================================================================
+19.0 - Content (Search and 404)
+============================================================================================================================
 */
 
 /*
-================================================================================================
-21.0 - Section Area (Jetpack Portfolio)
-================================================================================================
+============================================================================================================================
+20.0 - Content (Post Formats)
+============================================================================================================================
 */
-.jetpack-portfolio-grid {
-    margin: 1.250em 0;
-    padding: 0;
-}
-
-.jetpack-portfolio-grid ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    float: left;
-}
-
-.jetpack-portfolio-grid li {
-    list-style: none;
-    float: left;
-    margin: 0;
-    padding: 0.5em;
-    width: 33.33333333333333%;
-}
-
-.jetpack-portfolio-grid .jetpack-portfolio-title {
-    margin: 0;
-    padding: 0;
-}
-
-.featured-portfolio {
-    margin: 1.125em 0;
-}
-
-.section-portfolio {
-    background: #ffffff;
-}
-
-.section-portfolio .entry-header {
-    margin-bottom: 1.125em;
-    text-align: center;
-}
-
-.section-portfolio .entry-header .entry-title {
-    font-size: 2.250em;
-    margin: 0;
-    padding: 0;
-}
-
-.section-portfolio .entry-header .entry-description {
-    color: #999999;
-    margin: 0;
-    padding: 0;
-}
-
-.section-portfolio .entry-content {
-    margin: 1.125em 0;
-    text-align: center;
-}
-
-
-.related-items {
-    background: #ffffff;
-    border: 0.063em solid #cccccc;
-    padding: 1.125em;
-}
-
-.related-items .entry-header {
-    text-align: center;
-}
-
-.related-items .entry-header .entry-title {
-    margin: 0;
-    padding: 0;
-}
 
 /*
-================================================================================================
-22.0 - Section Area (Blog Section)
-================================================================================================
+============================================================================================================================
+21.0 - Widgets
+============================================================================================================================
 */
-.section-blog {
-    background: #eeeeee;
-}
-
-.section-blog .entry-header {
-    text-align: center;
-}
-
-.section-blog .entry-header .entry-title {
-    font-size: 2.250em;
-    margin: 0;
-    padding: 0;
-}
-
-.section-blog .entry-header .entry-description {
-    color: #999999;
-    margin: 0;
-    padding: 0;
-}
-
-.section-blog .entry-content {
-    margin: 1.125em 0;
-}
-
-.blog-grid {
-    margin: 1.250em 0;
-    padding: 0;
-}
-
-.blog-grid ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    float: left;
-}
-
-.blog-grid li {
-    list-style: none;
-    float: left;
-    margin: 0;
-    padding: 0.5em;
-    width: 50%;
-}
-
-
-/*
-================================================================================================
-23.0 - Section Area (Jetpack Testimonials)
-================================================================================================
-*/
-.section-testimonial {
-    background: #ffffff;
-}
-
-.section-testimonial .entry-header {
-    text-align: center;
-}
-
-.section-testimonial .entry-header .entry-title {
-    font-size: 2.250em;
-    margin: 0;
-    padding: 0;
-}
-
-.section-testimonial .entry-header .entry-description {
-    margin: 1.125em 0;
-}
-
-.section-testimonial .entry-content {
-    color: #000000;
-    margin: 1.125em 0;
-}
-
-.jetpack-testimonial-grid {
-    margin: 1.250em 0;
-    padding: 0;
-}
-
-.jetpack-testimonial-grid ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    float: left;
-}
-
-.jetpack-testimonial-grid li {
-    list-style: none;
-    float: left;
-    margin: 0;
-    padding: 0.5em;
-    width: 33.33333333333333%;
-}
-
-.jetpack-testimonial-grid .jetpack-testimonial-caption {
-    font-size: 0.875em;
-    margin: 0;
-    padding: 0.313em;
-    text-align: center;
-}
-
-.jetpack-testimonial-grid .jetpack-testimonial-caption-title {
-    margin: 0 0 0.2em 0;
-    padding: 0;
-}
-
-.featured-testimonials {
-    text-align: center;
-}
-
-.featured-testimonials img {
-    border-radius: 50%;
-    border: 0.5em solid #cccccc;
-}
-
-/*
-================================================================================================
-24.0 - Section Area (Jetpack Contact Form)
-================================================================================================
-*/
-.section-contact {
-    background: #000000;
-}
-
-.section-contact .entry-header {
-    text-align: center;
-}
-
-.section-contact .entry-header .entry-title {
-    color: #ffffff;
-    font-size: 2.250em;
-    margin: 0;
-    padding: 0;
-}
-
-.section-contact .entry-header .entry-description {
-    color: #ffffff;
-    margin: 0;
-    padding: 0;
-}
-
-.section-contact .entry-excerpt,
-.section-contact .entry-content {
-    color: #ffffff;
-    line-height: 1.6em;
-    margin: 1.125em 0;
-}
-
-.section-contact .continue-reading {
-    padding: 1.125em;
-    text-align: center;
-}
-
-.section-contact .continue-reading a {
-    border: 0.063em solid #ffffff;
-    color: #ffffff;
-    padding: 0.5em 1em;
-}
-
-.contact-grid {
-    margin: 1.250em 0;
-    padding: 0;
-}
-
-.contact-grid ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    float: left;
-}
-
-.contact-grid li {
-    list-style: none;
-    float: left;
-    margin: 0;
-    padding: 0.6em;
-    width: 50%;
-}
-
-
-.section-contact .wpcf7 label {
-    color: #ffffff;
-}
-
-.section-contact .wpcf7-form input[type="text"],
-.section-contact .wpcf7-form input[type="email"],
-.section-contact .wpcf7-form input[type="url"] {
-    border: 0.063em solid #cccccc;
-    font-family: 'Merriweather', serif;
-    display: block;
-    margin: 0.2em 0;
-    padding: 0.7em;
-    width: 100%;
-}
-
-.section-contact textarea {
-    font-size: 16px;
-    margin: 0.2em 0;
-    padding: 0.7em;
-    width: 100%;
-}
-
-.about-avatar {
-    padding: 1.125em;
-    text-align: center;
-}
-
-.about-avatar img {
-    border: 0.5em solid #cccccc;
-    border-radius: 50%;
-}
-
-.wpcf7-form input[type="text"],
-.wpcf7-form input[type="email"],
-.wpcf7-form input[type="url"] {
-    border: 0.063em solid #cccccc;
-    font-family: 'Merriweather', serif;
-    display: block;
-    margin: 0.2em 0;
-    padding: 0.7em;
-    width: 40%;
-}
-
-/*
-================================================================================================
-25.0 - Widget Area
-================================================================================================
-*/
-.left-sidebar .widget-area {
-    float: left;
-    width: 27.17948717948718%;
-}
-
-.right-sidebar .widget-area {
-    float: right;
-    width: 27.17948717948718%;
-}
-
 .widget-area .search-form:before,
 .widget-area .search-form:after {
     clear: both;
@@ -1514,6 +1070,7 @@ p.comment-awaiting-moderation {
     width: 30%;
 }
 
+.download-area .widget,
 .widget-area .widget {
     background: #ffffff;
     border: 0.063em solid #cccccc;
@@ -1616,12 +1173,12 @@ p.comment-awaiting-moderation {
 #wp-calendar td {
     border: 0.063em solid #cccccc;
     padding: 0.438em;
+    text-align: center;
 }
 
 #wp-calendar {
     border: 0.063em solid #cccccc;
-    margin: 0;
-    margin-bottom: 20px;
+    margin-bottom: 0;
     text-align: center;
     width: 100%;
 }
@@ -1642,33 +1199,14 @@ p.comment-awaiting-moderation {
     font-weight: 700;
 }
 
-/*
-================================================================================================
-26.0 - Footer Area
-================================================================================================
-*/
-.site-footer {
-    background: #373737;
-    padding: 1.125em;
-    text-align: center;
-}
-
-.site-footer,
-.site-footer a {
-    color: #ffffff;
-    text-decoration: none;
-}
-
-.footer-title {
-    display: block;
-    font-family: 'Sanchez', serif;
-    font-size: 1.125em;
+.textwidget {
+    line-height: 1.6em;
 }
 
 /*
-================================================================================================
-27.0 - Media Area (Captions)
-================================================================================================
+============================================================================================================================
+22.0 - Captions
+============================================================================================================================
 */
 .wp-caption {
     max-width: 100%;
@@ -1688,8 +1226,15 @@ p.comment-awaiting-moderation {
 .wp-caption .wp-caption-text,
 .gallery-caption {
     background: #eeeeee;
+    font-size: 14px;
     padding: 0.313em;
     text-align: center;
+}
+
+.wp-caption .wp-caption-text .jetpack-portfolio-title,
+.wp-caption .wp-caption-text .jetpack-testimonial-title {
+    margin: 0;
+    padding: 0;
 }
 
 .wp-caption p {
@@ -1698,21 +1243,26 @@ p.comment-awaiting-moderation {
 }
 
 /*
-================================================================================================
-28.0 - Media Area (Galleries)
-================================================================================================
+============================================================================================================================
+23.0 - Galleries
+============================================================================================================================
+*/
+.attachment-camaraderie-testimonial-thumbnails {
+    border: 5px solid #999999;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+/*
+============================================================================================================================
+24.0 - Media Queries (Mobile Small 30em (480px))
+============================================================================================================================
 */
 
 /*
-================================================================================================
-29.0 - Media Queries (Mobile Small 30em (480px))
-================================================================================================
-*/
-
-/*
-================================================================================================
-30.0 - Media Queries (Mobile Medium 37.50em (600px))
-================================================================================================
+============================================================================================================================
+25.0 - Media Queries (Mobile Medium 37.5em (600px))
+============================================================================================================================
 */
 @media screen and (min-height: 30.063em) and (max-width: 37.50em) {
     .menu-toggle,
@@ -1746,52 +1296,26 @@ p.comment-awaiting-moderation {
         float: none;
         width: 100%;
     }
-    
-    .right-sidebar .widget-area {
-        float: none;
-        margin-top: 1.125em;
-        width: 100%;
-    }
-    
-    .jetpack-portfolio-grid li {
-        list-style: none;
-        float: none;
-        margin: 0;
-        padding: 0.5em;
-        width: 100%;
-    }
-    
-    .blog-grid li {
-        float: none;
-        margin-bottom: 1.125em;
-        width: 100%;
-    }
-    
-    .contact-grid li {
-        float: none;
-        width: 100%;
-    }
 }
 
 /*
-================================================================================================
-31.0 - Media Queries (Mobile Large 41.688em (667px))
-================================================================================================
+============================================================================================================================
+26.0 - Media Queries (Mobile Large 41.688em (667px))
+============================================================================================================================
 */
 
 /*
-================================================================================================
-32.0 - Media Queries (Mobile Extra Large 46em (736px))
-================================================================================================
+============================================================================================================================
+27.0 - Media Queries (Mobile Extra Large 46em (736px))
+============================================================================================================================
 */
-
 
 /*
-================================================================================================
-33.0 - Media Queries (Tablet Small 48em (768px))
-================================================================================================
+============================================================================================================================
+28.0 - Media Queries (Tablet Small 48em (768px))
+============================================================================================================================
 */
-@media screen and (min-width: 37.563em) and (max-width: 48em) {
+@media screen and (min-width: 601px) and (max-width: 48em) {
     .menu-toggle,
     .primary-navigation.toggled ul {
         display: block;
@@ -1828,160 +1352,25 @@ p.comment-awaiting-moderation {
         margin-top: 1.125em;
         width: 100%;
     }
-    
-    .jetpack-portfolio-grid li {
-        list-style: none;
-        margin: 0;
-        padding: 0.5em;
-        width: 50%;
-    }
-    
-    .blog-grid li {
-        float: none;
-        margin-bottom: 1.125em;
-        width: 100%;
-    }
-    
-    .contact-grid li {
-        float: none;
-        width: 100%;
-    }
 }
 
+
 /*
-================================================================================================
-29.0 - Media Queries (Tablet Large 64em (1024px))
-================================================================================================
+============================================================================================================================
+29.0 - Media Queries (Tablet Medium 64em (1024px))
+============================================================================================================================
 */
-@media screen and (min-width: 48.063em) and (max-width: 64em) {
-    .primary-navigation {
-        clear: none;
-    }
-	
-	/* Position the menu in the header */
-	.primary-navigation,
-	.primary-navigation.toggled {
-		position: relative;
-		max-width: 100%;
-		margin: 0 auto;
-		padding: 0;
-	}
-	
-	.primary-navigation ul,
-	.primary-navigation.toggled ul {
-		max-height: none;
-		padding-left: 0;
-		text-align: center;
-        
-	}
-	
-	.primary-navigation.toggled ul {
-		overflow-y: visible;
-	}
-	
-	/* Display the menu items in a horizontal order */
-	.primary-navigation li {
-		display: inline-block;
-		border: none;
-	}
-	
-	/* Add an outline to the drop-down menus */
-	.primary-navigation ul ul {
-		outline: 1px solid #333;
-	}
-	
-	/* Left-align drop-down menu items */
-	.primary-navigation li li {
-		display: block;
-		text-align: left;
-	}
-    
-    .primary-navigation a {
-        padding: 0.5em 1em;
-    }
-	
-	.primary-navigation a,
-	.primary-navigation ul ul li:last-child a {
-		border-bottom: none;
-	}
-    
-    .primary-navigation ul ul li a {
-        color: #ffffff;
-    }
-	
-	/* Add an outline on hovered and focused menu items */
-	.primary-navigation a:hover,
-	.primary-navigation a:focus {
-		background: transparent;
-		color: #ffffff;
-		text-decoration: underline;
-		outline: solid 1px #b3b3b3;
-	}
-	
-	/* Create hover and focus contrast on drop-down items */
-	.primary-navigation li li a:hover,
-	.primary-navigation li li a:focus {
-		background: #eee;
-		color: #000;
-		text-decoration: none;
-	}
-	
-	/* Position drop-down menus absolutely */
-	.primary-navigation ul ul.toggled-on {
-		position: absolute;
-		width: 17em;
-		display: block;
-		z-index: 10;
-        right: 0.6em;
-		margin-left: 0;
-		background: #000;
-	}
-	
-	.primary-navigation ul ul ul.toggled-on {
-		right: 0;
-        padding-left: 1em;
-        position: relative;
-	}
-	
-	/* Indent 3rd level drop-down menus */
-	.primary-navigation ul ul ul a {
-		padding-left: 2em;
-	}
-    
-    .nav-menu {
-        padding: 0.4em;
-    }
-    
+@media screen and (min-width: 769px) and (max-width: 64em) {
     .site-main {
-        max-width: 64em;
+        margin: 2.250em;
     }
-    
-    .right-sidebar .content-area {
+
+    .primary-navigation {
+        clear: none;
         float: left;
-        width: 66.6015625%;
+        width: 100%;
     }
     
-    .right-sidebar .widget-area {
-        float: right;
-        width: 31.640625%;
-    }
-    
-    .dropdown-toggle {
-        right: 0.4em;
-        top: 0.3em;
-    }
-}
-
-/*
-================================================================================================
-34.0 - Media Queries (Tablet Medium 64em (1024px))
-================================================================================================
-*/
-@media screen and (min-width: 64em) {
-    .primary-navigation {
-        clear: none;
-    }
-	
 	/* Position the menu in the header */
 	.primary-navigation,
 	.primary-navigation.toggled {
@@ -2052,13 +1441,13 @@ p.comment-awaiting-moderation {
 	
 	/* Position drop-down menus absolutely */
 	.primary-navigation ul ul.toggled-on {
-		position: absolute;
-		width: 17em;
+        background: #000000;
 		display: block;
-		z-index: 10;
-        right: 0;
 		margin-left: 0;
-		background: #000;
+		position: absolute;
+        right: 0;
+		width: 17em;
+		z-index: 10;
 	}
 	
 	.primary-navigation ul ul ul.toggled-on {
@@ -2075,23 +1464,19 @@ p.comment-awaiting-moderation {
     .nav-menu {
         padding: 0.4em;
     }
-    
-    .dropdown-toggle {
-        right: 0.313em;
-        top: 0.313em;
-    }
 }
-
 /*
-================================================================================================
-35.0 - Media Queries (Table Large 64.063em (1025px))
-================================================================================================
+============================================================================================================================
+30.0 - Media Queries (Tablet Large 73.125em (1170px))
+============================================================================================================================
 */
-@media screen and (min-width: 64.063em) {
+@media screen and (min-width: 73.125em) {
     .primary-navigation {
         clear: none;
+        float: left;
+        width: 100%;
     }
-	
+    
 	/* Position the menu in the header */
 	.primary-navigation,
 	.primary-navigation.toggled {
@@ -2162,13 +1547,13 @@ p.comment-awaiting-moderation {
 	
 	/* Position drop-down menus absolutely */
 	.primary-navigation ul ul.toggled-on {
-		position: absolute;
-		width: 17em;
+        background: #000000;
 		display: block;
-		z-index: 10;
-        right: 0;
 		margin-left: 0;
-		background: #000;
+		position: absolute;
+        right: 0;
+		width: 17em;
+		z-index: 10;
 	}
 	
 	.primary-navigation ul ul ul.toggled-on {
@@ -2184,10 +1569,5 @@ p.comment-awaiting-moderation {
     
     .nav-menu {
         padding: 0.4em;
-    }
-    
-    .dropdown-toggle {
-        right: 0.313em;
-        top: 0.313em;
     }
 }

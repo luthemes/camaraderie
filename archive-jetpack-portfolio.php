@@ -1,33 +1,25 @@
 <?php
 /*
-================================================================================================
-Camaraderie - archive-jetpack-portfolio.php
-================================================================================================
-This will display automatically for portfolio, once you have succuessfully added content in the
-portfolio in the dashboad. this is where all information  will come in and uses the the following
-file content-archive-jetpack-portfolio.php to display information.
+===========================================================================================================
+luthemes - index.php
+===========================================================================================================
+This is the most generic template file in a WordPress Theme and is one of the two required files for a 
+theme (the other being style.css). The index.php template file is flexible. It can be used to include all 
+references to the header, content, widget, footer and any other pages created in WordPress. Or it can be 
+divided into modular template files, each taking on part of the workload. If you do not provide other 
+template files, WordPress may have default files or functions to perform their jobs.
 
-@package        Camaraderie WordPress Theme
-@copyright      Copyright (C) 2017. Benjamin Lu
+@package        luthemes WordPress Theme
+@copyright      Copyright (C) 2018. Benjamin Lu
 @license        GNU General Public License v2 or later (http://www.gnu.org/licenses/gpl-2.0.html)
-@author         Benjamin Lu (https://www.benjlu.com/)
-================================================================================================
+@author         Benjamin Lu (https://www.luthemes.com/)
+===========================================================================================================
 */
 ?>
 <?php get_header(); ?>
-    <section id="site-main" class="site-main">
+    <div id="site-main" class="site-main">
         <div id="content-area" class="content-area">
-            <?php if (have_posts()) : ?>
-                    <?php get_template_part('jetpack-portfolio/content', 'archive-jetpack-portfolio'); ?>
-                    <?php
-                        the_posts_navigation( array(
-                            'prev_text'          => '<span class="post-previous" aria-hidden="true">' . __( 'Previous', 'camaraderie' ) . '</span>' . '<span class="post-title">Projects</span>',
-                            'next_text' => '<span class="post-next" aria-hiddent="true">' . __('Next', 'camaraderie') . '</span>' . '<span class="post-title">Projects</span>',
-                        ) );
-                    ?>
-            <?php else : ?>
-                    <?php get_template_part('template-parts/content', 'none'); ?>
-            <?php endif; ?>
+            <?php camaraderie_display_archive_jetpack_portfolio(); ?>
         </div>
-    </section>
+    </div>
 <?php get_footer(); ?>

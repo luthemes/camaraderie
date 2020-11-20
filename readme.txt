@@ -1,14 +1,14 @@
-﻿Camaraderie WordPress Theme
+Camaraderie WordPress Theme
 ================================================================================================
 Contributor: benlumia007
 Tags: custom-background, custom-header, left-sidebar, right-sidebar
-Requres at least: 4.5
-Tested up to: 4.9.2
-Stable tag: 0.1.8
+Requres at least: 4.9.8
+Tested up to: 4.9.8
+Stable tag: 1.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Camaraderie WordPress Theme, Copyright (C) 2016, Benjamin Lu
+Camaraderie WordPress Theme, Copyright (C) 2017-2018, Benjamin Lu
 Camaraderie is distributed under the terms of the GNU GPL
 
 Camaraderie is a standard design with responsive capability.
@@ -41,7 +41,7 @@ Customizer
    - Blog
    
 
-Jetpack Plugin (Required for Portfolio to work)
+Jetpack Plugin (Required for Portfolio and Testimonial to work)
 ================================================================================================
 This theme uses WordPress: Jetpack Plugin and must be enabled to use Content Post Type for the
 Portfolio section for this theme. To use this Portfolio, you can enable the feature in the settings
@@ -68,6 +68,9 @@ Not Available.
 
 Changelog
 ================================================================================================
+Version: 1.0
+- Major Update
+
 Version: 0.1.8
 - Hide Post Format (Quote) from the custom loop for blog section.
 
@@ -168,19 +171,3 @@ License: CC0 License (https://www.pexels.com/photo-license/)
 Author: freestocks.org (https://www.pexels.com/u/freestocks/)
 Source: https://www.pexels.com/photo/silhouette-of-woman-during-sunset-194446/
 License: CC0 License (https://www.pexels.com/photo-license/)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
