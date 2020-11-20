@@ -1,18 +1,18 @@
 {
-  "name": "initiator",
-  "version": "1.0.0",
-  "description": "Initiator is a WordPress Starter Theme.",
+  "name": "Camaraderie",
+  "version": "2.0.0",
+  "description": "Camaraderie is a WordPress Starter Theme.",
   "main": "resources/assets/js/app.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/benlumia007/initiator.git"
+    "url": "git+https://github.com/benlumia007/camaraderie.git"
   },
   "author": "Benjamin Lu",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/benlumia007/initiator/issues"
+    "url": "https://github.com/benlumia007/camaraderie/issues"
   },
-  "homepage": "https://github.com/benlumia007/initiator#readme",
+  "homepage": "https://github.com/benlumia007/camaraderie#readme",
   "scripts": {
     "build": "npm run prod && npm run export",
     "dev": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
