@@ -7,7 +7,7 @@ Description: Camaraderie is a fully functional mobile friendly WordPress theme t
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: one-column, two-columns, left-sidebar, right-sidebar, custom-background, custom-header, sticky-post, theme-options, threaded-comments, translation-ready, blog, photography, portfolio
-Version: 0.0.8
+Version: 0.0.9
 Text Domain: camaraderie
 
 This theme, like WordPress, is licensed under the GPL.
@@ -161,26 +161,6 @@ figure {
     text-align: left;
     padding: 0.5em;
 }
-
-.textwidget table {
-    border-collapse: collapse;
-    width: 100%;
-}
-
-.textwidget tr:nth-of-type(odd) {
-    background: #eeeeee;
-}
-
-.textwidget th {
-    background: #333333;
-    color: #ffffff;
-    font-weight: 700;
-}
-
-.textwidget th, td {
-    border: 0.063em solid #cccccc;
-    text-align: left;
-    padding: 0.438em;
 }
 
 /*
@@ -1460,6 +1440,7 @@ p.comment-awaiting-moderation {
     background: #ffffff;
     border: 0.063em solid #cccccc;
     margin-bottom: 1.125em;
+    font-size: 0.875em;
     padding: 1.125em;
 }
 
@@ -1502,6 +1483,27 @@ p.comment-awaiting-moderation {
     font-size: 0.875em;
     font-weight: 700;
     margin-bottom: 1.125em;
+}
+
+.widget-area table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.widget-area tr:nth-of-type(odd) {
+    background: #eeeeee;
+}
+
+.widget-area th {
+    background: #333333;
+    color: #ffffff;
+    font-weight: 700;
+}
+
+.widget-area th, td {
+    border: 0.063em solid #cccccc;
+    text-align: left;
+    padding: 0.438em;
 }
 
 .rss-date {
