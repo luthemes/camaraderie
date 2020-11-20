@@ -23,7 +23,17 @@ or index.
     <div class="entry-content">
         <ul class="blog-grid">
             <?php $posts_per_page = 2; ?>
-            <?php $query = new WP_Query(array('post_type' => 'post', 'ignore_sticky_posts' => 1, 'posts_per_page' => $posts_per_page)); ?>
+            <?php $query = new WP_Query(array(
+                'post_type' => 'post', 
+                'ignore_sticky_posts' => 1, 
+                'posts_per_page' => $posts_per_page,
+                'tax_query' => array(array(
+                    'taxonomy'  => 'post_format',
+                    'field'     => 'slug',
+                    'terms'     => array('post-format-quote'),
+                    'operator'  => 'NOT IN',
+                ))
+            )); ?>
 
             <?php if ($query->have_posts()) { ?>
                 <?php while ($query->have_posts()) { ?>

@@ -4,7 +4,7 @@ Contributor: benlumia007
 Tags: custom-background, custom-header, left-sidebar, right-sidebar
 Requres at least: 4.5
 Tested up to: 4.9.2
-Stable tag: 0.1.7
+Stable tag: 0.1.8
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -68,6 +68,9 @@ Not Available.
 
 Changelog
 ================================================================================================
+Version: 0.1.8
+- Hide Post Format (Quote) from the custom loop for blog section.
+
 Version: 0.1.7 
 - Add Post Format (Quote)
 
