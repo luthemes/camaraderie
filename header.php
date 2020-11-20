@@ -52,12 +52,5 @@ navigation.
                 <h4 class="site-description"><?php bloginfo('description'); ?></h4>
             </div>
         </header>
-    <?php } else { ?>
-        <header id="site-header" class="site-header">
-            <div id="site-branding" class="site-branding">
-                <h1 class="site-title"><a href="<?php echo esc_url(home_url('/')); ?>"><?php bloginfo('name'); ?></a></h1>
-                <h4 class="site-description"><?php bloginfo('description'); ?></h4>
-            </div>
-        </header>
     <?php } ?>
     <section id="site-content" class="site-content">

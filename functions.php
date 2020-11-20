@@ -89,6 +89,17 @@ function camaraderie_theme_setup() {
     
     /*
     ============================================================================================
+    Enable and activate add_theme_support('cusom-background'); for Camaraderie WordPress Theme. This 
+    feature allows the use of HTML5 markup for search forms, comment forms, comment list, gallery, 
+    and captions.
+    ============================================================================================
+    */
+    add_theme_support('custom-background', array(
+        'default-color' => 'eeeeee',
+    ));
+    
+    /*
+    ============================================================================================
     Enable and activate add_theme_support('post-thumbnails); for Camaraderie WordPress Theme. 
     This feature enables Post Thumbnails (Featured Images) support for a theme. If you wish to 
     display thumbnails, use the following to display the_post_thumbnail();. If you need to to 
@@ -112,6 +123,38 @@ function camaraderie_theme_setup() {
     ============================================================================================
     */
     add_image_size('camaraderie-medium-thumbnails', 834, 250, true);
+    
+    /*
+    ============================================================================================
+    add_image_size('camaraderie-large-thumbnails', 1200, 630, true); should be used under the
+    following files. single-portfolio.phpi mea
+    ============================================================================================
+    */
+    add_image_size('camaraderie-jetpack-portfolio', 1200, 630, true);
+    
+    /*
+    ============================================================================================
+    add_image_size('camaraderie-jetpack-testimonial', 200, 200, true); should be used under the
+    following files. content.php
+    ============================================================================================
+    */
+    add_image_size('camaraderie-jetpack-testimonial', 200, 200, true);
+    
+    /*
+    ============================================================================================
+    add_post_type_support('page', 'excerpt'); should be used under the pages, you will need to
+    select Excerpt in the Screen Option to enable this feature.
+    ============================================================================================
+    */
+    add_post_type_support('page', 'excerpt');
+    
+    /*
+    ============================================================================================
+    load_theme_textdomain(); allows the WordPress Core to take care of all transations rather than
+    using a .pot file. A pot file is not required, but recommended.
+    ============================================================================================
+    */
+    load_theme_textdomain('camaraderie');
 }
 add_action('after_setup_theme', 'camaraderie_theme_setup');
 
@@ -239,6 +282,38 @@ function camaraderie_register_sidebars_setup() {
         'before_title'  => '<h2 class="widget-title">',
         'after_title'   => '</h2>',
     ));
+    
+    /*
+    ============================================================================================
+    Enable and activate About Sidebar for Camaraderie WordPress Theme. The About Sidebar should 
+    only show in the about page only rather in the default page. 
+    ============================================================================================
+    */
+    register_sidebar(array(
+        'name'          => __('About Sidebar', 'camaraderie'),
+        'description'   => __('Add widgets here in your sidebar on About Page only.', 'camaraderie'),
+        'id'            => 'about-sidebar',
+        'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</aside>',
+        'before_title'  => '<h2 class="widget-title">',
+        'after_title'   => '</h2>',
+    ));
+    
+    /*
+    ============================================================================================
+    Enable and activate Portfolio Sidebar for Camaraderie WordPress Theme. The Portfolio Sidebar 
+    should only show in the Portfolio only rather in the default page. 
+    ============================================================================================
+    */
+    register_sidebar(array(
+        'name'          => __('Portfolio Sidebar', 'camaraderie'),
+        'description'   => __('Add widgets here in your sidebar on About Page only.', 'camaraderie'),
+        'id'            => 'portfolio-sidebar',
+        'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</aside>',
+        'before_title'  => '<h2 class="widget-title">',
+        'after_title'   => '</h2>',
+    ));
 }
 add_action('widgets_init', 'camaraderie_register_sidebars_setup');
 
@@ -247,7 +322,11 @@ add_action('widgets_init', 'camaraderie_register_sidebars_setup');
  5.0 - Required Files
 ================================================================================================
 */
+require_once(get_template_directory() . '/extras/inline-styles/custom-image.php');
 require_once(get_template_directory() . '/extras/inline-styles/header-image.php');
 require_once(get_template_directory() . '/includes/custom-header.php');
+require_once(get_template_directory() . '/includes/customizer/control-radio-image.php');
+require_once(get_template_directory() . '/includes/customizer/customizer.php');
 require_once(get_template_directory() . '/includes/extras.php');
+require_once(get_template_directory() . '/includes/jetpack.php');
 require_once(get_template_directory() . '/includes/template-tags.php');

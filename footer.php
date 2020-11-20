@@ -34,10 +34,14 @@ of this theme. This also displays the navigation menu for Socal Navigation as we
         </div>
     <?php } ?>
     <footer id="site-footer" class="site-footer">
-        <div id="site-info" class="site-info">
-            <span class="footer-title"><a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name'); ?></a></span>
-            <small><i class="fa fa-copyright" aria-hidden="true"></i> <?php esc_html_e('2014-2017. ', 'camaraderie'); ?><?php esc_html_e('All Rights Reserved', 'camaraderie'); ?></small>
-        </div>
+		<div id="site-info" class="site-info">
+			<a href="<?php echo esc_url(__('https://wordpress.org/', 'camaraderie')); ?>">
+                <?php printf(esc_html__('Proudly Powered by %s', 'camaraderie'), 'WordPress'); ?>
+            </a>
+            <br />
+			<?php printf(esc_html__( 'Theme: %1$s by %2$s.', 'camaraderie' ), 'Camaraderie', '<a href="https://www.benjaminlu.net/">Benjamin Lu</a>' );
+			?>
+		</div><!-- .site-info -->
     </footer>
     <?php wp_footer(); ?>
 </body>

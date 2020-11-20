@@ -1,7 +1,7 @@
 <?php
 /*
 ================================================================================================
-Online Portfolio - custom-sidebar
+Camaraderie - custom-sidebar.php
 Template Name: Custom Sidebar
 ================================================================================================
 This is the most generic template file in a WordPress theme and is one of the two required files 
@@ -11,7 +11,7 @@ WordPress. Or it can be divided into modular template files, each taking on part
 If you do not provide other template files, WordPress may have default files or functions to 
 perform their jobs.
 
-@package        Online Portfolio WordPress Theme
+@package        Camaraderie WordPress Theme
 @copyright      Copyright (C) 2017. Benjamin Lu
 @license        GNU General Public License v2 or later (http://www.gnu.org/licenses/gpl-2.0.html)
 @author         Benjamin Lu (https://www.benjaminlu.net/)
@@ -20,7 +20,7 @@ perform their jobs.
 ?>
 <?php get_header(); ?>
     <section id="site-main" class="site-main">
-        <div id="global-layout" class="right-sidebar">
+        <div id="global-layout" class="<?php echo esc_attr(get_theme_mod('custom_layout', 'left-sidebar')); ?>">
             <div id="content-area" class="content-area">
                 <?php while (have_posts()) : the_post(); ?>
                     <?php get_template_part('template-parts/content', 'page'); ?>
@@ -33,7 +33,11 @@ perform their jobs.
                 ?>
                 <?php comments_template(); ?>
             </div>
-            <?php get_sidebar('custom'); ?>
+            <?php if ('left-sidebar' == get_theme_mod('custom_layout')) { ?>
+                <?php get_sidebar('custom'); ?>
+            <?php } else if ('right-sidebar' == get_theme_mod('custom_layout')) { ?>
+                <?php get_sidebar('custom'); ?>
+            <?php } ?>
         </div>
     </section>
 <?php get_footer(); ?>

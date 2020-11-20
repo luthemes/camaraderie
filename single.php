@@ -19,7 +19,7 @@ perform their jobs.
 ?>
 <?php get_header(); ?>
     <section id="site-main" class="site-main">
-        <div id="global-layout" class="right-sidebar">
+        <div id="global-layout" class="<?php echo esc_attr(get_theme_mod('global_layout', 'no-sidebar')); ?>">
             <div id="content-area" class="content-area">
                 <?php while (have_posts()) : the_post(); ?>
                     <?php get_template_part('template-parts/content', 'single'); ?>
@@ -32,7 +32,11 @@ perform their jobs.
                 ?>
                 <?php comments_template(); ?>
             </div>
-            <?php get_sidebar(); ?>
+            <?php if ('left-sidebar' == get_theme_mod('global_layout')) { ?>
+                <?php get_sidebar(); ?>
+            <?php } else if ('right-sidebar' == get_theme_mod('global_layout')) { ?>
+                <?php get_sidebar(); ?>
+            <?php } ?>
         </div>
     </section>
 <?php get_footer(); ?>

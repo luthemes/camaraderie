@@ -25,7 +25,7 @@ perform their jobs.
                     <h1 class="archive-title"><?php the_archive_title(); ?></h1>
                 </div>
                 <?php while (have_posts()) : the_post(); ?>
-                    <?php get_template_part('template-parts/content', 'page'); ?>
+                    <?php get_template_part('template-parts/content', get_post_format()); ?>
             <?php endwhile; ?>
                 <?php the_posts_pagination(); ?>
             <?php else : ?>

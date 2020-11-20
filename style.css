@@ -7,7 +7,7 @@ Description: Camaraderie
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: one-column, two-columns, left-sidebar, right-sidebar, custom-background, custom-colors, custom-header, custom-logo, footer-widgets, post-formats, sticky-post, theme-options, threaded-comments, translation-ready, blog, education, news, photography, portfolio
-Version: 0.0.1
+Version: 0.0.2
 Text Domain: camaraderie
 
 This theme, like WordPress, is licensed under the GPL.
@@ -146,7 +146,19 @@ figure {
  3.0 - Forms
 ================================================================================================
 */
+input[type="text"],
+input[type="email"],
+input[type="url"] {
+    border: 0.063em solid #cccccc;
+    padding: 0.6em;
+    width: 25em;
+}
 
+textarea {
+    border: 0.063em solid #cccccc;
+    padding: 0.6em;
+    width: 100%;
+}
 
 input[type="submit"] {
     background: #ffffff;
@@ -228,11 +240,29 @@ input[type="submit"]:hover {
 .site-content:after,
 .site-main:before,
 .site-main:after,
+.content-area:before,
+.content-area:after,
 .entry-content:before,
-.entry-content:after {
+.entry-content:after,
+.grid-column-two:before,
+.grid-column-two:after,
+.section-portfolio:before,
+.section-portfolio:after,
+.section-blog:before,
+.section-blog:after,
+.section-testimonial:before,
+.section-testimonial:after,
+.section-contact:before,
+.section-contact:after, 
+.site-footer:before,
+.site-footer:after,
+.post-navigation:before,
+.post-navigation:after,
+.posts-navigation:before,
+.posts-navigation:after {
     clear: both;
     content: "";
-    display: table;
+    display: table;:
 }
 
 /*
@@ -493,52 +523,52 @@ a:hover {
     padding: 0.5em 1em;
 }
 
-.content-area .post-navigation {
+.posts-navigation,
+.post-navigation {
     background: #ffffff;
     border: 0.063em solid #cccccc;
     clear: both;
     padding: 0.938em;
 }
 
-.content-area .post-navigation:before,
-.content-area .post-navigation:after {
-    clear: both;
-    content: "";
-    display: table;:
-}
-
-.content-area .post-navigation .nav-links .nav-previous {
+.posts-navigation .nav-links .nav-previous,
+.post-navigation .nav-links .nav-previous {
     float: left;
+    margin: 0.5em 0;
 }
 
-.content-area .post-navigation .nav-links .nav-next {
+.posts-navigation .nav-links .nav-next,
+.post-navigation .nav-links .nav-next {
     float: right;
+    margin: 0.5em 0;
 }
 
-.content-area .post-navigation .nav-links .nav-previous .post-previous {
+.posts-navigation .nav-links .nav-previous .post-previous,
+.post-navigation .nav-links .nav-previous .post-previous {
+    color: #000000;
     display: block;
     font-size: 0.9375em;
     font-weight: 700;
     text-align: left;
 }
 
-.content-area .post-navigation .nav-links .nav-next .post-next {
+.posts-navigation .nav-links .nav-next .post-next,
+.post-navigation .nav-links .nav-next .post-next {
+    color: #000000;
     display: block;
     font-size: 0.9375em;
     font-weight: 700;
     text-align: right
 }
 
-.content-area .post-navigation .nav-links .nav-previous .post-title {
+.posts-navigation .nav-links .nav-previous .post-title,
+.post-navigation .nav-links .nav-previous .post-title {
     font-size: 0.813em;
 }
 
-.content-area .post-navigation .nav-links .nav-next .post-title {
+.posts-navigation .nav-links .nav-next .post-title,
+.post-navigation .nav-links .nav-next .post-title {
     font-size: 0.813em;
-}
-
-.content-area .post-navigation .nav-links .nav-next .post-title:hover {
-    text-decoration: underline;
 }
 
 .link-pages {
@@ -643,9 +673,16 @@ a:hover {
     width: 71.28205128205128%;
 }
 
+.left-sidebar .content-area {
+    float: right;
+    width: 71.28205128205128%;
+}
+
 .content-area .post,
 .content-area .page,
-.content-area .themes {
+.content-area .jetpack-portfolio,
+.content-area .jetpack-testimonial,
+.recent-posts {
     background: #ffffff;
     border: 0.063em solid #cccccc;
     margin-bottom: 1.125em; /* 18px */
@@ -654,12 +691,16 @@ a:hover {
 }
 
 .content-area .post .entry-header,
-.content-area .page .entry-header {
+.content-area .page .entry-header,
+.content-area .jetpack-portfolio .entry-header,
+.content-area .jetpack-testimonial .entry-header {
     text-align: center;
 }
 
 .content-area .post .entry-header .entry-title,
-.content-area .page .entry-header .entry-title {
+.content-area .page .entry-header .entry-title,
+.content-area .jetpack-portfolio .entry-header .entry-title,
+.content-area .jetpack-testimonial .entry-header .entry-title {
     margin: 0;
     padding: 0;
 }
@@ -675,17 +716,23 @@ a:hover {
     top: 0;
 }
 
+.recent-posts,
 .content-area .post .entry-excerpt,
 .content-area .post .entry-content,
-.content-area .page .entry-content {
+.content-area .page .entry-content,
+.section-blog .entry-content {
     line-height: 1.6em;
 }
 
-.content-area .post .entry-excerpt .continue-reading {
+.recent-posts .continue-reading,
+.content-area .post .entry-excerpt .continue-reading,
+.section-blog .entry-content .continue-reading {
     text-align: center;
 }
 
-.content-area .post .entry-excerpt .continue-reading a {
+.recent-posts .continue-reading a, 
+.content-area .post .entry-excerpt .continue-reading a,
+.section-blog .entry-content .continue-reading a {
     background: #ffffff;
     border: 0.063em solid #cccccc;
     display: inline-block;
@@ -725,6 +772,42 @@ a:hover {
 
 .content-area .sticky {
     border: 0.063em solid #666666;
+}
+
+.recent-header {
+    text-align: center;
+}
+
+.recent-title {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.grid-column-two {
+    margin: 1.125em 0;
+    padding: 0;
+}
+
+.grid-column-two ul {
+    float: left;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.grid-column-two li:nth-of-type(1) {
+    float: left;
+    list-style: none;
+    margin: 0 0.563em 1.125em 0;
+    width: 49%;
+}
+
+.grid-column-two li:nth-of-type(2) {
+    float: right;
+    list-style: none;
+    margin: 0 0 1.125em 0.563em;
+    width: 49%;
 }
 
 /*
@@ -916,11 +999,51 @@ p.comment-awaiting-moderation {
     padding: 3px 5px;
 }
 
+.comment-subscription-form .subscribe-label {
+    display: inline !important;
+    font-size: 14px;
+}
+
+
 /*
 ================================================================================================
 18.0 - Content Area (Error 404)
 ================================================================================================
 */
+.content-area .search-form:before,
+.content-area .search-form:after {
+    clear: both;
+    content: "";
+    display: table;
+}
+
+.content-area  .post .search-form {
+    padding: 0.938em;
+    background: #555;
+    max-width: 100%;
+}
+
+.content-area .search-field {
+    border: none;
+    float: left;
+    font-family: 'Merriweather', serif;
+    font-size: 1em;
+    padding: 0.5em;
+    width: 100%;
+}
+
+.content-area .search-submit {
+    border: none;
+    background: #d88f3c;
+    color: #ffffff;
+    float: right;
+    font-family: 'Merriweather', serif;
+    font-size: 1em;
+    display: none;
+    padding: 0.4em;
+    position: relative;
+    width: 10%;
+}
 
 /*
 ================================================================================================
@@ -939,24 +1062,222 @@ p.comment-awaiting-moderation {
 21.0 - Section Area (Jetpack Portfolio)
 ================================================================================================
 */
+.jetpack-portfolio-grid {
+    margin: 1.250em 0;
+    padding: 0;
+}
+
+.jetpack-portfolio-grid ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    float: left;
+}
+
+.jetpack-portfolio-grid li {
+    list-style: none;
+    float: left;
+    margin: 0;
+    padding: 0.5em;
+    width: 33.33333333333333%;
+}
+
+.jetpack-portfolio-grid .jetpack-portfolio-caption {
+    background: #eeeeee;
+    font-size: 0.875em;
+    margin: 0 0 1.125em 0;;
+    padding: 0.313em;
+    text-align: center;
+}
+
+.jetpack-portfolio-grid .jetpack-portfolio-caption-title {
+    margin: 0 0 0.2em 0;
+    padding: 0;
+}
+
+.featured-portfolio {
+    margin: 1.125em 0;
+}
+
+.section-portfolio {
+    background: #ffffff;
+}
+
+.section-portfolio .entry-header {
+    margin-bottom: 1.125em;
+    text-align: center;
+}
+
+.section-portfolio .entry-header .entry-title {
+    font-size: 2.250em;
+    margin: 0;
+    padding: 0;
+}
+
+.section-portfolio .entry-header .entry-description {
+    color: #999999;
+    margin: 0;
+    padding: 0;
+}
 
 /*
 ================================================================================================
 22.0 - Section Area (Blog Section)
 ================================================================================================
 */
+.section-blog {
+    background: #eeeeee;
+}
+
+.section-blog .entry-header {
+    margin-bottom: 1.125em;
+    text-align: center;
+}
+
+.section-blog .entry-header .entry-title {
+    font-size: 2.250em;
+    margin: 0;
+    padding: 0;
+}
+
+.section-blog .entry-header .entry-description {
+    color: #999999;
+    margin: 0;
+    padding: 0;
+}
+
+.blog-grid {
+    margin: 1.250em 0;
+    padding: 0;
+}
+
+.blog-grid ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    float: left;
+}
+
+.blog-grid li {
+    list-style: none;
+    float: left;
+    margin: 0;
+    padding: 0.5em;
+    width: 50%;
+}
+
 
 /*
 ================================================================================================
 23.0 - Section Area (Jetpack Testimonials)
 ================================================================================================
 */
+.section-testimonial {
+    background: #eeeeee;
+}
+
+.section-testimonial .entry-header {
+    margin-bottom: 1.125em;
+    text-align: center;
+}
+
+.section-testimonial .entry-header .entry-title {
+    font-size: 2.250em;
+    margin: 0;
+    padding: 0;
+}
+
+.section-testimonial .entry-header .entry-description {
+    color: #999999;
+    margin: 0;
+    padding: 0;
+}
+
+.jetpack-testimonial-grid {
+    margin: 1.250em 0;
+    padding: 0;
+}
+
+.jetpack-testimonial-grid ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    float: left;
+}
+
+.jetpack-testimonial-grid li {
+    list-style: none;
+    float: left;
+    margin: 0;
+    padding: 0.5em;
+    width: 33.33333333333333%;
+}
+
+.jetpack-testimonial-grid .jetpack-testimonial-caption {
+    font-size: 0.875em;
+    margin: 0;
+    padding: 0.313em;
+    text-align: center;
+}
+
+.jetpack-testimonial-grid .jetpack-testimonial-caption-title {
+    margin: 0 0 0.2em 0;
+    padding: 0;
+}
+
+.featured-testimonials {
+    text-align: center;
+}
+
+.featured-testimonials img {
+    border-radius: 50%;
+    border: 0.500em solid #cccccc;
+}
 
 /*
 ================================================================================================
 24.0 - Section Area (Jetpack Contact Form)
 ================================================================================================
 */
+.section-contact {
+    background: #000000;
+}
+
+.section-contact .entry-header {
+    margin-bottom: 1.125em;
+    text-align: center;
+}
+
+.section-contact .entry-header .entry-title {
+    color: #ffffff;
+    font-size: 2.250em;
+    margin: 0;
+    padding: 0;
+}
+
+.section-contact .entry-header .entry-description {
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+
+.section-contact .wpcf7 label {
+    color: #ffffff;
+}
+
+.section-contact input[type="text"],
+.section-contact input[type="email"],
+.section-contact input[type="url"] {
+    border: 0.063em solid #cccccc;
+    padding: 0.6em;
+    width: 25em;
+}
+
+.section-contact textarea {
+    padding: 0.6em;
+    width: 50%;
+}
 
 /*
 ================================================================================================
@@ -991,8 +1312,8 @@ p.comment-awaiting-moderation {
     float: left;
     font-family: 'Merriweather', serif;
     font-size: 1em;
-    padding: 0.5em;
-    width: 70%;
+    padding: 0.563em;
+    width: 100%;
 }
 
 .widget-area .search-submit {
@@ -1002,7 +1323,8 @@ p.comment-awaiting-moderation {
     float: right;
     font-family: 'Merriweather', serif;
     font-size: 1em;
-    padding: 0.375em;
+    display: none;
+    padding: 0.5em;
     position: relative;
     width: 30%;
 }
@@ -1209,6 +1531,7 @@ p.comment-awaiting-moderation {
         margin: 1em 1em 3.6em 1em;
     }
     
+    .left-sidebar .content-area,
     .right-sidebar .content-area {
         float: none;
         width: 100%;

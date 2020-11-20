@@ -1,14 +1,14 @@
 <?php
 /*
 ================================================================================================
-Camaraderie - index.php
+Camaraderie - about.php
+Template Name: About
+Template Post Type: page
 ================================================================================================
 This is the most generic template file in a WordPress theme and is one of the two required files 
-for a theme (the other being style.css). The index.php template file is flexible. It can be used to 
-include all references to the header, content, widget, footer and any other pages created in 
-WordPress. Or it can be divided into modular template files, each taking on part of the workload. 
-If you do not provide other template files, WordPress may have default files or functions to 
-perform their jobs.
+for a theme (the other footer.php). The header.php template file only displays the header section
+of this theme. This also displays the navigation menu as well or any extra features such s social
+navigation.
 
 @package        Camaraderie WordPress Theme
 @copyright      Copyright (C) 2017. Benjamin Lu
@@ -27,9 +27,9 @@ perform their jobs.
                 <?php comments_template(); ?>
             </div>
             <?php if ('left-sidebar' == get_theme_mod('global_layout')) { ?>
-                <?php get_sidebar('page'); ?>
+                <?php get_sidebar('about'); ?>
             <?php } else if ('right-sidebar' == get_theme_mod('global_layout')) { ?>
-                <?php get_sidebar('page'); ?>
+                <?php get_sidebar('about'); ?>
             <?php } ?>
         </div>
     </section>

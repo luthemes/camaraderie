@@ -29,7 +29,12 @@ Table of Content
  1.0 - Pingback Setup
 ================================================================================================
 */
-
+function camaraderie_pingback_setup() {
+	if (is_singular() && pings_open()) {
+		printf('<link rel="pingback" href="%s">' . "\n", get_bloginfo('pingback_url'));
+	}
+}
+add_action('wp_head', 'camaraderie_pingback_setup');
 /*
 ================================================================================================
  2.0 - Post Thumbnail Setup
@@ -37,7 +42,7 @@ Table of Content
 */
 function camaraderie_unset_has_post_thumbnail($classes) {
     $class_key = array_search('has-post-thumbnail', $classes);
-    if (is_singular() || is_post_type_archive('themes')) {
+    if (is_singular() || is_post_type_archive('jetpack-portfolio') || is_post_type_archive('jetpack-testimonial')) {
         unset($classes[$class_key]);
     }     
     return $classes;
@@ -53,11 +58,3 @@ function camaraderie_excerpt_length_setup() {
     return 50;
 }
 add_filter('excerpt_length', 'camaraderie_excerpt_length_setup');
-
-function camaraderie_customize_control_print_styles_setup() {
-    wp_enqueue_style('online-portfolio-customize-control-print-style', get_template_directory_uri() . '/css/customize-controls/checkbox.css');
-}
-add_action('customize_controls_print_styles', 'camaraderie_customize_control_print_styles_setup');
-
-
-
