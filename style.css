@@ -7,7 +7,7 @@ Description: Camaraderie is a fully functional mobile friendly WordPress theme t
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: one-column, two-columns, left-sidebar, right-sidebar, custom-background, custom-header, sticky-post, theme-options, threaded-comments, translation-ready, blog, photography, portfolio
-Version: 0.1.2
+Version: 0.1.3
 Text Domain: camaraderie
 
 This theme, like WordPress, is licensed under the GPL.
@@ -1455,7 +1455,7 @@ p.comment-awaiting-moderation {
     border: 0.063em solid #cccccc;
     margin-bottom: 1.125em;
     font-size: 0.875em;
-    padding: 1.125em 1.125em 0 1.125em;
+    padding: 1.125em;
 }
 
 .widget ul,
