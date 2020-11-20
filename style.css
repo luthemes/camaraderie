@@ -7,7 +7,7 @@ Description: Camaraderie is a fully functional mobile friendly WordPress theme t
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: one-column, two-columns, left-sidebar, right-sidebar, custom-background, custom-header, sticky-post, theme-options, threaded-comments, translation-ready, blog, photography, portfolio
-Version: 0.0.5
+Version: 0.0.6
 Text Domain: camaraderie
 
 This theme, like WordPress, is licensed under the GPL.
@@ -141,6 +141,48 @@ figure {
     max-width: 100%;
 }
 
+.entry-content table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.entry-content tr:nth-of-type(odd) {
+    background: #eeeeee;
+}
+
+.entry-content th {
+    background: #333333;
+    color: #ffffff;
+    font-weight: 700;
+}
+
+.entry-content th, td {
+    border: 0.063em solid #cccccc;
+    text-align: left;
+    padding: 0.5em;
+}
+
+.textwidget table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.textwidget tr:nth-of-type(odd) {
+    background: #eeeeee;
+}
+
+.textwidget th {
+    background: #333333;
+    color: #ffffff;
+    font-weight: 700;
+}
+
+.textwidget th, td {
+    border: 0.063em solid #cccccc;
+    text-align: left;
+    padding: 0.438em;
+}
+
 /*
 ================================================================================================
  3.0 - Forms
@@ -269,7 +311,9 @@ input[type="submit"]:hover {
 .right-sidebar:before,
 .right-sidebar:after,
 .left-sidebar:before,
-.left-sidebar:after {
+.left-sidebar:after,
+.theme-meta:before,
+.theme-meta:after {
     clear: both;
     content: "";
     display: table;:
@@ -730,8 +774,10 @@ a:hover {
 .content-area .post .entry-excerpt,
 .content-area .post .entry-content,
 .content-area .page .entry-content,
+.content-area .jetpack-portfolio .entry-content,
 .section-blog .entry-content {
     line-height: 1.6em;
+    margin: 1.125em 0;
 }
 
 .recent-posts .continue-reading,
@@ -1130,6 +1176,12 @@ p.comment-awaiting-moderation {
     padding: 0;
 }
 
+.section-portfolio .entry-content {
+    margin: 1.125em 0;
+    text-align: center;
+}
+
+
 .related-items {
     background: #ffffff;
     border: 0.063em solid #cccccc;
@@ -1141,7 +1193,8 @@ p.comment-awaiting-moderation {
 }
 
 .related-items .entry-header .entry-title {
-
+    margin: 0;
+    padding: 0;
 }
 
 /*
@@ -1154,7 +1207,6 @@ p.comment-awaiting-moderation {
 }
 
 .section-blog .entry-header {
-    margin-bottom: 1.125em;
     text-align: center;
 }
 
@@ -1168,6 +1220,10 @@ p.comment-awaiting-moderation {
     color: #999999;
     margin: 0;
     padding: 0;
+}
+
+.section-blog .entry-content {
+    margin: 1.125em 0;
 }
 
 .blog-grid {
@@ -1268,7 +1324,6 @@ p.comment-awaiting-moderation {
 }
 
 .section-contact .entry-header {
-    margin-bottom: 1.125em;
     text-align: center;
 }
 
@@ -1285,6 +1340,44 @@ p.comment-awaiting-moderation {
     padding: 0;
 }
 
+.section-contact .entry-excerpt,
+.section-contact .entry-content {
+    color: #ffffff;
+    line-height: 1.6em;
+    margin: 1.125em 0;
+}
+
+.section-contact .continue-reading {
+    padding: 1.125em;
+    text-align: center;
+}
+
+.section-contact .continue-reading a {
+    border: 0.063em solid #ffffff;
+    color: #ffffff;
+    padding: 0.5em 1em;
+}
+
+.contact-grid {
+    margin: 1.250em 0;
+    padding: 0;
+}
+
+.contact-grid ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    float: left;
+}
+
+.contact-grid li {
+    list-style: none;
+    float: left;
+    margin: 0;
+    padding: 0.6em;
+    width: 50%;
+}
+
 
 .section-contact .wpcf7 label {
     color: #ffffff;
@@ -1294,13 +1387,25 @@ p.comment-awaiting-moderation {
 .section-contact input[type="email"],
 .section-contact input[type="url"] {
     border: 0.063em solid #cccccc;
-    padding: 0.6em;
-    width: 25em;
+    margin: 0.5em 0;
+    padding: 0.7em;
+    width: 100%;
 }
 
 .section-contact textarea {
-    padding: 0.6em;
-    width: 50%;
+    margin: 0.5em 0;
+    padding: 0.7em;
+    width: 100%;
+}
+
+.about-avatar {
+    padding: 1.125em;
+    text-align: center;
+}
+
+.about-avatar img {
+    border: 0.5em solid #cccccc;
+    border-radius: 50%;
 }
 
 /*

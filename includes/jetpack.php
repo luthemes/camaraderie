@@ -329,6 +329,17 @@ if (class_exists('Jetpack_Portfolio')) {
             'settings'  => 'contact_description',
             'priority'  => 15,
         ));
+
+        $wp_customize->add_setting('about_dropdown', array(
+            'sanitize_callback' => 'camaraderie_sanitize_dropdown',
+        ));
+        
+        $wp_customize->add_control('about_dropdown', array(
+            'type' => 'dropdown-pages',
+            'section' => 'contact_section',
+            'label' => __( 'About Dropdown', 'camaraderie'),
+            'description'   => __('This section is intended to be used only for about me and will need to create a page for this to work.', 'camaraderie'),
+        ));
         
         $wp_customize->add_setting('contact_dropdown', array(
             'sanitize_callback' => 'camaraderie_sanitize_dropdown',
@@ -338,7 +349,7 @@ if (class_exists('Jetpack_Portfolio')) {
             'type' => 'dropdown-pages',
             'section' => 'contact_section',
             'label' => __( 'Custom Dropdown Pages', 'camaraderie'),
-        ) );
+        ));
         
         $wp_customize->add_section('related_items', array(
             'title' => esc_html__('Related Items', 'camaraderie'),

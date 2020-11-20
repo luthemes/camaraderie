@@ -1,13 +1,13 @@
 <?php
 /*
 ================================================================================================
-Online Portfolio - footer.php
+Camaraderie - footer.php
 ================================================================================================
 This is the most generic template file in a WordPress theme and is one of the two required files 
 for a theme (the other header.php). The footer.php template file only displays the footer section
 of this theme. This also displays the navigation menu for Socal Navigation as well.
 
-@package        Online Portfolio WordPress Theme
+@package        Camaraderie WordPress Theme
 @copyright      Copyright (C) 2017. Benjamin Lu
 @license        GNU General Public License v2 or later (http://www.gnu.org/licenses/gpl-2.0.html)
 @author         Benjamin Lu (https://www.benjaminlu.net/)

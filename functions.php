@@ -139,6 +139,7 @@ function camaraderie_theme_setup() {
     ============================================================================================
     */
     add_image_size('camaraderie-jetpack-testimonial', 200, 200, true);
+    add_image_size('camaraderie-about-avatar', 200, 200, true);
     
     /*
     ============================================================================================
