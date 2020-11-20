@@ -1,6 +1,6 @@
 {
-  "name": "Camaraderie",
-  "version": "2.0.0",
+  "name": "camaraderie",
+  "version": "1.0.0",
   "description": "Camaraderie is a WordPress Starter Theme.",
   "main": "resources/assets/js/app.js",
   "repository": {
@@ -8,7 +8,7 @@
     "url": "git+https://github.com/benlumia007/camaraderie.git"
   },
   "author": "Benjamin Lu",
-  "license": "ISC",
+  "license": "GPL-2.0+",
   "bugs": {
     "url": "https://github.com/benlumia007/camaraderie/issues"
   },
