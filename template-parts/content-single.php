@@ -39,6 +39,6 @@ content. This content.php is the main content that will be displayed.
         ?>
     </div>
     <div class="entry-taxonomies">
-
+        <?php camaraderie_entry_taxonomies_setup(); ?>
     </div>
 </article>

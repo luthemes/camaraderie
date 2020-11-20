@@ -29,7 +29,4 @@ content. This content.php is the main content that will be displayed.
         ));
         ?>
     </div>
-    <div class="entry-taxonomies">
-
-    </div>
 </article>
