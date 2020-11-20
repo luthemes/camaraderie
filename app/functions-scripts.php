@@ -1,9 +1,9 @@
 <?php
 /**
- * Camaraderie ( functions-scripts.php )
+ * Initiator ( functions-scripts.php )
  *
- * @package     Camaraderie
- * @copyright   Copyright (C) 2017-2020. Benjamin Lu
+ * @package     Initiator
+ * @copyright   Copyright (C) 2019. Benjamin Lu
  * @license     GNU General Public License v2 or later ( https://www.gnu.org/licenses/gpl-2.0.html )
  * @author      Benjamin Lu ( https://benjlu.com )
  */
@@ -11,7 +11,7 @@
 /**
  * Define namespace
  */
-namespace Camaraderie;
+namespace Initiator;
 
 /**
  * Enqueue Scripts and Styles
@@ -27,9 +27,15 @@ add_action(
 	'wp_enqueue_scripts',
 	function() {
 		/**
-		 * This is the main stylesheet that is being enqueue. This should be used rather than using @import stylesheets.
+		 * Rather than enqueue the main stylesheet, we are going to enqueue sceen.css since all of the styles will
+		 * go here. We only need parse the information for the Theme in style.css so that it can be activated.
 		 */
-		wp_enqueue_style( 'camaraderie-style', get_stylesheet_uri(), array(), '1.0.0' );
+		wp_enqueue_style( 'initiator-screen', get_theme_file_uri( 'public/css/screen.css' ), array(), '1.0.0' );
+
+		/**
+		 * We will be enqueue the app.js file, which mainly be for the navigation only.
+		 */
+		wp_enqueue_script( 'initiator-app', get_theme_file_uri( 'public/js/app.js' ), array('jquery'), '1.0.0', true );
 
 		/**
 		 * This allows users to comment by clicking on reply so that it gets nested.
@@ -54,74 +60,13 @@ add_action(
 				{$value}
 			}
 		";
-		wp_add_inline_style( 'camaraderie-style', $custom_css );
+		wp_add_inline_style( 'initiator-style', $custom_css );
 	}
 );
-
-add_action(
-	'wp_enqueue_scripts', function() {
-		$header_image = esc_url( get_theme_mod( 'header_image', get_theme_file_uri( '/assets/images/header-image.jpg' ) ) );
-
-		$custom_css = "
-			.site-header.header-image {
-				background-attachment: scroll;
-				background: url( {$header_image} );
-				background-position: center;
-				background-repeat: no-repeat;
-				min-height: 5.5em;
-				padding: 10em 0;
-			}
-		";
-		wp_add_inline_style( 'camaraderie-style', $custom_css );
-	}
-);
-
-add_action(
-	'wp_enqueue_scripts', function() {
-		$custom_image = esc_url( get_theme_mod( 'custom_image', get_theme_file_uri( '/assets/images/header-image.jpg' ) ) );
-		$avatar       = esc_url( get_theme_mod( 'custom_avatar', get_theme_file_uri( '/assets/images/avatar.jpg' ) ) );
-	
-		$custom_css = "      
-			.site-header {
-				padding-top: 15em;
-				min-height: 100vh;
-			}  
-			.site-header.custom-image {
-				background: url({$custom_image});
-				background-attachment: fixed;
-				background-position: center;
-			}
-			
-			.site-avatar {
-				background: url({$avatar}) no-repeat;
-				border: 0.625em solid #cccccc;
-				border-radius: 50%;
-				height: 15.625em;
-				margin: 1em auto;
-				width: 15.625em;
-			}
-
-			@media screen and (max-width: 30em) {
-				.site-header {
-					padding-top: 10em;
-				}
-			}
-
-			@media screen and ( min-width: 30.063em ) and ( max-width: 37.5em ) {
-				.site-header {
-					padding-top: 15em;
-				}
-			}
-		";
-		wp_add_inline_style( 'camaraderie-style', $custom_css );
-	}
-);
-
-
 
 add_action(
 	'enqueue_block_editor_assets',
 	function() {
-		wp_enqueue_style( 'camaraderie-custom-fonts', get_theme_file_uri( '/vendor/benlumia007/backdrop-core/assets/fonts/custom-fonts.css' ), array(), '1.0.0' );
+		wp_enqueue_style( 'initiator-custom-fonts', get_theme_file_uri( '/vendor/benlumia007/backdrop-core/assets/fonts/custom-fonts.css' ), array(), '1.0.0' );
 	}
 );

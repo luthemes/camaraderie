@@ -1,9 +1,9 @@
 <?php
 /**
- * Camaraderie ( functions-setup.php )
+ * Initiator ( functions-setup.php )
  *
- * @package     Camaraderie
- * @copyright   Copyright (C) 2017-2020. Benjamin Lu
+ * @package     Initiator
+ * @copyright   Copyright (C) 2019. Benjamin Lu
  * @license     GNU General Public License v2 or later ( https://www.gnu.org/licenses/gpl-2.0.html )
  * @author      Benjamin Lu ( https://benjlu.com )
  */
@@ -11,7 +11,7 @@
 /**
  * Define namespace
  */
-namespace Camaraderie;
+namespace Initiator;
 
 /**
  * Setup Theme Support.
@@ -66,19 +66,19 @@ add_action( 'after_setup_theme', function() {
 		add_theme_support( 'post-thumbnails' );
 
 		/**
-		 * By add_image_size( 'camaraderie-small-thumbnails', 324, 324, true );. This should be used for content in the home for blogs.
+		 * By add_image_size( 'initiator-small-thumbnails', 324, 324, true );. This should be used for content in the home for blogs.
 		 */
-		add_image_size( 'camaraderie-small-thumbnails', 324, 324, true );
+		add_image_size( 'initiator-small-thumbnails', 324, 324, true );
 
 		/**
-		 * By add_image_size( 'camaraderie-medium-thumbnails', 810, 396, true );. This should be used for content that has sidebars.
+		 * By add_image_size( 'initiator-medium-thumbnails', 810, 396, true );. This should be used for content that has sidebars.
 		 */
-		add_image_size( 'camaraderie-medium-thumbnails', 810, 396, true );
+		add_image_size( 'initiator-medium-thumbnails', 810, 396, true );
 
 		/**
-		 * By add_image_size( 'camaraderie-large-thumbnails', 1170, 614, true );. This should be used for content that has no sidebars.
+		 * By add_image_size( 'initiator-large-thumbnails', 1170, 614, true );. This should be used for content that has no sidebars.
 		 */
-		add_image_size( 'camaraderie-large-thumbnails', 1170, 614, true );
+		add_image_size( 'initiator-large-thumbnails', 1170, 614, true );
 
 		/**
 		 * By add_theme_support( 'wp-block-styles' );. This should enable block styles on the frontend.
@@ -92,9 +92,14 @@ add_action( 'after_setup_theme', function() {
 		add_editor_style( 'assets/css/editor-styles.css' );
 
 		/**
+		 * By adding add_theme_support( 'align-wide' );. This will enable alignwide and alignfull.
+		 */
+		add_theme_support( 'align-wide' );
+
+		/**
 		 * Load theme translation.
 		 */
-		load_theme_textdomain( 'camaraderie', get_parent_theme_file_path( '/languages ' ) );
+		load_theme_textdomain( 'initiator', get_parent_theme_file_path( '/languages ' ) );
 	}
 );
 
@@ -120,8 +125,26 @@ add_action( 'after_setup_theme', function() {
 				'header-image' => array(
 					'url'           => '%s/assets/images/header-image.jpg',
 					'thumbnail_url' => '%s/assets/images/header-image.jpg',
-					'description'   => esc_html__( 'Header Image', 'camaraderie' ),
+					'description'   => esc_html__( 'Header Image', 'initiator' ),
 				),
 			)
 		);
+} );
+
+/**
+ * Add Support Custom Background
+ */
+add_action( 'after_setup_theme', function() {
+
+	add_theme_support( 'custom-background', [
+		'default-image'          => '',
+		'default-preset'         => 'default',
+		'default-position-x'     => 'left',
+		'default-position-y'     => 'top',
+		'default-size'           => 'auto',
+		'default-repeat'         => 'repeat',
+		'default-attachment'     => 'scroll',
+		'default-color'          => '',
+	] );
+
 } );

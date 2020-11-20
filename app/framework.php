@@ -15,21 +15,19 @@
  *
  * This will create an instance of the framework allowing you to initialize the theme.
  */
-$camaraderie = Benlumia007\Backdrop\Framework::get_instance();
+$initiator = Benlumia007\Backdrop\Framework::get_instance();
 
-$camaraderie->customize = new Camaraderie\Component\Customize();
-$camaraderie->admin     = new Camaraderie\Component\Admin();
-$camaraderie->layouts   = new Camaraderie\Component\ThemeLayout();
-
-$extras = array(
-	'secondary' => array(
-		'name'  => esc_html__( 'Secondary Sidebar', 'camaraderie' ),
-		'desc'  => esc_html__( 'All widgets defined here will display in pages.', 'camaraderie' ), 
-	),
-	'portfolio' => array(
-		'name' => esc_html__( 'Portfolio Sidebar', 'camaraderie' ),
-		'desc' => esc_html__( 'test', 'camaraderie'),
-	),
+$initiator->menus = new Benlumia007\Backdrop\Menu\Menu(
+	$args = [
+		'primary' => esc_html__( 'Primary Navigation', 'initiator' ),
+	]
 );
 
-$sidebars = new Benlumia007\Backdrop\Sidebar\Sidebar( $extras 	);
+$initiator->sidebars = new Benlumia007\Backdrop\Sidebar\Sidebar(
+	$args = [
+		'primary' => [
+			'name' => esc_html__( 'Primary Sidebar', 'initiator' ),
+			'desc' => esc_html__( 'Test', 'initiator' ),
+		],
+	]
+);

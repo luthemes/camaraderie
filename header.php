@@ -7,9 +7,6 @@
  * @license     GNU General Public License v2 or later ( https://www.gnu.org/licenses/gpl-2.0.html )
  * @author      Benjamin Lu ( https://benjlu.com )
  */
-
-use Benlumia007\Backdrop\Site\Site as site;
-use Benlumia007\Backdrop\View\View as menu;
 ?>
 <!doctype html>
 <html <?php language_attributes(); ?>>
@@ -20,15 +17,13 @@ use Benlumia007\Backdrop\View\View as menu;
 <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
+<?php wp_body_open(); ?>
 <div id="container" class="site-container">
-	<?php menu::display( 'menu', [ 'primary' ] ); ?>
-		<?php $is_front = ( is_front_page() && ! is_home() ); ?>
-		<header id="header" class="site-header <?php echo $is_front ? 'custom' : 'header'; ?>-image">
-		<?php if ( $is_front ) { ?>
-			<div class="site-avatar"></div>
-		<?php } ?>
+	<a class="skip-link screen-reader-text" href="#main"><?php esc_html_e( 'Skip to content', 'initiator' ) ?></a>
+	<header id="header" class="site-header">
 		<div class="site-branding">
-			<?php site::display( 'site-title' ); ?>
-			<?php site::display( 'site-description' ); ?>
+			<?php Benlumia007\Backdrop\Site\display_site_title(); ?>
+			<?php Benlumia007\Backdrop\Site\display_site_description(); ?>
 		</div>
-		</header>
+		<?php Benlumia007\Backdrop\View\display( 'menu', [ 'primary' ] ); ?>
+	</header>
