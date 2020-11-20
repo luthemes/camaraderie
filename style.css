@@ -6,8 +6,8 @@ Author URI: https://www.benjlu.com/
 Description: Camaraderie is a fully functional mobile friendly WordPress theme that allows you to create amazing things such as photography portfolio or just a regular portfolio to your needs. It also includes theme options that allows you to create a home page with a template that allows you to set as static page to show your amazing work. WooCommerce is now supported.
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Tags: one-column, two-columns, left-sidebar, right-sidebar, custom-background, custom-header, sticky-post, theme-options, threaded-comments, translation-ready, blog, photography, portfolio
-Version: 0.1.6
+Tags: one-column, two-columns, left-sidebar, right-sidebar, custom-background, custom-header, post-formats, sticky-post, theme-options, threaded-comments, translation-ready, blog, photography, portfolio
+Version: 0.1.7
 Text Domain: camaraderie
 
 This theme, like WordPress, is licensed under the GPL.
@@ -182,6 +182,7 @@ q {
 blockquote {
     font-size: 24px;
     font-weight: bold;
+    line-height: 1.6em;
     margin: 1.5em 2em 1.5em 2em;
     position: relative;
     text-align: center;
