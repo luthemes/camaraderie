@@ -69,6 +69,12 @@ Table of Content
     }
 }
 
+@media screen and (min-width: 73.125em) {
+    .section-portfolio .site-main {
+        margin: 0 auto;
+    }
+}
+
 /*
 ============================================================================================================================
  2.0 - Section (Blog)
@@ -136,6 +142,12 @@ Table of Content
     }
 }
 
+@media screen and (min-width: 73.125em) {
+    .section-blog .site-main {
+        margin: 0 auto;
+    }
+}
+
 /*
 ============================================================================================================================
  3.0 - Section (Jetpack Testimonial)
@@ -198,6 +210,12 @@ Table of Content
 @media screen and (min-height: 30.063em) and (max-width: 37.50em) {
     .section-testimonial .site-main {
         margin: 1.125em;
+    }
+}
+
+@media screen and (min-width: 73.125em) {
+    .section-testimonial .site-main {
+        margin: 0 auto;
     }
 }
 
@@ -267,5 +285,11 @@ Table of Content
 @media screen and (min-height: 30.063em) and (max-width: 37.50em) {
     .section-contact .site-main {
         margin: 1.125em;
+    }
+}
+
+@media screen and (min-width: 73.125em) {
+    .section-contact .site-main {
+        margin: 0 auto;
     }
 }

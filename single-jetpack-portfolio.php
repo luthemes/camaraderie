@@ -12,6 +12,7 @@ to work properly.
 @author         Benjamin Lu (https://benjlu.com/)
 ================================================================================================
 */
+$related_display = get_theme_mod('related_display');
 ?>
 <?php get_header(); ?>
     <section id="site-main" class="site-main">
@@ -27,4 +28,41 @@ to work properly.
             <?php } ?>
         </div>
     </section>
+    <?php if (isset($related_display) && $related_display != 0) { ?>
+            <div id="related-items" class="related-items">
+                <header class="entry-header">
+                    <h1 class="entry-title"><?php camaraderie_custom_related_title_setup(); ?></h1>
+                </header>
+                <div class="entry-content">
+                    <div class="jetpack-portfolio-grid">
+                        <?php $query = new WP_Query(array(
+                            'post_type'         => 'jetpack-portfolio', 
+                            'posts_per_page'    => 3, 
+                            'orderby'           => 'rand',
+                            'post__not_in'      => array(get_queried_object_id())
+                        )); 
+                        ?>
+                        <?php if ($query->have_posts()) { ?>
+                            <?php while ($query->have_posts()) { ?>
+                                <?php $query->the_post(); ?>
+                                    <?php if ( has_post_thumbnail() ) { ?>
+                                    <div class="jetpack-portfolio-items>
+                                        <a href="<?php echo esc_url(get_permalink()); ?>">
+                                            <?php the_post_thumbnail('camaraderie-portfolio-thumbnails'); ?>
+                                        </a>
+                                        <div class="wp-caption">
+                                            <div class="wp-caption-text">
+                                                <h3 class="jetpack-portfolio-title"><a href="<?php echo esc_url(get_permalink()); ?>"><?php the_title(); ?></a></h3>
+                                                <small><?php echo get_post(get_post_thumbnail_id())->post_content; ?></small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                <?php } ?>
+                            <?php } ?> 
+                            <?php wp_reset_postdata(); ?>
+                        <?php } ?>
+                    </div >
+                </div>
+            </div>
+            <?php } ?>
 <?php get_footer(); ?>

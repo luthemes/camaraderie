@@ -1,10 +1,10 @@
 Camaraderie WordPress Theme
-================================================================================================
+============================================================================================================================
 Contributor: benlumia007
 Tags: custom-background, custom-header, left-sidebar, right-sidebar
 Requres at least: 4.9.8
 Tested up to: 4.9.8
-Stable tag: 1.0
+Stable tag: 1.0.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -15,13 +15,13 @@ Camaraderie is a standard design with responsive capability.
 
 
 Installation
-================================================================================================
+============================================================================================================================
 1. In your admin panel, go to Appearance -> Themes and click the Add New button.
 2. Click Upload and Choose File, then select the theme's ZIP file. Click Install Now.
 3. Click Activate to use your new theme right away.
 
 Customizer
-================================================================================================
+============================================================================================================================
 1. In your admin panel, go to Appearance -> Customize
 2. List of different types that you can modify such as
    - Site Title Tagline
@@ -42,7 +42,7 @@ Customizer
    
 
 Jetpack Plugin (Required for Portfolio and Testimonial to work)
-================================================================================================
+============================================================================================================================
 This theme uses WordPress: Jetpack Plugin and must be enabled to use Content Post Type for the
 Portfolio section for this theme. To use this Portfolio, you can enable the feature in the settings
 Writing and enable Portfolio. This will then will give you Portfolio section on the dashboard
@@ -54,7 +54,7 @@ settings Writing and enable Testimonial. This will then will give you Testimonl 
 dashboard for you to add new Testimonials.
 
 Description
-================================================================================================
+============================================================================================================================
 Camaraderie is a fully functional mobile friendly WordPress theme that allows you to create amazing 
 things such as photography portfolio or just a regular portfolio to your needs. It also includes 
 theme options that allows you to create a home page with a template that allows you to set as static 
@@ -62,12 +62,36 @@ page to show your amazing work.
 
 
 Frequently Asked Questions
-================================================================================================
+============================================================================================================================
 Not Available.
 
 
 Changelog
-================================================================================================
+============================================================================================================================
+Version: 1.0.5
+- Add Theme URI
+- Add Author URI
+
+Version: 1.0.4
+- add new custom templates
+- added content for page.php, seems like I forgot about it
+
+Version: 1.0.3
+- style.css
+  - add styles for related Items
+- add related items to the jetpack portfolio single page
+
+Version: 1.0.2
+- readme.md
+  - Add Information
+- readme.txt
+  - Bump to 1.0.2
+  - Correct Images References
+
+Version: 1.0.1
+- sections.css
+  - media query missing for landing page.
+
 Version: 1.0
 - Major Update
 
@@ -140,12 +164,12 @@ Version: 0.0.1
 
 
 Upgrade Notice
-================================================================================================
+============================================================================================================================
 Not Available At the Moment
 
 
 Resources
-================================================================================================
+============================================================================================================================
 Font Awesome by Dave Gandy - http://fontawesome.io
 Font Awesome licensed under SIL OFL 1.1 Ã‚Â· CSS and Font licensed under MIT License
 Source: http://fortawesome.github.io/Font-Awesome/
@@ -160,14 +184,14 @@ Designer: Daniel Hernandez
 License: Sil Open Font License
 Source: https://fonts.google.com/specimen/Sanchez
 
-Author: Vojtech Okenka (https://www.pexels.com/u/vojtech-okenka-127162/)
-Source: https://www.pexels.com/photo/apple-business-computer-connection-392018/
-License: CC0 License (https://www.pexels.com/photo-license/)
+Author: Free Photos (https://pixabay.com/en/users/Free-Photos-242387/)
+Source: https://pixabay.com/en/hoodie-sweater-dark-night-evening-691449/
+License: CC0 License (https://pixabay.com/en/service/terms/#usage)
 
-Author: Tookapic (https://www.pexels.com/u/tookapic/)
-Source: https://www.pexels.com/photo/desk-notebook-pencil-notes-73988/
-License: CC0 License (https://www.pexels.com/photo-license/)
+Author: kaboompics (https://pixabay.com/en/users/kaboompics-1013994/)
+Source: https://pixabay.com/en/pencils-writing-write-blog-blogger-762555/
+License: CC0 License (https://pixabay.com/en/service/terms/#usage)
 
-Author: freestocks.org (https://www.pexels.com/u/freestocks/)
-Source: https://www.pexels.com/photo/silhouette-of-woman-during-sunset-194446/
-License: CC0 License (https://www.pexels.com/photo-license/)
+Author: Free Photos (https://pixabay.com/en/users/Free-Photos-242387/)
+Source: https://pixabay.com/en/computer-computer-code-screen-1209641/
+License: CC0 License (https://pixabay.com/en/service/terms/#usage)

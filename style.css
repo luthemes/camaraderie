@@ -3,12 +3,14 @@
 Camaraderie - style.css
 ============================================================================================================================
 Theme Name:     Camaraderie
+Theme URI:      https://benjlu.com/portfolio/camaraderie
 Author:         Benjamin Lu
+Author URI:     https://benjlu.com
 Description:    Camaraderie is a fully functional mobile friendly WordPress theme that allows you to create amazing portfolio for your needs. This theme also comes with a landing page when set as a static page to show your work in a creative format. Camaraderie also lets you set each page its own template allowing you to set each page differently with or without sidebars and of course full width pages.
 License:        GNU General Public License v2.0 or later
 License URI:    https://www.gnu.org/licenses/gpl-2.0.html
 Tags:           grid-layout, left-sidebar, one-column, right-sidebar, two-columns, custom-background, custom-header, featured-images, footer-widgets, post-formats, sticky-post, threaded-comments, blog, photography, portfolio
-Version:        1.0
+Version:        1.0.5
 Text Domain:    camaraderie
 ============================================================================================================================
 */
@@ -224,7 +226,11 @@ figure {
 .posts-navigation:before,
 .posts-navigation:after,
 .post-navigation:before,
-.post-navigation:after {
+.post-navigation:after,
+.related-items:before,
+.related-items:after,
+.portfolio-layout:before,
+.portfolio-layout:after {
     clear: both;
     content: "";
     display: table;
@@ -263,7 +269,7 @@ figure {
 ============================================================================================================================
 */
 .site-main {
-    margin: 1.125em auto;
+    margin: 1.125em auto 0 auto;
     max-width: 73.125em;
 }
 
@@ -759,7 +765,23 @@ a:hover {
     border: 0.063em solid #000000;
 }
 
+.related-items {
+    background: #ffffff;
+    border: 0.063em solid #cccccc;
+    margin: 0 auto 1.125em auto;
+    max-width: 73.125em;
+    padding: 1.125em;
+}
 
+.related-items .entry-header {
+    margin-bottom: 1.125em;
+    text-align: center;
+}
+
+.related-items .entry-header .entry-title {
+    margin: 0;
+    padding: 0;
+}
 /*
 ============================================================================================================================
 17.0 - Content (Comments)

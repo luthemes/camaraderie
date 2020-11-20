@@ -79,7 +79,7 @@ function camaraderie_output_jetpack_portfolio_grid() {
                     if (has_post_thumbnail()) { ?>
                         <div class="jetpack-portfolio-items">
                             <a href="<?php echo esc_url(get_permalink()); ?>">
-                                <?php the_post_thumbnail('camaraderie-jetpack-portfolio-thumbnails'); ?>
+                                <?php the_post_thumbnail('camaraderie-portfolio-thumbnails'); ?>
                             </a>
                             <div class="wp-caption">
                                 <div class="wp-caption-text">
@@ -96,7 +96,7 @@ function camaraderie_output_jetpack_portfolio_grid() {
         while (have_posts()) : the_post(); ?>
             <div class="jetpack-portfolio-items">
                 <a href="<?php echo esc_url(get_permalink()); ?>">
-                    <?php the_post_thumbnail('camaraderie-jetpack-portfolio-thumbnails'); ?>
+                    <?php the_post_thumbnail('camaraderie-portfolio-thumbnails'); ?>
                 </a>
                 <div class="wp-caption">
                     <div class="wp-caption-text">
