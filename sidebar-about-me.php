@@ -10,11 +10,15 @@ widget area in the customizer and widget area.
 @package        Camaraderie WordPress Theme
 @copyright      Copyright (C) 2017. Benjamin Lu
 @license        GNU General Public License v2 or later (http://www.gnu.org/licenses/gpl-2.0.html)
-@author         Benjamin Lu (https://www.benjaminlu.net/)
+@author         Benjamin Lu (https://www.benjlu.com/)
 ================================================================================================
 */
 ?>
 <div id="widget-area" class="widget-area">
+    <aside id="widget" class="widget widget_post_thumbnail">
+        <?php the_post_thumbnail('camaraderie-medium-avatar'); ?>
+        <div class="wp-caption"><div class="wp-caption-text"><?php the_post_thumbnail_caption(); ?></div></div>
+    </aside>
     <?php if (!dynamic_sidebar('about-sidebar')) { ?>
         <?php the_widget('WP_Widget_Categories', array(
             'dropdown'  => true,

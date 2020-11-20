@@ -1,8 +1,8 @@
 <?php
 /*
 ================================================================================================
-Camaraderie - portfolio.php
-Template Name: Portfolio
+Camaraderie - home-template.php
+Template Name: Home
 Template Post Type: page
 ================================================================================================
 This is the most generic template file in a WordPress theme and is one of the two required files 
@@ -13,7 +13,7 @@ navigation.
 @package        Camaraderie WordPress Theme
 @copyright      Copyright (C) 2017. Benjamin Lu
 @license        GNU General Public License v2 or later (http://www.gnu.org/licenses/gpl-2.0.html)
-@author         Benjamin Lu (https://www.benjaminlu.net/)
+@author         Benjamin Lu (https://www.benjlu.com/)
 ================================================================================================
 */
 $jetpack_portfolio_display = get_theme_mod('jetpack_portfolio_display');

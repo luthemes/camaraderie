@@ -10,7 +10,7 @@ of this theme. This also displays the navigation menu for Socal Navigation as we
 @package        Camaraderie WordPress Theme
 @copyright      Copyright (C) 2017. Benjamin Lu
 @license        GNU General Public License v2 or later (http://www.gnu.org/licenses/gpl-2.0.html)
-@author         Benjamin Lu (https://www.benjaminlu.net/)
+@author         Benjamin Lu (https://www.benjlu.com/)
 ================================================================================================
 */
 ?>
@@ -39,7 +39,7 @@ of this theme. This also displays the navigation menu for Socal Navigation as we
                 <?php printf(esc_html__('Proudly Powered by %s', 'camaraderie'), 'WordPress'); ?>
             </a>
             <br />
-			<?php printf(esc_html__( 'Theme: %1$s by %2$s.', 'camaraderie' ), 'Camaraderie', '<a href="https://www.benjaminlu.net/">Benjamin Lu</a>' );
+			<?php printf(esc_html__( 'Theme: %1$s by %2$s.', 'camaraderie' ), 'Camaraderie', '<a href="https://www.benjlu.com/">Benjamin Lu</a>' );
 			?>
 		</div><!-- .site-info -->
     </footer>

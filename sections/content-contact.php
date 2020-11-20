@@ -10,7 +10,7 @@ or index.
 @package        Camaraderie WordPress Theme
 @copyright      Copyright (C) 2017. Benjamin Lu
 @license        GNU General Public License v2 or later (http://www.gnu.org/licenses/gpl-2.0.html)
-@author         Benjamin Lu (https://www.benjaminlu.net/)
+@author         Benjamin Lu (https://www.benjlu.com/)
 ================================================================================================
 */
 $contact_dropdown = get_theme_mod('contact_dropdown');
@@ -32,7 +32,7 @@ $about_dropdown = get_theme_mod('about_dropdown');
                                     </header>
                                 <div class="entry-excerpt">
                                     <div class="about-avatar">
-                                        <?php the_post_thumbnail('camaraderie-about-avatar'); ?>
+                                        <?php the_post_thumbnail('camaraderie-small-avatar'); ?>
                                     </div>
                                     <?php the_excerpt(); ?>
                                     <?php if (!is_singular() || is_front_page()) { ?>
