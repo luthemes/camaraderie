@@ -1,7 +1,7 @@
 <?php
 /*
 ================================================================================================
-Camaraderie - index.php
+Camaraderie - page.php
 ================================================================================================
 This is the most generic template file in a WordPress theme and is one of the two required files 
 for a theme (the other being style.css). The index.php template file is flexible. It can be used to 

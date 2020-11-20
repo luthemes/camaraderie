@@ -11,6 +11,13 @@ plugin. In this case, the only feature is supported in this theme is portfolio f
 @copyright      Copyright (C) 2017. Benjamin Lu
 @license        GNU General Public License v2 or later (http://www.gnu.org/licenses/gpl-2.0.html)
 @author         Benjamin Lu (https://www.lumiathemes.com/)
+
+	if (is_tax() && get_the_archive_description()) {
+		echo $before . get_the_archive_description() . $after;
+	} else if (isset($portfolio_description) && '' != $portfolio_description) {
+		$content = convert_chars(convert_smilies(wptexturize(stripslashes(wp_filter_post_kses(addslashes($portfolio_description))))));
+		echo $before . $content . $after;
+	}
 ================================================================================================
 */
 
@@ -63,7 +70,7 @@ function camaraderie_jetpack_portfolio_content($before = '', $after = '') {
 	}
 }
 
-function camaraderie_custom_blog_title_setup() {
+function camaraderie_custom_blog_title_setup($before = '', $after = '') {
     $blog_title = get_theme_mod('blog_title', __('Blog', 'camaraderie'));
     $title = '';
     
@@ -73,7 +80,7 @@ function camaraderie_custom_blog_title_setup() {
     echo $before . $title . $after;
 }
 
-function camaraderie_custom_blog_description_setup() {
+function camaraderie_custom_blog_description_setup($before = '', $after = '') {
     $blog_description = get_theme_mod('blog_description', __('Latest News', 'camaraderie'));
     
     if (isset($blog_description) && '' != $blog_description) {
@@ -82,8 +89,8 @@ function camaraderie_custom_blog_description_setup() {
     echo $before . $content . $after;
 }
 
-function camaraderie_custom_testimonial_title_setup() {
-    $blog_title = get_theme_mod('testimonial_title', __('Blog', 'camaraderie'));
+function camaraderie_custom_testimonial_title_setup($before = '', $after = '') {
+    $blog_title = get_theme_mod('testimonial_title', __('Testimonals', 'camaraderie'));
     $title = '';
     
     if (isset($blog_title) && '' != $blog_title) {
@@ -92,8 +99,8 @@ function camaraderie_custom_testimonial_title_setup() {
     echo $before . $title . $after;
 }
 
-function camaraderie_custom_testimonial_description_setup() {
-    $testimonial_description = get_theme_mod('testimonial_description', __('Latest News', 'camaraderie'));
+function camaraderie_custom_testimonial_description_setup($before = '', $after = '') {
+    $testimonial_description = get_theme_mod('testimonial_description', __('What People Say About Us.', 'camaraderie'));
     
     if (isset($testimonial_description) && '' != $testimonial_description) {
         $content = convert_chars(convert_smilies(wptexturize(stripslashes(wp_filter_post_kses(addslashes($testimonial_description))))));
@@ -101,13 +108,23 @@ function camaraderie_custom_testimonial_description_setup() {
     echo $before . $content . $after;
 }
 
-function camaraderie_custom_contact_description_setup() {
-    $contact_description = get_theme_mod('contact_description', __('Latest News', 'camaraderie'));
+function camaraderie_custom_contact_description_setup($before = '', $after = '') {
+    $contact_description = get_theme_mod('contact_description', __('Questions or Hire Me', 'camaraderie'));
     
     if (isset($contact_description) && '' != $contact_description) {
         $content = convert_chars(convert_smilies(wptexturize(stripslashes(wp_filter_post_kses(addslashes($contact_description))))));
     }
     echo $before . $content . $after;
+}
+
+function camaraderie_custom_related_title_setup($before = '', $after = '') {
+    $related_title = get_theme_mod('related_title', __('Related Items', 'camaraderie'));
+    $title = '';
+    
+    if (isset($related_title) && '' != $related_title) {
+        $title = esc_html($related_title);
+    }
+    echo $before . $title . $after;
 }
 
 /*
@@ -128,6 +145,7 @@ if (class_exists('Jetpack_Portfolio')) {
         $wp_customize->get_section('jetpack_portfolio')->title = esc_html__('Portfolio Section', 'camaraderie');
         $wp_customize->get_section('jetpack_portfolio')->priority = 5;
         $wp_customize->get_control('jetpack_portfolio_title')->priority = 20;
+        $wp_customize->get_setting('jetpack_portfolio_content')->default = esc_html('Some of my recent works.', 'camaraderie');
         $wp_customize->get_control('jetpack_portfolio_content')->priority = 25;
         
         $wp_customize->add_setting('jetpack_portfolio_display', array(
@@ -322,6 +340,37 @@ if (class_exists('Jetpack_Portfolio')) {
             'label' => __( 'Custom Dropdown Pages', 'camaraderie'),
         ) );
         
+        $wp_customize->add_section('related_items', array(
+            'title' => esc_html__('Related Items', 'camaraderie'),
+            'priority'  => 10,
+        ));
+
+        $wp_customize->add_setting('related_display', array(
+            'sanitize_callback' => 'camaraderie_sanitize_checkbox',
+        ));
+
+        $wp_customize->add_control('related_display', array(
+            'label'     => esc_html__('Enable Related Items', 'camaraderie'),
+            'description'   => esc_html__('Related Items when enabled, will appear at the bottom page when using Jetpack Portfolio.', 'camaraderie'),
+            'type'      => 'checkbox',
+            'section'   => 'related_items',
+            'settings'  => 'related_display',
+            'priority'  => 5,
+        ));
+        
+        $wp_customize->add_setting('related_title', array(
+            'default'   => esc_html__('Related Items', 'camaraderie'),
+            'sanitize_callback' => 'sanitize_text_field'
+        ));
+        
+        $wp_customize->add_control('related_title', array(
+            'label'     => esc_html__('Related Title', 'camaraderie'),
+            'type'      => 'text',
+            'section'   => 'related_items',
+            'settings'  => 'related_title',
+            'priority'  => 10,
+        ));
+
     }
     add_action('customize_register', 'camaraderie_jetpack_customize_register_setup', 11);
 }

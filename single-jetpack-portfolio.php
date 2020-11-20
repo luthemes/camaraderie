@@ -1,14 +1,11 @@
 <?php
 /*
 ================================================================================================
-Camaraderie - single-portfolio.php
+Camaraderie - single-jetpack-portfolio.php
 ================================================================================================
-This is the most generic template file in a WordPress theme and is one of the two required files 
-for a theme (the other style.css). The index.php template file is flexible. It can be used to 
-include all references to the header, content, widget, footer and any other pages created in 
-WordPress. Or it can be divided into modular template files, each taking on part of the workload. 
-If you do not provide other template files, WordPress may have default files or functions to 
-perform their jobs.
+This is the most generic template file in a WordPress theme and is one of the required file for 
+a theme. This is single-portfolio.php is controlled by Jetpack Plugin for Custom Post Type for it
+to work properly. 
 
 @package        Camaraderie WordPress Theme
 @copyright      Copyright (C) 2017. Benjamin Lu
@@ -16,24 +13,15 @@ perform their jobs.
 @author         Benjamin Lu (https://www.benjaminlu.net/)
 ================================================================================================
 */
+$related_display = get_theme_mod('related_display');
 ?>
 <?php get_header(); ?>
     <section id="site-main" class="site-main">
         <div id="portfolio-layout" class="<?php echo esc_attr(get_theme_mod('portfolio_layout', 'no-sidebar')); ?>">
             <div id="content-area" class="content-area">
-                <?php if (have_posts()) : ?>
-                    <?php while (have_posts()) : the_post(); ?>
-                        <?php get_template_part('jetpack-portfolio/content', 'jetpack-portfolio'); ?>
+                <?php while (have_posts()) : the_post(); ?>
+                    <?php get_template_part('jetpack-portfolio/content', 'jetpack-portfolio'); ?>
                 <?php endwhile; ?>
-                    <?php 
-                        the_post_navigation(array(
-                            'next_text' => '<span class="post-next" aria-hiddent="true">' . __('Next', 'camaraderie') . '</span>' . '<span class="post-title">%title</span>',
-                            'prev_text' => '<span class="post-previous" aria-hidden="true">' . __( 'Previous', 'camaraderie' ) . '</span> ' . '<span class="post-title">%title</span>',
-                        ));
-                    ?>
-                <?php else : ?>
-                        <?php get_template_part('template-parts/content', 'none'); ?>
-                <?php endif; ?>
             </div>
             <?php if ('left-sidebar' == get_theme_mod('portfolio_layout')) { ?>
                 <?php get_sidebar('portfolio'); ?>
@@ -42,5 +30,40 @@ perform their jobs.
                 <?php get_sidebar('portfolio'); ?>
             <?php } ?>
         </div>
+        <?php if (isset($related_display) && $related_display != 0) { ?>
+            <div id="related-items" class="related-items">
+                <header class="entry-header">
+                    <h1 class="entry-title"><?php camaraderie_custom_related_title_setup(); ?></h1>
+                </header>
+                <div class="entry-content">
+                    <ul class="jetpack-portfolio-grid">
+                        <?php $query = new WP_Query(array(
+                            'post_type'         => 'jetpack-portfolio', 
+                            'posts_per_page'    => 3, 
+                            'orderby'           => 'rand',
+                            'post__not_in'      => array(get_queried_object_id())
+                        )); 
+                        ?>
+                        <?php if ($query->have_posts()) { ?>
+                            <?php while ($query->have_posts()) { ?>
+                                <?php $query->the_post(); ?>
+                                   <?php if ( has_post_thumbnail() ) { ?>
+                                    <li>
+                                        <a href="<?php echo esc_url(get_permalink()); ?>">
+                                            <?php the_post_thumbnail('camaraderie-large-thumbnails'); ?>
+                                        </a>
+                                    <div class="jetpack-portfolio-caption">
+                                        <h3 class="jetpack-portfolio-caption-title"><a href="<?php echo esc_url(get_permalink()); ?>"><?php the_title(); ?></a></h3>
+                                        <?php the_terms($post->ID, 'jetpack-portfolio-type'); ?>
+                                    </div>
+                                    </li>
+                                <?php } ?>
+                            <?php } ?> 
+                            <?php wp_reset_postdata(); ?>
+                        <?php } ?>
+                    </ul>
+                </div>
+            </div>
+        <?php } ?>
     </section>
 <?php get_footer(); ?>

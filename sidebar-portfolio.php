@@ -4,8 +4,8 @@
 Camaraderie - sidebar-portfolio.php
 ================================================================================================
 This is the most generic template file in a WordPress theme and is one of the requirements to 
-display widgets on the bottom of the page. This is the footer sidebar that is assigned in the 
-widget area in the customizer and widget area.
+display widgets on the left or right of the page. This is the jetpack portfolio's sidebar that is 
+assigned in the widget area in the customizer and widget area.
 
 @package        Camaraderie WordPress Theme
 @copyright      Copyright (C) 2017. Benjamin Lu
@@ -15,11 +15,6 @@ widget area in the customizer and widget area.
 */
 ?>
 <div id="widget-area" class="widget-area">
-    <?php if (has_post_thumbnail()) { ?>
-        <aside id="widget" class="widget widget_text">
-            <?php the_post_thumbnail('camaraderie_large_thumbnails'); ?>
-        </aside>
-    <?php } ?>
     <?php if (!dynamic_sidebar('portfolio-sidebar')) { ?>
         <?php the_widget('WP_Widget_Categories', array(
             'dropdown'  => true,

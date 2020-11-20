@@ -3,8 +3,8 @@
 Contributor: benlumia007
 Tags: custom-background, custom-header, left-sidebar, right-sidebar
 Requres at least: 4.5
-Tested up to: 4.8.1
-Stable tag: 0.0.1
+Tested up to: 4.8.3
+Stable tag: 0.0.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -65,6 +65,18 @@ Not Available.
 
 Changelog
 ================================================================================================
+Version: 0.0.5
+- Fixed Jetpack Portfolio 
+- Added Recent Items to support Jetpack Portfolio
+- Minor Changes and Bugs to CSS classes
+
+Version: 0.0.4
+- Fixed Bugs
+
+Version: 0.0.3
+- Minor CSS Change
+- Fixed Bugs
+
 Version: 0.0.2
 - Added Jetpack Testimonial
 - Added Jetpack Portfolio

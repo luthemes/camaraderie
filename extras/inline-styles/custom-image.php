@@ -17,7 +17,7 @@ function camaraderie_inline_styles_custom_image_setup() {
         $avatar = esc_url(get_theme_mod('custom_avatar', get_template_directory_uri() . '/images/avatar.jpg'));
         $custom_css = "
             .site-header {
-                min-height: 95vh;
+                min-height: 100vh;
             }
             
             .site-header.custom-image {

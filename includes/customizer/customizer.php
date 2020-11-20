@@ -68,6 +68,7 @@ function camaraderie_customize_register_setup($wp_customize) {
         'section'   => 'custom_avatar',
         'settings'  => 'custom_avatar',
     )));
+    
 }
 add_action('customize_register', 'camaraderie_customize_register_setup');
 

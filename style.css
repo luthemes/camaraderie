@@ -7,7 +7,7 @@ Description: Camaraderie is a fully functional mobile friendly WordPress theme t
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: one-column, two-columns, left-sidebar, right-sidebar, custom-background, custom-header, sticky-post, theme-options, threaded-comments, translation-ready, blog, photography, portfolio
-Version: 0.0.4
+Version: 0.0.5
 Text Domain: camaraderie
 
 This theme, like WordPress, is licensed under the GPL.
@@ -244,6 +244,8 @@ input[type="submit"]:hover {
 .content-area:after,
 .entry-content:before,
 .entry-content:after,
+.widget-area:before,
+.widget-area:after, 
 .grid-column-two:before,
 .grid-column-two:after,
 .section-portfolio:before,
@@ -259,7 +261,15 @@ input[type="submit"]:hover {
 .post-navigation:before,
 .post-navigation:after,
 .posts-navigation:before,
-.posts-navigation:after {
+.posts-navigation:after,
+.related-items:before, 
+.related-items:after,
+.no-sidebar:before,
+.no-sidebar:after,
+.right-sidebar:before,
+.right-sidebar:after,
+.left-sidebar:before,
+.left-sidebar:after {
     clear: both;
     content: "";
     display: table;:
@@ -1120,6 +1130,20 @@ p.comment-awaiting-moderation {
     padding: 0;
 }
 
+.related-items {
+    background: #ffffff;
+    border: 0.063em solid #cccccc;
+    padding: 1.125em;
+}
+
+.related-items .entry-header {
+    text-align: center;
+}
+
+.related-items .entry-header .entry-title {
+
+}
+
 /*
 ================================================================================================
 22.0 - Section Area (Blog Section)
@@ -1173,7 +1197,7 @@ p.comment-awaiting-moderation {
 ================================================================================================
 */
 .section-testimonial {
-    background: #eeeeee;
+    background: #ffffff;
 }
 
 .section-testimonial .entry-header {
@@ -1352,9 +1376,10 @@ p.comment-awaiting-moderation {
 }
 
 .widget select {
+    font-family: 'Merriweather', serif;
     margin: 0.625em 0;
-    padding: 0.313em 0.313em;
-    max-width: 100%;
+    padding: 0.5em;
+    width: 100%;
 }
 
 .widget-title {
@@ -1540,6 +1565,14 @@ p.comment-awaiting-moderation {
     .right-sidebar .widget-area {
         float: none;
         margin-top: 1.125em;
+        width: 100%;
+    }
+    
+    .jetpack-portfolio-grid li {
+        list-style: none;
+        float: none;
+        margin: 0;
+        padding: 0.5em;
         width: 100%;
     }
 }
