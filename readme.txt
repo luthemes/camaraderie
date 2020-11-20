@@ -68,6 +68,17 @@ Not Available.
 
 Changelog
 ================================================================================================
+Version: 0.1.1 
+- Fixed and Modify Contact Form 7 CSS in style.css
+
+Version: 0.1.0
+- Minor Changes to CSS
+- Fixed About Me Page and Sidebar
+- Changed portfolio.php to template-home.php
+
+Version: 0.0.9 
+- Minor Changes to CSS
+
 Version: 0.0.8 
 - Fixed and Modified caption divs
 - Bump Version to 0.0.8
