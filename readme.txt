@@ -4,7 +4,7 @@ Contributor: benlumia007
 Tags: custom-background, custom-header, left-sidebar, right-sidebar
 Requres at least: 4.5
 Tested up to: 4.9.1
-Stable tag: 0.0.7
+Stable tag: 0.1.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -68,6 +68,9 @@ Not Available.
 
 Changelog
 ================================================================================================
+Version: 0.1.12
+- Fixed Layouts for Portfolio in different media queries.
+
 Version: 0.1.1 
 - Fixed and Modify Contact Form 7 CSS in style.css
 
