@@ -32,7 +32,7 @@ $about_dropdown = get_theme_mod('about_dropdown');
                                     </header>
                                 <div class="entry-excerpt">
                                     <div class="about-avatar">
-                                        <?php the_post_thumbnail('camaraderie_about_avatar'); ?>
+                                        <?php the_post_thumbnail('camaraderie-about-avatar'); ?>
                                     </div>
                                     <?php the_excerpt(); ?>
                                     <?php if (!is_singular() || is_front_page()) { ?>

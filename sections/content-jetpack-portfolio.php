@@ -33,9 +33,11 @@ or index.
                                 <a href="<?php echo esc_url(get_permalink()); ?>">
                                     <?php the_post_thumbnail('camaraderie-large-thumbnails'); ?>
                                 </a>
-                                <div class="jetpack-portfolio-caption">
-                                    <h3 class="jetpack-portfolio-caption-title"><a href="<?php echo esc_url(get_permalink()); ?>"><?php the_title(); ?></a></h3>
-                                    <?php the_terms($post->ID, 'jetpack-portfolio-type'); ?>
+                                <div class="wp-caption">
+                                    <div class="wp-caption-text">
+                                        <h3 class="jetpack-portfolio-title"><a href="<?php echo esc_url(get_permalink()); ?>"><?php the_title(); ?></a></h3>
+                                        <small><?php the_terms($post->ID, 'jetpack-portfolio-type'); ?></small>
+                                    </div>
                                 </div>
                         </li>
                     <?php } ?>

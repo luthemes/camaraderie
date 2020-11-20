@@ -4,7 +4,7 @@ Contributor: benlumia007
 Tags: custom-background, custom-header, left-sidebar, right-sidebar
 Requres at least: 4.5
 Tested up to: 4.8.3
-Stable tag: 0.0.6
+Stable tag: 0.0.7
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -55,7 +55,10 @@ dashboard for you to add new Testimonials.
 
 Description
 ================================================================================================
-Camaraderie is a responsive WordPress theme.
+Camaraderie is a fully functional mobile friendly WordPress theme that allows you to create amazing 
+things such as photography portfolio or just a regular portfolio to your needs. It also includes 
+theme options that allows you to create a home page with a template that allows you to set as static 
+page to show your amazing work.
 
 
 Frequently Asked Questions
@@ -65,6 +68,10 @@ Not Available.
 
 Changelog
 ================================================================================================
+Version: 0.0.7
+- Minor CSS Change
+- Add WooCommerce Feature
+
 Version: 0.0.6
 - Fixed About Section
 - Modify Contact Section

@@ -138,8 +138,8 @@ function camaraderie_theme_setup() {
     following files. content.php
     ============================================================================================
     */
-    add_image_size('camaraderie-jetpack-testimonial', 200, 200, true);
-    add_image_size('camaraderie-about-avatar', 200, 200, true);
+    add_image_size('camaraderie-jetpack-testimonial', 150, 150, true);
+    add_image_size('camaraderie-about-avatar', 150, 150, true);
     
     /*
     ============================================================================================
@@ -148,14 +148,6 @@ function camaraderie_theme_setup() {
     ============================================================================================
     */
     add_post_type_support('page', 'excerpt');
-    
-    /*
-    ============================================================================================
-    load_theme_textdomain(); allows the WordPress Core to take care of all transations rather than
-    using a .pot file. A pot file is not required, but recommended.
-    ============================================================================================
-    */
-    load_theme_textdomain('camaraderie');
 }
 add_action('after_setup_theme', 'camaraderie_theme_setup');
 
@@ -331,3 +323,4 @@ require_once(get_template_directory() . '/includes/customizer/customizer.php');
 require_once(get_template_directory() . '/includes/extras.php');
 require_once(get_template_directory() . '/includes/jetpack.php');
 require_once(get_template_directory() . '/includes/template-tags.php');
+require_once(get_template_directory() . '/includes/woocommerce.php');

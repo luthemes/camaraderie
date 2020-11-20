@@ -3,11 +3,11 @@ Theme Name:  Camaraderie
 Theme URI: https://www.benjaminlu.net/portfolio/camaraderie/
 Author: Benjamin Lu
 Author URI: https://www.benjaminlu.net/
-Description: Camaraderie is a fully functional mobile friendly WordPress theme that allows you to create amazing things such as photography portfolio or just a regular portfolio to your needs. It also includes theme options that allows you to create a home page with a template that allows you to set as static page to show your amazing work.
+Description: Camaraderie is a fully functional mobile friendly WordPress theme that allows you to create amazing things such as photography portfolio or just a regular portfolio to your needs. It also includes theme options that allows you to create a home page with a template that allows you to set as static page to show your amazing work. WooCommerce is now supported.
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: one-column, two-columns, left-sidebar, right-sidebar, custom-background, custom-header, sticky-post, theme-options, threaded-comments, translation-ready, blog, photography, portfolio
-Version: 0.0.6
+Version: 0.0.7
 Text Domain: camaraderie
 
 This theme, like WordPress, is licensed under the GPL.
@@ -885,7 +885,7 @@ a:hover {
 */
 .comments-area {
     background: #ffffff;
-    border: 1px solid #cccccc;
+    border: 0.063em solid #cccccc;
     margin: 0.938em 0;
     padding: 1.125em;    
 }
@@ -1015,12 +1015,12 @@ ol.children {
 .comment-awaiting-moderation {
     background: #84BD68;
     color: #ffffff;
-    font-size: 12px;
-    padding: 3px 4px;
+    font-size: 0.750em;
+    padding: 0.188em 0.250em;
 }
 
 .form-allowed-tags {
-    font-size: 13px;
+    font-size: 0.813em;
     width: 600px;
 }
 
@@ -1034,6 +1034,8 @@ ol.children {
 
 .comment-form .comment-form-comment textarea {
     border: 0.063em solid #cccccc;
+    font-family: 'Merriewather', serif;
+    font-size: 1em;
     min-height: 12.375em;
     width: 100%;
 }
@@ -1042,6 +1044,8 @@ ol.children {
 .comment-form .comment-form-email input[type="email"],
 .comment-form .comment-form-url input[type="url"] {
     border: 0.063em solid #cccccc;
+    font-family: 'Merriewather', serif;
+    font-size: 1em;
     padding: 0.6em;
     width: 20em;
 }
@@ -1051,13 +1055,13 @@ ol.children {
 }
 
 p.comment-awaiting-moderation {
-    margin: 2px 0 0 65px;
-    padding: 3px 5px;
+    margin: 0.125em 0 0 4.063em;
+    padding: 0.188em 0.313em;
 }
 
 .comment-subscription-form .subscribe-label {
     display: inline !important;
-    font-size: 14px;
+    font-size: 0.875em;
 }
 
 
@@ -1138,16 +1142,8 @@ p.comment-awaiting-moderation {
     width: 33.33333333333333%;
 }
 
-.jetpack-portfolio-grid .jetpack-portfolio-caption {
-    background: #eeeeee;
-    font-size: 0.875em;
-    margin: 0 0 1.125em 0;;
-    padding: 0.313em;
-    text-align: center;
-}
-
-.jetpack-portfolio-grid .jetpack-portfolio-caption-title {
-    margin: 0 0 0.2em 0;
+.jetpack-portfolio-grid .jetpack-portfolio-title {
+    margin: 0;
     padding: 0;
 }
 
@@ -1257,7 +1253,6 @@ p.comment-awaiting-moderation {
 }
 
 .section-testimonial .entry-header {
-    margin-bottom: 1.125em;
     text-align: center;
 }
 
@@ -1268,9 +1263,12 @@ p.comment-awaiting-moderation {
 }
 
 .section-testimonial .entry-header .entry-description {
-    color: #999999;
-    margin: 0;
-    padding: 0;
+    margin: 1.125em 0;
+}
+
+.section-testimonial .entry-content {
+    color: #000000;
+    margin: 1.125em 0;
 }
 
 .jetpack-testimonial-grid {
@@ -1311,7 +1309,7 @@ p.comment-awaiting-moderation {
 
 .featured-testimonials img {
     border-radius: 50%;
-    border: 0.500em solid #cccccc;
+    border: 0.5em solid #cccccc;
 }
 
 /*
@@ -1606,10 +1604,8 @@ p.comment-awaiting-moderation {
 .wp-caption .wp-caption-text,
 .gallery-caption {
     background: #eeeeee;
-    color: #000000;
-    font-style: italic;
-    margin-top: 0.063em;
-    padding: 8px;`
+    padding: 0.313em;
+    text-align: center;
 }
 
 .wp-caption p {
