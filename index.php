@@ -1,24 +1,34 @@
-<?php 
-/*
-============================================================================================================================
-Camaraderie - index.php
-============================================================================================================================
-The index.php template file is flexible, it can be used to include all the references for the header, content, aside, and 
-footer and other pages created in WordPress. It can also be divided into modular template files, each taking on part of the 
-workload. If you wish to not provide other template files, the WordPress hierarchy may have default template files or 
-functions to peform their jobs.
+<?php
+/**
+ * Initiator ( index.php )
+ *
+ * The (index.php) template file is very flexible, it can be used to include all the references for the header, content,
+ * aside, footer, and other pages created in WordPress. The (index.php) can also be divided into modular template files,
+ * each taking on part of the workload. If you wish to not provide any other template files, the WordPress hierarchy may
+ * have default template files or functions to perform their jobs.
+ *
+ * @package     Initiator
+ * @copyright   Copyright (C) 2019. Benjamin Lu
+ * @license     GNU General Public License v2 or later ( https://www.gnu.org/licenses/gpl-2.0.html )
+ * @author      Benjamin Lu ( https://benjlu.com )
+ */
 
-@package        Camaraderie WordPress Theme
-@copyright      Copyright (C) 2017-2018. Benjamin Lu
-@license        GNU General Public License v2 or later (https://www.gnu.org/licenses/gpl-2.0.html)
-@author         Benjamin Lu (https://benjlu.com)
-============================================================================================================================
-*/
+use Benlumia007\Backdrop\View\View as sidebar;
 ?>
 <?php get_header(); ?>
-    <div class="site-main">
-        <div class="content-area">
-            <?php camaraderie_display_content_post_format(); ?>
-        </div>
-    </div>
+	<section id="content" class="site-content">
+		<main id="main" class="content-area">
+			<?php
+				if ( have_posts() ) :
+					while ( have_posts() ) : the_post();
+						get_template_part( 'views/content/content', get_post_format() );
+					endwhile;
+					the_posts_pagination();
+				else :
+						get_template_part( 'views/content/content', 'none' );
+				endif;
+			?>
+		</main>
+		<?php sidebar::display( 'sidebar', [ 'primary' ] ); ?>
+	</section>
 <?php get_footer(); ?>

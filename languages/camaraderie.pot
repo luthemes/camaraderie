@@ -1,0 +1,392 @@
+# Copyright (C) 2020 Benjamin Lu
+# This file is distributed under the GNU General Public License v2.0 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Camaraderie 1.1.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/camaraderie\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2020-02-12T22:49:52+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.4.0\n"
+"X-Domain: camaraderie\n"
+
+#. Theme Name of the theme
+msgid "Camaraderie"
+msgstr ""
+
+#. Theme URI of the theme
+msgid "https://benjlu.com/portfolio/camaraderie"
+msgstr ""
+
+#. Description of the theme
+msgid "Camaraderie is a starter theme that uses backdrop-core that automatically loads your theme with all the features needed."
+msgstr ""
+
+#. Author of the theme
+msgid "Benjamin Lu"
+msgstr ""
+
+#. Author URI of the theme
+msgid "https://benjlu.com"
+msgstr ""
+
+#: app/Component/Admin.php:48
+msgid "Introduction"
+msgstr ""
+
+#: app/Component/Admin.php:88
+msgid "Theme Info"
+msgstr ""
+
+#: app/Component/Admin.php:90
+msgid "Theme Name: "
+msgstr ""
+
+#: app/Component/Admin.php:91
+msgid "Theme Version: "
+msgstr ""
+
+#: app/Component/Admin.php:93
+msgid "Welcome"
+msgstr ""
+
+#: app/Component/Admin.php:94
+msgid "Hope you are enjoying the theme. "
+msgstr ""
+
+#: app/Component/Admin.php:95
+msgid "Recommended Plugins"
+msgstr ""
+
+#: app/Component/Admin.php:97
+msgid "Contact Form 7"
+msgstr ""
+
+#: app/Component/Admin.php:98
+msgid "Backdrop Post Types"
+msgstr ""
+
+#: app/Component/Admin.php:99
+msgid "Regenerate Thumbnails"
+msgstr ""
+
+#: app/Component/Customize.php:55
+msgid "Custom Header"
+msgstr ""
+
+#: app/Component/Customize.php:61
+msgid "Custom Portfolio"
+msgstr ""
+
+#: app/Component/Customize.php:67
+msgid "Custom Blog"
+msgstr ""
+
+#: app/Component/Customize.php:73
+msgid "Custom Contact"
+msgstr ""
+
+#: app/Component/Customize.php:105
+#: views/section/home-portfolio.php:14
+msgid "Portfolio"
+msgstr ""
+
+#: app/Component/Customize.php:110
+#: app/Component/Customize.php:137
+msgid "Some of my recent works!"
+msgstr ""
+
+#: app/Component/Customize.php:132
+#: views/section/home-blog.php:14
+msgid "Blog"
+msgstr ""
+
+#: app/Component/Customize.php:163
+msgid "Avatar Image"
+msgstr ""
+
+#: app/Component/Customize.php:164
+msgid "Please set avatar image to 200 by 200 to fit properly"
+msgstr ""
+
+#: app/Component/Customize.php:171
+msgid "Enable Portfolio"
+msgstr ""
+
+#: app/Component/Customize.php:178
+msgid "Enable Contact"
+msgstr ""
+
+#: app/Component/Customize.php:185
+#: app/Component/Customize.php:224
+msgid "Background Color"
+msgstr ""
+
+#: app/Component/Customize.php:191
+#: app/Component/Customize.php:230
+msgid "Title"
+msgstr ""
+
+#: app/Component/Customize.php:198
+#: app/Component/Customize.php:237
+msgid "Description"
+msgstr ""
+
+#: app/Component/Customize.php:205
+msgid "Number of Items"
+msgstr ""
+
+#: app/Component/Customize.php:217
+msgid "Enable Blog"
+msgstr ""
+
+#: app/Component/Customize.php:246
+msgid "Custom Dropdown Pages"
+msgstr ""
+
+#: app/Component/ThemeLayout.php:53
+msgid "Global Layout"
+msgstr ""
+
+#: app/Component/ThemeLayout.php:88
+msgid "General Layout applies to all layouts that supports in this theme."
+msgstr ""
+
+#: app/framework.php:26
+msgid "Secondary Sidebar"
+msgstr ""
+
+#: app/framework.php:27
+msgid "All widgets defined here will display in pages."
+msgstr ""
+
+#: app/framework.php:30
+msgid "Portfolio Sidebar"
+msgstr ""
+
+#: app/framework.php:31
+msgid "test"
+msgstr ""
+
+#: app/functions-filters.php:55
+msgid "Category"
+msgstr ""
+
+#: app/functions-filters.php:57
+msgid "Tag"
+msgstr ""
+
+#: app/functions-filters.php:59
+msgid "Author"
+msgstr ""
+
+#: app/functions-filters.php:61
+msgid "Year"
+msgstr ""
+
+#: app/functions-filters.php:61
+msgctxt "yearly archives date format"
+msgid "Y"
+msgstr ""
+
+#: app/functions-filters.php:63
+msgid "Month"
+msgstr ""
+
+#: app/functions-filters.php:63
+msgctxt "monthly archives date format"
+msgid "F"
+msgstr ""
+
+#: app/functions-filters.php:65
+msgid "Day"
+msgstr ""
+
+#: app/functions-filters.php:65
+msgctxt "daily archives date format"
+msgid "F j Y"
+msgstr ""
+
+#: app/functions-filters.php:68
+msgctxt "post format archive title"
+msgid "Asides"
+msgstr ""
+
+#: app/functions-filters.php:70
+msgctxt "post format archive title"
+msgid "Galleries"
+msgstr ""
+
+#: app/functions-filters.php:72
+msgctxt "post format archive title"
+msgid "Images"
+msgstr ""
+
+#: app/functions-filters.php:74
+msgctxt "post format archive title"
+msgid "Videos"
+msgstr ""
+
+#: app/functions-filters.php:76
+msgctxt "post format archive title"
+msgid "Quotes"
+msgstr ""
+
+#: app/functions-filters.php:78
+msgctxt "post format archive title"
+msgid "Links"
+msgstr ""
+
+#: app/functions-filters.php:80
+msgctxt "post format archive title"
+msgid "Statuses"
+msgstr ""
+
+#: app/functions-filters.php:82
+msgctxt "post format archive title"
+msgid "Audio"
+msgstr ""
+
+#: app/functions-filters.php:84
+msgctxt "post format archive title"
+msgid "Chats"
+msgstr ""
+
+#: app/functions-filters.php:87
+#: app/functions-filters.php:93
+msgid "Archives"
+msgstr ""
+
+#. Translators: 1 = singular name, 2 = single term title.
+#: app/functions-filters.php:91
+msgid "%1$s: %2$s"
+msgstr ""
+
+#: app/functions-setup.php:123
+msgid "Header Image"
+msgstr ""
+
+#: archive-portfolio.php:20
+msgid "Older"
+msgstr ""
+
+#: archive-portfolio.php:21
+msgid "Newer"
+msgstr ""
+
+#: comments.php:26
+msgctxt "comments title"
+msgid "One Comment"
+msgstr ""
+
+#. Translators: 1 = counts.
+#: comments.php:29
+msgctxt "comments title"
+msgid "%1$s Comment"
+msgid_plural "%1$s Comments"
+msgstr[0] ""
+msgstr[1] ""
+
+#: comments.php:47
+msgid "Older Comments"
+msgstr ""
+
+#: comments.php:48
+msgid "Newer Comments"
+msgstr ""
+
+#. Translators: 1 = Date, 2 = Site Link.
+#: footer.php:18
+msgid "Copyright &#169; %1$s. %2$s"
+msgstr ""
+
+#. Translators: 1 = WordPress Link, 2 = Theme Link.
+#: footer.php:27
+msgid "Powered By %1$s and %2$s"
+msgstr ""
+
+#. translators: 1 =  a version string, 2 = current wp version string.
+#: functions.php:29
+msgid "Camaraderie requires at least WordPress version %1$s. You are currently running %2$s. Please upgrade and try again."
+msgstr ""
+
+#. translators: 1 =  a version string, 2 = current wp version string.
+#: functions.php:36
+msgid "Camaraderie requires at least PHP version %1$s. You are currently running %2$s. Please upgrade and try again."
+msgstr ""
+
+#: search.php:21
+msgid "Search for: "
+msgstr ""
+
+#: single-portfolio.php:23
+#: single.php:23
+msgid "Next"
+msgstr ""
+
+#: single-portfolio.php:24
+#: single.php:24
+msgid "Previous"
+msgstr ""
+
+#. Template Name of the theme
+msgid "Home"
+msgstr ""
+
+#: views/content/content-404.php:20
+msgid "Just kidding! It looks like you have stumbled upon a page that doesn't exist, so that means I probably broke something. To find what you are looking for, check out the most recent articles below or try a search: "
+msgstr ""
+
+#: views/content/content-none.php:15
+msgid "Nothing Found"
+msgstr ""
+
+#. Translators: 1 = admin url.
+#: views/content/content-none.php:23
+msgid "Ready to publish your first post? %s"
+msgstr ""
+
+#. Translators: 1 = admin url.
+#: views/content/content-none.php:23
+msgid "Get Started"
+msgstr ""
+
+#: views/content/content-none.php:27
+msgid "It seems we cannot find what you are looking for. Perhaps searching can help."
+msgstr ""
+
+#: views/content/content.php:27
+msgid "Featured"
+msgstr ""
+
+#: views/page/content-page.php:22
+#: views/single/content-portfolio.php:25
+#: views/single/content-single.php:26
+msgid "Pages:"
+msgstr ""
+
+#: views/page/content-page.php:26
+#: views/single/content-portfolio.php:29
+#: views/single/content-single.php:30
+msgid "Page"
+msgstr ""
+
+#: views/section/home-blog.php:15
+msgid "Latest News"
+msgstr ""
+
+#: views/section/home-contact.php:14
+msgid "Contact"
+msgstr ""
+
+#: views/section/home-contact.php:15
+msgid "Questions or Hire Me"
+msgstr ""
+
+#: views/section/home-portfolio.php:15
+msgid "Some of my recent works"
+msgstr ""

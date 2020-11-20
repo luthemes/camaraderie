@@ -1,0 +1,6 @@
+.tabs-content {
+	clear: both;
+	content: "";
+	display: table;
+	margin: 1.125em 0;
+}
