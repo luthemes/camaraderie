@@ -35,7 +35,7 @@ class Customize extends CustomizeAbstract {
 	public function register_panels( $manager ) {
 		$manager->add_panel( 'home_section', array(
 			'title' => esc_html( 'Home Section', 'camaraderie' ),
-			'priority' => 10,
+			'priority' => 15,
 		) );
 	}
 
@@ -47,11 +47,8 @@ class Customize extends CustomizeAbstract {
 	 * @param  object $manager customizer object.
 	 */
 	public function register_sections( $manager ) {
-		/**
-		 * Home Section
-		 */
-		$manager->add_section( 'custom_header', array(
-			'title'    => esc_html__( 'Custom Header', 'camaraderie' ),
+		$manager->add_section( 'header_section', array(
+			'title'    => esc_html__( 'Header Section', 'camaraderie' ),
 			'panel'    => 'home_section',
 			'priority' => 5,
 		) );
@@ -82,8 +79,8 @@ class Customize extends CustomizeAbstract {
 		$manager->add_control( new WP_Customize_Image_Control(
 			$manager, 'custom_avatar', array(
 				'label' => esc_html__( 'Avatar Image', 'camaraderie' ),
-				'description' => esc_html__( 'Please set avatar image to 200 by 200 to fit properly', 'camaraderie' ),
-				'section' => 'custom_header',
+				'description' => esc_html__( 'Please set avatar image to 250 by 250 to fit properly', 'camaraderie' ),
+				'section' => 'header_section',
 				'settings' => 'custom_avatar',
 			)
 		) );
