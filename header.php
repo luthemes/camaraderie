@@ -24,9 +24,7 @@
 	<?php $is_front = ( is_front_page() && ! is_home() ); ?>
 		<header id="header" class="site-header <?php echo $is_front ? 'custom' : 'header'; ?>-image">
 			<?php if ( $is_front ) { ?>
-				<div class="site-avatar">
-					<?php echo get_avatar( get_the_author_meta( 'ID' ), 250 ); ?>
-				</div>
+				<div class="site-avatar"></div>
 			<?php } ?>
 			<div class="site-branding">
 				<?php Benlumia007\Backdrop\Site\display_site_title(); ?>
