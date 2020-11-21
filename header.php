@@ -21,9 +21,15 @@
 <div id="container" class="site-container">
 	<a class="skip-link screen-reader-text" href="#main"><?php esc_html_e( 'Skip to content', 'camaraderie' ) ?></a>
 	<?php Benlumia007\Backdrop\View\display( 'menu', [ 'primary' ] ); ?>
-	<header id="header" class="site-header">
-		<div class="site-branding">
-			<?php Benlumia007\Backdrop\Site\display_site_title(); ?>
-			<?php Benlumia007\Backdrop\Site\display_site_description(); ?>
-		</div>
-	</header>
+	<?php $is_front = ( is_front_page() && ! is_home() ); ?>
+		<header id="header" class="site-header <?php echo $is_front ? 'custom' : 'header'; ?>-image">
+			<?php if ( $is_front ) { ?>
+				<div class="site-avatar">
+					<?php echo get_avatar( get_the_author_meta( 'ID' ), 250 ); ?>
+				</div>
+			<?php } ?>
+			<div class="site-branding">
+				<?php Benlumia007\Backdrop\Site\display_site_title(); ?>
+				<?php Benlumia007\Backdrop\Site\display_site_description(); ?>
+			</div>
+		</header>
