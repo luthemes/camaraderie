@@ -1,0 +1,10 @@
+.site-container:before,
+.site-container:after,
+.site-content:before,
+.site-content:after,
+.post-navigation:before,
+.post-navigation:after {
+    clear: both;
+    content: "";
+    display: table;
+}
