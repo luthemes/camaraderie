@@ -1,8 +1,8 @@
 <?php
 /**
- * Initiator ( Customize.php )
+ * Camaraderie ( Customize.php )
  *
- * @package     Initiator
+ * @package     Camaraderie
  * @copyright   Copyright (C) 2019. Benjamin Lu
  * @license     GNU General Public License v2 or later ( https://www.gnu.org/licenses/gpl-2.0.html )
  * @author      Benjamin Lu ( https://benjlu.com )
@@ -13,9 +13,10 @@
  *
  * 1.0 - Create a New Framework
  */
-namespace Initiator\Component;
+namespace Camaraderie\Component;
 
 use Benlumia007\Backdrop\Contracts\Customize\Customize as CustomizeAbstract;
+use WP_Customize_Image_Control;
 
 /**
  * 1.0 - Create a New Framework
@@ -31,7 +32,12 @@ class Customize extends CustomizeAbstract {
 	 * @access public
 	 * @param  object $manager customizer object.
 	 */
-	public function register_panels( $manager ) {}
+	public function register_panels( $manager ) {
+		$manager->add_panel( 'home_section', array(
+			'title' => esc_html( 'Home Section', 'camaraderie' ),
+			'priority' => 10,
+		) );
+	}
 
 	/**
 	 * Register register_sections
@@ -41,7 +47,14 @@ class Customize extends CustomizeAbstract {
 	 * @param  object $manager customizer object.
 	 */
 	public function register_sections( $manager ) {
-		$manager->get_section( 'colors' )->panel = 'theme_options';
+		/**
+		 * Home Section
+		 */
+		$manager->add_section( 'custom_header', array(
+			'title'    => esc_html__( 'Custom Header', 'camaraderie' ),
+			'panel'    => 'home_section',
+			'priority' => 5,
+		) );
 	}
 
 	/**
@@ -51,7 +64,12 @@ class Customize extends CustomizeAbstract {
 	 * @access public
 	 * @param  object $manager customizer object.
 	 */
-	public function register_settings( $manager ) {}
+	public function register_settings( $manager ) {
+		$manager->add_setting( 'custom_avatar', array(
+			'default'           => get_theme_file_uri( '/public/images/avatar.jpg' ),
+			'sanitize_callback' => 'esc_url_raw',
+		) );
+	}
 
 	/**
 	 * Register register_controls
@@ -60,5 +78,14 @@ class Customize extends CustomizeAbstract {
 	 * @access public
 	 * @param  object $manager customizer object.
 	 */
-	public function register_controls( $manager ) {}
+	public function register_controls( $manager ) {
+		$manager->add_control( new WP_Customize_Image_Control(
+			$manager, 'custom_avatar', array(
+				'label' => esc_html__( 'Avatar Image', 'camaraderie' ),
+				'description' => esc_html__( 'Please set avatar image to 200 by 200 to fit properly', 'camaraderie' ),
+				'section' => 'custom_header',
+				'settings' => 'custom_avatar',
+			)
+		) );
+	}
 }
