@@ -16,3 +16,68 @@
 //
 // 1.0 - Content
 //
+.content-area {
+    line-height: 1.8em;
+
+    .sticky {
+        border: 0.063em solid #000000;
+    }
+
+    .post {
+        background: #ffffff;
+        border: 0.063em solid #cccccc;
+        margin-bottom: 1.125em;
+        min-height: 20.313em;
+        padding: 1.125em;
+
+        .entry-header {
+            text-align: center;
+
+            .entry-title {
+                margin: 0;
+                padding: 0;
+            }
+
+            .entry-metadata {
+                .fa-user {
+                    padding-right: 0.313em;
+                }
+
+                .fa-calendar-alt,
+                .fa-comment {
+                    padding: 0 0.313em 0 0.625em;
+                }
+            }
+        }
+
+        .entry-taxonomies {
+            .cat-link,
+            .tag-link {
+
+                font-size: 14px;
+            }
+
+            .cat-list,
+            .tag-list {
+                font-size: 12px;
+            }
+        }
+    }
+
+    .page {
+        background: #ffffff;
+        border: 0.063em solid #cccccc;
+        margin-bottom: 1.125em;
+        min-height: 20.313em;
+        padding: 1.125em;
+
+        .entry-header {
+            text-align: center;
+
+            .entry-title {
+                margin: 0;
+                padding: 0;
+            }
+        }
+    }
+}
