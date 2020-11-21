@@ -130,21 +130,3 @@ add_action( 'after_setup_theme', function() {
 			)
 		);
 } );
-
-/**
- * Add Support Custom Background
- */
-add_action( 'after_setup_theme', function() {
-
-	add_theme_support( 'custom-background', [
-		'default-image'          => '',
-		'default-preset'         => 'default',
-		'default-position-x'     => 'left',
-		'default-position-y'     => 'top',
-		'default-size'           => 'auto',
-		'default-repeat'         => 'repeat',
-		'default-attachment'     => 'scroll',
-		'default-color'          => '',
-	] );
-
-} );
