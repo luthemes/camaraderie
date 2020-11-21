@@ -66,7 +66,7 @@ class Admin extends AdminPage {
 		} else {
 			$this->tabs( 'introduction' );
 		}
-		echo '<div class="tabs-content">';
+		echo '<div class="tabs-content clear">';
 
 		if ( 'themes.php' === $pagenow && 'theme-page' === sanitize_text_field( wp_unslash( $_GET['page'] ) ) ) { // WPCS: input var ok.
 			if ( isset( $_GET['tab'] ) && isset( $_GET['_wp_nonce'] ) && false !== wp_verify_nonce( $_GET['_wp_nonce'], 'admin_nonce' ) ) { // WPCS: input var ok, sanitization ok.
@@ -100,7 +100,7 @@ class Admin extends AdminPage {
 	<?php }
 
 	public function admin_enqueue() {
-		wp_register_style( 'admin-style', get_theme_file_uri() . '/assets/css/admin-styles.css', array(), '1.0.0' );
+		wp_register_style( 'admin-style', get_theme_file_uri() . '/public/css/admin.css', array(), '1.0.0' );
 		wp_enqueue_style( 'admin-style' );
 	}
 }
