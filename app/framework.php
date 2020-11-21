@@ -19,15 +19,15 @@ $camaraderie = Benlumia007\Backdrop\Framework::get_instance();
 
 $camaraderie->menus = new Benlumia007\Backdrop\Menu\Menu(
 	$args = [
-		'primary' => esc_html__( 'Primary Navigation', 'Camaraderie' ),
+		'primary' => esc_html__( 'Primary Navigation', 'camaraderie' ),
 	]
 );
 
 $camaraderie->sidebars = new Benlumia007\Backdrop\Sidebar\Sidebar(
 	$args = [
 		'primary' => [
-			'name' => esc_html__( 'Primary Sidebar', 'Camaraderie' ),
-			'desc' => esc_html__( 'Test', 'Camaraderie' ),
+			'name' => esc_html__( 'Primary Sidebar', 'camaraderie' ),
+			'desc' => esc_html__( 'Test', 'camaraderie' ),
 		],
 	]
 );
