@@ -33,3 +33,4 @@ $camaraderie->sidebars = new Benlumia007\Backdrop\Sidebar\Sidebar(
 );
 
 $camaraderie->customize = new Camaraderie\Component\Customize();
+$camaraderie->admin = new Camaraderie\Component\Admin();
