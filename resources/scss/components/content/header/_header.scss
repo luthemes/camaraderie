@@ -16,3 +16,29 @@
 //
 // 1.0 - Header
 //
+.site-header {
+    .site-branding {
+        text-align: center;
+
+        .site-title,
+        .site-description {
+            margin: 0;
+            padding: 0;
+        }
+
+        .site-title {
+            a {
+                color: #ffffff;
+                font-size: 1.750em;
+                text-decoration: none;
+                text-shadow: 2px 2px #000000;
+            }
+        }
+
+        .site-description {
+            color: #ffffff;
+            text-decoration: none;
+            text-shadow: 2px 2px #000000;
+        }
+    }
+}
