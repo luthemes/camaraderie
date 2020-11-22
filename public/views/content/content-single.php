@@ -9,6 +9,11 @@
  */
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	<picture class="post-thumbnail">
+		<?php if ( has_post_thumbnail() ) { ?>
+			<?php the_post_thumbnail( 'camaraderie-large-thumbnails' ); ?>
+		<?php } ?>
+	</picture>
 	<header class="entry-header">
 		<?php Benlumia007\Backdrop\Entry\display_title(); ?>
 		<div class="entry-metadata">
