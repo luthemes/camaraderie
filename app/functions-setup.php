@@ -73,12 +73,12 @@ add_action( 'after_setup_theme', function() {
 		/**
 		 * By add_image_size( 'camaraderie-medium-thumbnails', 810, 396, true );. This should be used for content that has sidebars.
 		 */
-		add_image_size( 'camaraderie-medium-thumbnails', 810, 396, true );
+		add_image_size( 'camaraderie-medium-thumbnails', 986, 448, true );
 
 		/**
-		 * By add_image_size( 'camaraderie-large-thumbnails', 1170, 614, true );. This should be used for content that has no sidebars.
+		 * By add_image_size( 'camaraderie-large-thumbnails', 1132, 594, true );. This should be used for content that has no sidebars.
 		 */
-		add_image_size( 'camaraderie-large-thumbnails', 1170, 614, true );
+		add_image_size( 'camaraderie-large-thumbnails', 1132, 594, true );
 
 		/**
 		 * By add_theme_support( 'wp-block-styles' );. This should enable block styles on the frontend.
