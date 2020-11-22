@@ -66,7 +66,7 @@ add_action(
 
 add_action(
 	'wp_enqueue_scripts', function() {
-		$header_image = esc_url( get_theme_mod( 'header_image', get_theme_file_uri( '/assets/images/header-image.jpg' ) ) );
+		$header_image = esc_url( get_theme_mod( 'header_image', get_theme_file_uri( '/public/images/header-image.jpg' ) ) );
 
 		$custom_css = "
 			.site-header.header-image {
