@@ -77,17 +77,6 @@
         }
     }
 
-    .has-post-thumbnail {
-        position: relative;
-        padding-left: 21.375em;
-
-        .post-thumbnail {
-            left: 0;
-            position: absolute;
-            top: 0;
-        }
-    }
-
     .sticky {
         border: 0.063em solid #333333;
     }
@@ -368,7 +357,7 @@ p.comment-awaiting-moderation {
     padding: 0;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 48em) {
     .content-area {
         .has-post-thumbnail {
             padding-left: 1.125em;
@@ -379,9 +368,63 @@ p.comment-awaiting-moderation {
 
                 .size-camaraderie-small-thumbnails {
                     height: auto;
+                    margin-bottom: 1.125em;
                     width: auto;
                 }
             }
         }
     };
+}
+
+@media screen and (min-width: 48.0625em) and (max-width: 64em) {
+    .content-area {
+        .has-post-thumbnail {
+            padding-left: 1.125em;
+            position: unset;
+
+            .post-thumbnail {
+                position: unset;
+
+                .size-camaraderie-small-thumbnails {
+                    height: auto;
+                    margin-bottom: 1.125em;
+                    width: auto;
+                }
+            }
+        }
+    };
+}
+
+@media screen and (min-width: 64.0625em) and (max-width: 73.125em) {
+    .blog {
+        .content-area {
+            .has-post-thumbnail {
+                position: relative;
+                padding-left: 21.375em;
+        
+                .post-thumbnail {
+                    left: 0;
+                    position: absolute;
+                    top: 0;
+                }
+            }
+        };       
+    }
+}
+
+@media screen and (min-width: 1171px) {
+    .blog {
+        .content-area {
+            .has-post-thumbnail {
+                position: relative;
+                padding-left: 21.375em;
+        
+                .post-thumbnail {
+                    left: 0;
+                    position: absolute;
+                    top: 0;
+                }
+            }
+        };       
+    }
 }
