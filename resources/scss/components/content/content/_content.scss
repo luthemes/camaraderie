@@ -367,3 +367,21 @@ p.comment-awaiting-moderation {
     margin: 0;
     padding: 0;
 }
+
+@media screen and (max-width: 768px) {
+    .content-area {
+        .has-post-thumbnail {
+            padding-left: 1.125em;
+            position: unset;
+
+            .post-thumbnail {
+                position: unset;
+
+                .size-camaraderie-small-thumbnails {
+                    height: auto;
+                    width: auto;
+                }
+            }
+        }
+    };
+}
