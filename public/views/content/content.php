@@ -11,7 +11,7 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<picture class="post-thumbnail">
 		<?php if ( has_post_thumbnail() ) { ?>
-			<source media="(min-width: 601px) and (max-width: 768px)" srcset="<?php the_post_thumbnail_url( 'camaraderie-medium-thumbnails' ); ?>">
+			<source media="(max-width: 768px)" srcset="<?php the_post_thumbnail_url( 'camaraderie-medium-thumbnails' ); ?>">
 			<?php the_post_thumbnail( 'camaraderie-small-thumbnails' ); ?>
 		<?php } ?>
 	</picture>
