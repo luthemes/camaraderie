@@ -20,6 +20,8 @@ $camaraderie = Benlumia007\Backdrop\Framework::get_instance();
 $camaraderie->menus = new Benlumia007\Backdrop\Menu\Menu(
 	$args = [
 		'primary' => esc_html__( 'Primary Navigation', 'camaraderie' ),
+		'secondary' => esc_html__( 'Secondary Navigation', 'camaraderie' ),
+		'social' => esc_html__( 'Social Navigation', 'camaraderie' ),
 	]
 );
 
@@ -29,8 +31,17 @@ $camaraderie->sidebars = new Benlumia007\Backdrop\Sidebar\Sidebar(
 			'name' => esc_html__( 'Primary Sidebar', 'camaraderie' ),
 			'desc' => esc_html__( 'Test', 'camaraderie' ),
 		],
+		'secondary' => [
+			'name' => esc_html__( 'Secondary Sidebar', 'camaraderie' ),
+			'desc' => esc_html__( 'Test', 'camaraderie' ),
+		],
+		'portfolio' => [
+			'name' => esc_html__( 'Portfolio Sidebar', 'camaraderie' ),
+			'desc' => esc_html__( 'Test', 'camaraderie' ),
+		]
 	]
 );
 
-$camaraderie->customize = new Camaraderie\Component\Customize();
 $camaraderie->admin = new Camaraderie\Component\Admin();
+$camaraderie->customize = new Camaraderie\Component\Customize();
+$camaraderie->layouts = new Camaraderie\Component\ThemeLayouts();
