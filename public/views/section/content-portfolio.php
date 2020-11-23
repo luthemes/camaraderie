@@ -8,8 +8,11 @@
  * @author      Benjamin Lu ( https://benjlu.com )
  */
 ?>
-<section id="portflio" class="site-portfolio">
-    <header id="header" class="portfolio-header">
-        <h1 class="portfolio-title"><?php esc_html_e( 'Portfolio', 'camaraderie' ); ?></h1>
-    </header>
+<section id="portfolio" class="site-portfolio">
+    <div class="portfolio-container">
+        <header id="header" class="portfolio-header">
+            <h1 class="portfolio-title"><?php esc_html_e( 'Portfolio', 'camaraderie' ); ?></h1>
+            <span class="portfolio-description"><?php esc_html_e( 'Work That I have done', 'camaraderie' ); ?></span>
+        </header>
+    </div>
 </section>
