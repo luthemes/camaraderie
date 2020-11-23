@@ -18,7 +18,7 @@ $contact_display   = get_theme_mod( 'custom_contact_display' );
         <?php Benlumia007\Backdrop\Template\get_template_part( 'section/content', 'portfolio' ); ?>
     <?php } ?>
     <?php if ( 0 != $blog_display && isset( $blog_display ) ) { // phpcs:ignore ?>
-        <?php Benlumia007\Backdrop\Template\get_template_part( 'section/content', get_post_format() ); ?>
+        <?php Benlumia007\Backdrop\Template\get_template_part( 'section/content', 'blog' ); ?>
     <?php } ?>
     <?php if ( 0 != $contact_display && isset( $contact_display ) ) { // phpcs:ignore ?>
         <?php Benlumia007\Backdrop\Template\get_template_part( 'section/content', get_post_format() ); ?>
