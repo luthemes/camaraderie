@@ -110,6 +110,26 @@
     }
 }
 
+.site-contact {
+    background: #000000;
+
+    .contact-header {
+        padding: 1.125em;
+        text-align: center;
+
+        .contact-title {
+            color: #ffffff;
+            font-size: 2.5em;
+            margin: 0;
+            padding: 0;
+        }
+
+        .contact-description {
+            color: #ffffff;
+        }
+    }
+}
+
 .comments-area {
     background: #ffffff;
     border: 0.063em solid #cccccc;
