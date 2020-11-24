@@ -94,7 +94,7 @@ add_action( 'after_setup_theme', function() {
 		/**
 		 * Load theme translation.
 		 */
-		load_theme_textdomain( 'camaraderie', get_parent_theme_file_path( '/languages ' ) );
+		load_theme_textdomain( 'camaraderie' );
 	}
 );
 
