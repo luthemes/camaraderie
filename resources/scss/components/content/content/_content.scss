@@ -116,7 +116,7 @@
         .entry-content {
             .blog-grid {
                 display: grid;
-                grid-template-columns: 1fr 1fr 1fr;
+                grid-template-columns: 1fr 1fr;
                 grid-gap: 1.125em;
                 list-style: none;
                 margin: 0;
@@ -462,7 +462,62 @@ p.comment-awaiting-moderation {
                 }
             }
         }
-    };
+    }
+
+    .site-blog {
+        .content-area {
+            margin: 0 auto;
+            padding: 0 1.125em;
+            max-width: 1024px;
+    
+            .blog-header {
+                padding: 1.125em;
+                text-align: center;
+        
+                .blog-title {
+                    font-size: 2.5em;
+                    margin: 0;
+                    padding: 0;
+                }
+            }
+    
+            .entry-content {
+                .blog-grid {
+                    display: grid;
+                    grid-template-columns: 1fr;
+                    grid-gap: 1.125em;
+                    list-style: none;
+                    margin: 0;
+                    padding: 0;
+    
+                    .entry-header {
+                        text-align: center;
+    
+                        .entry-title {
+                            font-size: 1.75em;
+                            margin: 0;
+                            padding: 0;
+                        }
+    
+                        .entry-metadata {
+                            font-size: 0.8125em;
+    
+                            .fa-user,
+                            .fa-calendar-alt,
+                            .fa-comment {
+                                padding-right: 0.313em
+                            }
+    
+                            .fa-calendar-alt,
+                            .fa-comment {
+                                padding-left: 0.5em;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 @media screen and (min-width: 48.0625em) and (max-width: 64em) {
@@ -481,7 +536,62 @@ p.comment-awaiting-moderation {
                 }
             }
         }
-    };
+    }
+
+    .site-blog {
+        .content-area {
+            margin: 0 auto;
+            padding: 0 1.125em;
+            max-width: 1024px;
+    
+            .blog-header {
+                padding: 1.125em;
+                text-align: center;
+        
+                .blog-title {
+                    font-size: 2.5em;
+                    margin: 0;
+                    padding: 0;
+                }
+            }
+    
+            .entry-content {
+                .blog-grid {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    grid-gap: 1.125em;
+                    list-style: none;
+                    margin: 0;
+                    padding: 0;
+    
+                    .entry-header {
+                        text-align: center;
+    
+                        .entry-title {
+                            font-size: 1.75em;
+                            margin: 0;
+                            padding: 0;
+                        }
+    
+                        .entry-metadata {
+                            font-size: 0.8125em;
+    
+                            .fa-user,
+                            .fa-calendar-alt,
+                            .fa-comment {
+                                padding-right: 0.313em
+                            }
+    
+                            .fa-calendar-alt,
+                            .fa-comment {
+                                padding-left: 0.5em;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 @media screen and (min-width: 64.0625em) and (max-width: 73.125em) {
@@ -498,6 +608,61 @@ p.comment-awaiting-moderation {
                 }
             }
         };       
+    }
+
+    .site-blog {
+        .content-area {
+            margin: 0 auto;
+            padding: 0 1.125em;
+            max-width: 1170px;
+    
+            .blog-header {
+                padding: 1.125em;
+                text-align: center;
+        
+                .blog-title {
+                    font-size: 2.5em;
+                    margin: 0;
+                    padding: 0;
+                }
+            }
+    
+            .entry-content {
+                .blog-grid {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    grid-gap: 1.125em;
+                    list-style: none;
+                    margin: 0;
+                    padding: 0;
+    
+                    .entry-header {
+                        text-align: center;
+    
+                        .entry-title {
+                            font-size: 1.75em;
+                            margin: 0;
+                            padding: 0;
+                        }
+    
+                        .entry-metadata {
+                            font-size: 0.8125em;
+    
+                            .fa-user,
+                            .fa-calendar-alt,
+                            .fa-comment {
+                                padding-right: 0.313em
+                            }
+    
+                            .fa-calendar-alt,
+                            .fa-comment {
+                                padding-left: 0.5em;
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 

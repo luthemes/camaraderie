@@ -17,7 +17,7 @@
         <div class="entry-content">
             <ul class="blog-grid">
                 <?php
-                    $posts_per_page = 3;
+                    $posts_per_page = 2;
                     $query          = new \WP_Query(
                         array(
                             'post_type'           => 'post',
