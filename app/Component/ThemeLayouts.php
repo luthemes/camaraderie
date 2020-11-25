@@ -91,9 +91,9 @@ class ThemeLayouts extends CustomizeAbstract {
 					'type'        => 'radio-image',
 					'choices'     =>
 						[
-							'left-sidebar'  => get_theme_file_uri( '/assets/images/2cl.png' ),
-							'right-sidebar' => get_theme_file_uri( '/assets/images/2cr.png' ),
-							'no-sidebar'    => get_theme_file_uri( '/assets/images/1col.png' ),
+							'left-sidebar'  => get_theme_file_uri( '/public/images/2cl.png' ),
+							'right-sidebar' => get_theme_file_uri( '/public/images/2cr.png' ),
+							'no-sidebar'    => get_theme_file_uri( '/public/images/1col.png' ),
 						],
 				]
 			)
