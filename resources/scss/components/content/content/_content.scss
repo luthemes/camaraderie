@@ -60,7 +60,8 @@
         }
     }
 
-    .page {
+    .page,
+    .portfolio {
         background: #ffffff;
         border: 0.063em solid #cccccc;
         margin-bottom: 1.125em;
@@ -85,14 +86,35 @@
 .site-portfolio {
     background: #ffffff;
 
-    .portfolio-header {
-        padding: 1.125em;
-        text-align: center;
+    .content-area {
+        .portfolio-header {
+            padding: 1.125em;
+            text-align: center;
+    
+            .portfolio-title {
+                font-size: 2.5em;
+                margin: 0;
+                padding: 0;
+            }
+        }
 
-        .portfolio-title {
-            font-size: 2.5em;
-            margin: 0;
-            padding: 0;
+        .entry-content {
+            .portfolio-grid {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-gap: 1.125em;
+                margin: 0 auto;
+                max-width: 1170px;
+            }
+
+            .wp-caption {
+                .wp-caption-text {
+                    .portfolio-title {
+                        margin: 0;
+                        padding: 0;
+                    }
+                }
+            }
         }
     }
 }
