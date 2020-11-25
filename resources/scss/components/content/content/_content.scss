@@ -510,6 +510,55 @@ p.comment-awaiting-moderation {
                 }
             }
         }
+
+        .portfolio {
+            .entry-content {
+                margin-top: 1.125em;
+    
+                .portfolio-grid {
+                    display: grid;
+                    grid-template-columns: 1fr;
+                    grid-gap: 1.125em;
+                    list-style: none;
+                    margin: 0;
+                    padding: 0;
+                }
+    
+                .wp-caption {
+                    margin-bottom: 0;
+    
+                    .wp-caption-text {
+                        .portfolio-title {
+                            margin: 0;
+                            padding: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .site-portfolio {
+        .content-area {
+            .entry-content {
+                .portfolio-grid {
+                    display: grid;
+                    grid-template-columns: 1fr;
+                    grid-gap: 1.125em;
+                    margin: 0 auto;
+                    max-width: 1170px;
+                }
+    
+                .wp-caption {
+                    .wp-caption-text {
+                        .portfolio-title {
+                            margin: 0;
+                            padding: 0;
+                        }
+                    }
+                }
+            }
+        }
     }
 
     .site-blog {
@@ -581,6 +630,32 @@ p.comment-awaiting-moderation {
                     height: auto;
                     margin-bottom: 1.125em;
                     width: auto;
+                }
+            }
+        }
+
+        .portfolio {
+            .entry-content {
+                margin-top: 1.125em;
+    
+                .portfolio-grid {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    grid-gap: 1.125em;
+                    list-style: none;
+                    margin: 0;
+                    padding: 0;
+                }
+    
+                .wp-caption {
+                    margin-bottom: 0;
+    
+                    .wp-caption-text {
+                        .portfolio-title {
+                            margin: 0;
+                            padding: 0;
+                        }
+                    }
                 }
             }
         }
