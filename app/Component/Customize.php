@@ -94,6 +94,11 @@ class Customize extends CustomizeAbstract {
 			'sanitize_callback' => 'Benlumia007\Backdrop\Helpers\Sanitize::checkbox',
 		) );
 
+		$manager->add_setting( 'custom_portfolio_items', array(
+			'default' => 9,
+			'sanitize_callback' => 'absint',
+		) );
+
 		$manager->add_setting( 'custom_blog_display', array(
 			'sanitize_callback' => 'Benlumia007\Backdrop\Helpers\Sanitize::checkbox',
 		) );
@@ -134,6 +139,14 @@ class Customize extends CustomizeAbstract {
 			'type' => 'checkbox',
 			'section' => 'custom_portfolio',
 			'settings' => 'custom_portfolio_display',
+		) );
+
+		$manager->add_control( 'custom_portfolio_items', array(
+			'label'    => esc_html__( 'Number of Items', 'camaraderie' ),
+			'type'     => 'number',
+			'section'  => 'custom_portfolio',
+			'settings' => 'custom_portfolio_items',
+			'priority' => 20,
 		) );
 
 		$manager->add_control( 'custom_blog_display', array(
