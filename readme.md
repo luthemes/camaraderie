@@ -13,4 +13,4 @@ This theme uses WordPress: Jetpack Testimonial and must be enabled to use Conten
 Copyright and License
 Initiator is licensed under the GNU GPL, v2 or later
 
-© 2018-2019. Benjamin Lu
+© 2017-2020. Benjamin Lu
