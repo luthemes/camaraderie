@@ -562,6 +562,32 @@ p.comment-awaiting-moderation {
         }
     }
 
+    .left-sidebar {
+        .content-area {
+            float: none;
+            width: 100%;
+        }
+    }
+    
+    .right-sidebar {
+        .content-area {
+            float: none;
+            width: 100%; 
+        }
+    }
+    
+    .left-sidebar .widget-area {
+        float: none;
+        margin-top: 1.125em;
+        width: 100%;
+    }
+    
+    .right-sidebar .widget-area {
+        float: none;
+        margin-top: 1.125em;
+        width: 100%;
+    }
+
     .site-portfolio {
         .content-area {
             .entry-content {
