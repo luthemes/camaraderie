@@ -91,7 +91,7 @@ class Admin extends AdminPage {
 			<li><?php echo esc_html( __('Theme Version: ', 'camaraderie' ) . $this->theme_info->version ); ?></li>
 		</ul>
 		<h2 class="admin-title"><?php esc_html_e( 'Description', 'camaraderie' ); ?></h2>
-		<?php echo esc_html__( $this->theme_info->description ); ?>
+		<?php echo esc_html( $this->theme_info->description ); ?>
 		<h2 class="admin-title"><?php esc_html_e( 'Welcome', 'camaraderie' ); ?></h2>
 		<?php esc_html_e( 'Hope you are enjoying the theme. ', 'camaraderie' ); ?>
 		<h2 class="admin-title"><?php esc_html_e( 'Recommended Plugins', 'camaraderie' ); ?></h2>
