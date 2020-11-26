@@ -106,6 +106,10 @@ class Customize extends CustomizeAbstract {
 		$manager->add_setting( 'custom_contact_display', array(
 			'sanitize_callback' => 'Benlumia007\Backdrop\Helpers\Sanitize::checkbox',
 		) );
+
+		$manager->add_setting('custom_contact_dropdown', array(
+			'sanitize_callback' => 'Benlumia007\Backdrop\Helpers\Sanitize::dropdown',
+		) );
 	}
 
 	/**
@@ -161,6 +165,12 @@ class Customize extends CustomizeAbstract {
 			'type' => 'checkbox',
 			'section' => 'custom_contact',
 			'settings' => 'custom_contact_display',
+		) );
+
+		$manager->add_control('custom_contact_dropdown', array(
+			'type'    => 'dropdown-pages',
+			'section' => 'custom_contact',
+			'label'   => esc_html__( 'Custom Dropdown Pages', 'camaraderie' ),
 		) );
 	}
 }
