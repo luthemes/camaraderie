@@ -10,7 +10,7 @@
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
-        <?php Benlumia007\Backdrop\Entry\display_title(); ?>
+        <h1 class="entry-title"><?php esc_html_e( 'Portfolio', 'camaraderie' ); ?></h1>
 	</header>
     <div class="entry-content">
         <ul class="portfolio-grid">
