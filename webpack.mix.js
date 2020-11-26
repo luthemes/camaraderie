@@ -51,7 +51,10 @@ mix.setPublicPath( 'public' );
  */
 mix.options( {
 	postCss        : [ require( 'postcss-preset-env' )() ],
-	processCssUrls : false
+	processCssUrls : false,
+	terser: {
+		extractComments: false,
+	  }
 } );
 
 /*
