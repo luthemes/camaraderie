@@ -576,16 +576,20 @@ p.comment-awaiting-moderation {
         }
     }
     
-    .left-sidebar .widget-area {
-        float: none;
-        margin-top: 1.125em;
-        width: 100%;
+    .left-sidebar {
+        .widget-area {
+            float: none;
+            margin-top: 1.125em;
+            width: 100%;
+        }
     }
     
-    .right-sidebar .widget-area {
-        float: none;
-        margin-top: 1.125em;
-        width: 100%;
+    .right-sidebar {
+        .widget-area {
+            float: none;
+            margin-top: 1.125em;
+            width: 100%;
+        }    
     }
 
     .site-portfolio {
