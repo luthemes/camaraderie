@@ -15,19 +15,17 @@
 ?>
 <?php get_header(); ?>
 	<section id="content" class="site-content">
-		<div id="global-layout" class="<?php echo esc_attr( get_theme_mod( 'global_layout', 'no-sidebar' ) ); ?>">
-			<main id="main" class="content-area">
-				<?php
-					if ( have_posts() ) :
-						while ( have_posts() ) : the_post();
-							Benlumia007\Backdrop\Template\get_template_part( 'content/content', get_post_format() );
-						endwhile;
-						the_posts_pagination();
-					else :
-							Benlumia007\Backdrop\Template\get_template_part( 'content/content', 'none' );
-					endif;
-				?>
-			</main>
-		</div>
+		<main id="main" class="content-area">
+			<?php
+				if ( have_posts() ) :
+					while ( have_posts() ) : the_post();
+						Benlumia007\Backdrop\Template\get_template_part( 'content/content', get_post_format() );
+					endwhile;
+					the_posts_pagination();
+				else :
+						Benlumia007\Backdrop\Template\get_template_part( 'content/content', 'none' );
+				endif;
+			?>
+		</main>
 	</section>
 <?php get_footer(); ?>
