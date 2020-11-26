@@ -168,9 +168,10 @@ class Customize extends CustomizeAbstract {
 		) );
 
 		$manager->add_control('custom_contact_dropdown', array(
+			'label'   => esc_html__( 'Custom Dropdown Pages', 'camaraderie' ),
+			'description' => esc_html__( 'It is recommended to enable Contact Form 7 and use the default layout that comes with and use the dropdown to select the contact page to display the contact form', 'camaraderie' ),
 			'type'    => 'dropdown-pages',
 			'section' => 'custom_contact',
-			'label'   => esc_html__( 'Custom Dropdown Pages', 'camaraderie' ),
 		) );
 	}
 }

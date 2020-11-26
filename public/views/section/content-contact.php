@@ -9,7 +9,7 @@
  */
 ?>
 <section id="contact" class="site-contact">
-    <div class="contact-container">
+    <div class="content-area">
         <header id="header" class="contact-header">
             <h1 class="contact-title"><?php esc_html_e( 'Contact', 'camaraderie' ); ?></h1>
             <span class="contact-description"><?php esc_html_e( 'Work That I have done', 'camaraderie' ); ?></span>

@@ -226,19 +226,41 @@
 .site-contact {
     background: #000000;
 
-    .contact-header {
-        padding: 1.125em;
-        text-align: center;
+    .content-area {
+        margin: 0 auto;
+        max-width: 1170px;
 
-        .contact-title {
-            color: #ffffff;
-            font-size: 2.5em;
-            margin: 0;
-            padding: 0;
+        .contact-header {
+            padding: 1.125em;
+            text-align: center;
+    
+            .contact-title {
+                color: #ffffff;
+                font-size: 2.5em;
+                margin: 0;
+                padding: 0;
+            }
+    
+            .contact-description {
+                color: #ffffff;
+            }
         }
-
-        .contact-description {
+    
+        .wpcf7-form label {
             color: #ffffff;
+            line-height: 1.8em;
+        }
+        
+        .wpcf7-form input[type="text"],
+        .wpcf7-form input[type="email"] {
+            padding: 0.3em;
+            width: 100%;
+        }
+        
+        .wpcf7-form textarea {
+            border-radius: 0.125em;
+            padding: 0.5em;
+            width: 100%;
         }
     }
 }
