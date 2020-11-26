@@ -109,6 +109,30 @@
     }
 }
 
+.left-sidebar {
+    .content-area {
+        float: right;
+        width: 69.230769230769231%;
+    }
+}
+
+.right-sidebar {
+    .content-area {
+        float: left;
+        width: 69.230769230769231%; 
+    }
+}
+
+.left-sidebar .widget-area {
+    float: left;
+    width: 29.230769230769231%;
+}
+
+.right-sidebar .widget-area {
+    float: right;
+    width: 29.230769230769231%;
+}
+
 .site-portfolio {
     background: #ffffff;
 
