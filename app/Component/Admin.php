@@ -90,11 +90,14 @@ class Admin extends AdminPage {
 			<li><?php echo esc_html( __('Theme Name: ', 'camaraderie' ) . $this->theme_info->name ); ?></li>
 			<li><?php echo esc_html( __('Theme Version: ', 'camaraderie' ) . $this->theme_info->version ); ?></li>
 		</ul>
+		<h2 class="admin-title"><?php esc_html_e( 'Description', 'camaraderie' ); ?></h2>
+		<?php echo esc_html__( $this->theme_info->description ); ?>
 		<h2 class="admin-title"><?php esc_html_e( 'Welcome', 'camaraderie' ); ?></h2>
 		<?php esc_html_e( 'Hope you are enjoying the theme. ', 'camaraderie' ); ?>
 		<h2 class="admin-title"><?php esc_html_e( 'Recommended Plugins', 'camaraderie' ); ?></h2>
 		<ul>
-			<li><a href="<?php esc_url( 'https://wordpress.org/plugins/backdrop-post-types/' ); ?>"><?php esc_html_e( 'Backdrop Post Types', 'camaraderie' ); ?></a></li>
+			<li><a href="<?php esc_url( 'https://wordpress.org/plugins/backdrop-post-types' ); ?>"><?php esc_html_e( 'Backdrop Post Types', 'camaraderie' ); ?></a></li>
+			<li><a href="<?php esc_url( 'https://wordpress.org/plugins/contact-form-7' ); ?>"><?php esc_html_e( 'Contact Form 7', 'camaraderie' ); ?></a></li>
 			<li><a href="<?php esc_url( 'https://wordpress.org/plugins/regenerate-thumbnails' ); ?>"><?php esc_html_e( 'Regenerate Thumbnails', 'camaraderie' ); ?></a></li>
 		</ul>
 	<?php }
