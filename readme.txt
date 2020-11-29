@@ -37,6 +37,9 @@ Welcome to Camaraderie WordPress theme. Camaraderie is a fully functional mobile
 Not Available at this time
 
 == Changelog ==
+Version: 2.0.1
+- Small minor fixed regardin the vendor 
+
 Version: 2.0.0
 - New Updated Version
 
