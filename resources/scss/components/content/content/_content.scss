@@ -101,12 +101,28 @@
                     }
                 }
             }
-        }
+		}
     }
 
     .sticky {
         border: 0.063em solid #333333;
-    }
+	}
+	
+	.wpcf7-form label {
+		line-height: 1.8em;
+	}
+	
+	.wpcf7-form input[type="text"],
+	.wpcf7-form input[type="email"] {
+		padding: 0.3em;
+		width: 100%;
+	}
+	
+	.wpcf7-form textarea {
+		border-radius: 0.125em;
+		padding: 0.5em;
+		width: 100%;
+	}
 }
 
 .left-sidebar {
