@@ -36,6 +36,10 @@ Welcome to Camaraderie WordPress theme. Camaraderie is a fully functional mobile
 == Frequent Asked Questions ==
 Not Available at this time
 
+== Changelog ==
+Version: 2.0.0
+- New Updated Version
+
 == Resources ==
 Font Awesome ( Version: 5.0 )
 Created By: Fonticons, Inc
