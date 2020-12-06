@@ -20,7 +20,6 @@ $camaraderie = Benlumia007\Backdrop\Framework::get_instance();
 $camaraderie->menus = new Benlumia007\Backdrop\Menu\Menu(
 	$args = [
 		'primary' => esc_html__( 'Primary Navigation', 'camaraderie' ),
-		'secondary' => esc_html__( 'Secondary Navigation', 'camaraderie' ),
 		'social' => esc_html__( 'Social Navigation', 'camaraderie' ),
 	]
 );
@@ -29,15 +28,15 @@ $camaraderie->sidebars = new Benlumia007\Backdrop\Sidebar\Sidebar(
 	$args = [
 		'primary' => [
 			'name' => esc_html__( 'Primary Sidebar', 'camaraderie' ),
-			'desc' => esc_html__( 'Test', 'camaraderie' ),
+			'desc' => esc_html__( 'Applies to Posts', 'camaraderie' ),
 		],
 		'secondary' => [
 			'name' => esc_html__( 'Secondary Sidebar', 'camaraderie' ),
-			'desc' => esc_html__( 'Test', 'camaraderie' ),
+			'desc' => esc_html__( 'Applies to Pages', 'camaraderie' ),
 		],
 		'portfolio' => [
 			'name' => esc_html__( 'Portfolio Sidebar', 'camaraderie' ),
-			'desc' => esc_html__( 'Test', 'camaraderie' ),
+			'desc' => esc_html__( 'Applies to Portoflio', 'camaraderie' ),
 		]
 	]
 );
