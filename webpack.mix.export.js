@@ -43,7 +43,8 @@ let files = [
 let folders = [
 	'app',
 	'public',
-	'vendor'
+	'vendor',
+	'templates'
 ];
 
 // Delete the previous export to start clean.
