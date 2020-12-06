@@ -16,13 +16,7 @@
 					while ( have_posts() ) : the_post();
 						Benlumia007\Backdrop\Template\get_template_part( 'single/content', 'portfolio' );
 					endwhile;
-						the_post_navigation(
-							array(
-								'next_text' => '<span class="post-next" aria-hiddent="true">' . esc_html__( 'Next', 'camaraderie' ) . '</span><span class="post-title">%title</span>',
-								'prev_text' => '<span class="post-previous" aria-hidden="true">' . esc_html__( 'Previous', 'camaraderie' ) . '</span><span class="post-title">%title</span>',
-							)
-						);
-				comments_template();
+					comments_template();
 				?>
 			</main>
 			<?php Benlumia007\Backdrop\View\display( 'sidebar', [ 'portfolio' ] ); ?>
