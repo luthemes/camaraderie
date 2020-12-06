@@ -19,7 +19,7 @@
 					comments_template();
 				?>
 			</main>
-			<?php Benlumia007\Backdrop\View\display( 'sidebar', [ 'primary' ] ); ?>
+			<?php Benlumia007\Backdrop\View\display( 'sidebar', [ 'secondary' ] ); ?>
 		</div>
 	</section>
 <?php get_footer(); ?>
