@@ -25,7 +25,7 @@
 				comments_template();
 				?>
 			</main>
-			<?php Benlumia007\Backdrop\View\display( 'sidebar', [ 'primary' ] ); ?>
+			<?php Benlumia007\Backdrop\View\display( 'sidebar', [ 'portfolio' ] ); ?>
 		</div>
 	</section>
 <?php get_footer(); ?>
