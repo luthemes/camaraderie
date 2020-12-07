@@ -148,6 +148,16 @@
     max-width: 1170px;
     padding: 1.125em;
 
+    .related-header {
+        margin-bottom: 1.125em;
+        text-align: center;
+
+        .related-title {
+            margin: 0;
+            padding: 0;
+        }
+    }
+
     .entry-content {
         .portfolio-grid {
             display: grid;

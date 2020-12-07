@@ -26,6 +26,9 @@
 	</section>
 	<?php if ( isset( $related_display)  && $related_display != 0 ) { ?>
 		<div id="related-items" class="related-items">
+			<header class="related-header">
+				<h1 class="related-title"><?php esc_html_e( 'Related Items', 'camaraderie' ); ?></h1>
+			</header>
 			<div class="entry-content">
 				<ul class="portfolio-grid">
 					<?php $query = new WP_Query( array(
