@@ -37,6 +37,11 @@ Welcome to Camaraderie WordPress theme. Camaraderie is a fully functional mobile
 Not Available at this time
 
 == Changelog ==
+Version: 2.0.4
+- Enable related items in the custom portfolio section in customizer
+- Add related items to the bottom of the portfolio
+- Minor fixes to CSS
+
 Version: 2.0.3
 - single-portfolio.php set sidebar to portfolio
 - page.php set sidebar to secondary
