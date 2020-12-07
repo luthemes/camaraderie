@@ -60,11 +60,27 @@
         }
     }
 
-    .page,
-    .portfolio {
+    .page {
         background: #ffffff;
         border: 0.063em solid #cccccc;
         margin-bottom: 1.125em;
+        min-height: 20.313em;
+        padding: 1.125em;
+
+        .entry-header {
+            text-align: center;
+
+            .entry-title {
+                margin: 0;
+                padding: 0;
+            }
+        }
+    }
+
+    .portfolio {
+        background: #ffffff;
+        border: 0.063em solid #cccccc;
+        margin-bottom: 0;
         min-height: 20.313em;
         padding: 1.125em;
 
@@ -123,6 +139,38 @@
 		padding: 0.5em;
 		width: 100%;
 	}
+}
+
+.related-items {
+    background: #ffffff;
+    border: 0.063em solid #cccccc;
+    margin: 0 auto 1.125em;
+    max-width: 1170px;
+    padding: 1.125em;
+
+    .entry-content {
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-gap: 1.125em;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .wp-caption {
+            margin-bottom: 0;
+
+            .wp-caption-text {
+                padding: 1em;
+
+                .portfolio-title {
+                    margin: 0;
+                    padding: 0;
+                }
+            }
+        }
+    }
 }
 
 .left-sidebar {
