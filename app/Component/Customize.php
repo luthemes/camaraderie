@@ -99,6 +99,10 @@ class Customize extends CustomizeAbstract {
 			'sanitize_callback' => 'absint',
 		) );
 
+		$manager->add_setting( 'related_display', array(
+			'sanitize_callback' => 'Benlumia007\Backdrop\Helpers\Sanitize::checkbox',
+		) );
+
 		$manager->add_setting( 'custom_blog_display', array(
 			'sanitize_callback' => 'Benlumia007\Backdrop\Helpers\Sanitize::checkbox',
 		) );
@@ -151,6 +155,15 @@ class Customize extends CustomizeAbstract {
 			'section'  => 'custom_portfolio',
 			'settings' => 'custom_portfolio_items',
 			'priority' => 20,
+		) );
+
+		$manager->add_control( 'related_display', array(
+            'label'     => esc_html__('Enable Related Items', 'camaraderie'),
+            'description'   => esc_html__('Related Items when enabled, will appear at the bottom page when using Backdrop Post Types for Portfolio.', 'camaraderie'),
+            'type'      => 'checkbox',
+            'section'   => 'custom_portfolio',
+            'settings'  => 'related_display',
+            'priority'  => 25,
 		) );
 
 		$manager->add_control( 'custom_blog_display', array(
