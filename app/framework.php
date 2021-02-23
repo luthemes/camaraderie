@@ -26,8 +26,7 @@ $camaraderie->provider( Camaraderie\Customize\Provider::class );
 $camaraderie->provider( Camaraderie\ThemeLayouts\Provider::class );
 $camaraderie->provider( Camaraderie\Admin\Provider::class );
 
+/**
+ * Boot the framework
+ */
 $camaraderie->boot();
-
-// $camaraderie->admin = new Camaraderie\Component\Admin();
-// $camaraderie->customize = new Camaraderie\Component\Customize();
-// $camaraderie->layouts = new Camaraderie\Component\ThemeLayouts();
