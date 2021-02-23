@@ -11,7 +11,7 @@
 /**
  * Define namespace
  */
-namespace Camaraderie\Control;
+namespace Camaraderie\ThemeLayouts\Control;
 use WP_Customize_Control;
 
 /**

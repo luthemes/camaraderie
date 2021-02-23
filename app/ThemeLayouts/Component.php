@@ -1,37 +1,29 @@
 <?php
 /**
- * Camaraderie ( Customize.php )
+ * Camaraderie ( app/Customize/Component.php )
  *
- * @package     Camaraderie
- * @copyright   Copyright (C) 2017-2020. Benjamin Lu
- * @license     GNU General Public License v2 or later ( https://www.gnu.org/licenses/gpl-2.0.html )
- * @author      Benjamin Lu ( https://benjlu.com )
+ * This file is used to create a new framework instance and adds specific features to the theme.
+ *
+ * @package   Camaraderie
+ * @copyright Copyright (C) 2019-2021. Benjamin Lu
+ * @license   GNU General Public License v2 or later ( https://www.gnu.org/licenses/gpl-2.0.html )
+ * @author    Benjamin Lu ( https://getbenonit.com )
  */
 
-/**
- * Table of Content
- *
- * 1.0 - Create a New Framework
- */
-namespace Camaraderie\Component;
 
-use Benlumia007\Backdrop\Contracts\Customize\Customize as CustomizeAbstract;
-use Camaraderie\Control\ImageRadio;
-/**
- * 1.0 - Create a New Framework
- *
- * This will initialize te Backdrop Core Framework and will add all the necessary components and features
- * to the theme, such as Menu, Sidebar, and Global Layout.
- */
-class ThemeLayouts extends CustomizeAbstract {
+ namespace Camaraderie\ThemeLayouts;
+ use Benlumia007\Backdrop\Component\Customize as CustomizeContract;
+ use Camaraderie\ThemeLayouts\Control\ImageRadio;
+
+class Component extends CustomizeContract {
 	/**
-	 * Register register_panels
+	 * Register panels
 	 *
 	 * @since  1.0.0
 	 * @access public
 	 * @param  object $manager customizer object.
 	 */
-	public function register_panels( $manager ) {
+	public function panels( $manager ) {
 		$manager->add_panel( 'theme_options', array(
 			'title' => esc_html( 'Theme Options', 'camaraderie' ),
 			'priority' => 15,
@@ -39,13 +31,13 @@ class ThemeLayouts extends CustomizeAbstract {
 	}
 
 	/**
-	 * Register register_sections
+	 * Register sections
 	 *
 	 * @since  1.0.0
 	 * @access public
 	 * @param  object $manager customizer object.
 	 */
-	public function register_sections( $manager ) {
+	public function sections( $manager ) {
 		/**
 		 * Home Section
 		 */
@@ -57,13 +49,13 @@ class ThemeLayouts extends CustomizeAbstract {
 	}
 
 	/**
-	 * Register register_settings
+	 * Register settings
 	 *
 	 * @since  1.0.0
 	 * @access public
 	 * @param  object $manager customizer object.
 	 */
-	public function register_settings( $manager ) {
+	public function settings( $manager ) {
 		$manager->add_setting( 'global_layout',
 			[
 				'default'           => 'left-sidebar',
@@ -73,13 +65,13 @@ class ThemeLayouts extends CustomizeAbstract {
 	}
 
 	/**
-	 * Register register_controls
+	 * Register controls
 	 *
 	 * @since  1.0.0
 	 * @access public
 	 * @param  object $manager customizer object.
 	 */
-	public function register_controls( $manager ) {
+	public function controls( $manager ) {
 		$manager->add_control(
 			new ImageRadio(
 				$manager,

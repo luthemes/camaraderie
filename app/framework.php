@@ -15,32 +15,19 @@
  *
  * This will create an instance of the framework allowing you to initialize the theme.
  */
-$camaraderie = Benlumia007\Backdrop\Framework::get_instance();
+$camaraderie = new Benlumia007\Backdrop\Framework();
 
-$camaraderie->menus = new Benlumia007\Backdrop\Menu\Menu(
-	$args = [
-		'primary' => esc_html__( 'Primary Navigation', 'camaraderie' ),
-		'social' => esc_html__( 'Social Navigation', 'camaraderie' ),
-	]
-);
+/**
+ * Register Service Provider with the Framework
+ */
+$camaraderie->provider( Camaraderie\Menu\Provider::class );
+$camaraderie->provider( Camaraderie\Sidebar\Provider::class );
+$camaraderie->provider( Camaraderie\Customize\Provider::class );
+$camaraderie->provider( Camaraderie\ThemeLayouts\Provider::class );
+$camaraderie->provider( Camaraderie\Admin\Provider::class );
 
-$camaraderie->sidebars = new Benlumia007\Backdrop\Sidebar\Sidebar(
-	$args = [
-		'primary' => [
-			'name' => esc_html__( 'Primary Sidebar', 'camaraderie' ),
-			'desc' => esc_html__( 'Applies to Posts', 'camaraderie' ),
-		],
-		'secondary' => [
-			'name' => esc_html__( 'Secondary Sidebar', 'camaraderie' ),
-			'desc' => esc_html__( 'Applies to Pages', 'camaraderie' ),
-		],
-		'portfolio' => [
-			'name' => esc_html__( 'Portfolio Sidebar', 'camaraderie' ),
-			'desc' => esc_html__( 'Applies to Portoflio', 'camaraderie' ),
-		]
-	]
-);
+$camaraderie->boot();
 
-$camaraderie->admin = new Camaraderie\Component\Admin();
-$camaraderie->customize = new Camaraderie\Component\Customize();
-$camaraderie->layouts = new Camaraderie\Component\ThemeLayouts();
+// $camaraderie->admin = new Camaraderie\Component\Admin();
+// $camaraderie->customize = new Camaraderie\Component\Customize();
+// $camaraderie->layouts = new Camaraderie\Component\ThemeLayouts();
