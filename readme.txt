@@ -2,7 +2,7 @@
 Contributors: benlumia007
 Requires at least: 5.0
 Tested up to WordPress.5.2
-Version: 1.0.9
+Version: 2.0.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: grid-layout, left-sidebar, one-column, right-sidebar, two-columns, custom-background, custom-colors, custom-header, custom-logo, custom-menu, featured-images, footer-widgets, post-formats, sticky-post, theme-options, threaded-comments, translation-ready, blog
@@ -37,6 +37,10 @@ Welcome to Camaraderie WordPress theme. Camaraderie is a fully functional mobile
 Not Available at this time
 
 == Changelog ==
+Version: 2.0.5 
+- Minor Changes to the Framework
+- Keyboard Navigation Ready for Accessibility
+
 Version: 2.0.4
 - Enable related items in the custom portfolio section in customizer
 - Add related items to the bottom of the portfolio
