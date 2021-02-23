@@ -12,11 +12,11 @@
 ?>
 <?php get_header(); ?>
 	<section id="content" class="site-content">
-		<div id="global-layout" class="<?php echo esc_attr( get_theme_mod( 'global_layout', 'no-sidebar' ) ); ?>">
+		<div id="global-layout" class="right-sidebar">
 			<main id="main" class="content-area">
 				<?php
 					while ( have_posts() ) : the_post();
-						Benlumia007\Backdrop\Template\get_template_part( 'single/content', 'portfolio' );
+						Benlumia007\Backdrop\Template\get_template_part( 'single/content', 'backdrop-portfolio' );
 					endwhile;
 					comments_template();
 				?>
@@ -32,7 +32,7 @@
 			<div class="entry-content">
 				<ul class="portfolio-grid">
 					<?php $query = new WP_Query( array(
-						'post_type'         => 'portfolio', 
+						'post_type'         => 'backdrop-portfolio', 
 						'posts_per_page'    => 3, 
 						'orderby'           => 'rand',
 						'post__not_in'      => array( get_queried_object_id() )

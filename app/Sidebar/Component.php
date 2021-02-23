@@ -32,7 +32,7 @@ class Component extends SidebarContract {
                 'desc' => 
                 esc_html__( 'Displays only custom templates', 'camaraderie' )
             ],
-            'portflio' => [
+            'portfolio' => [
                 'name' => esc_html__( 'Portfolio Sidebar', 'camaraderie' ),
                 'desc' => esc_html__( 'Displays only on Portfolio', 'camaraderie' )
             ]
