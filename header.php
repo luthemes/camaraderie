@@ -20,7 +20,9 @@
 <?php wp_body_open(); ?>
 <div id="container" class="site-container">
 	<a class="skip-link screen-reader-text" href="#main"><?php esc_html_e( 'Skip to content', 'camaraderie' ) ?></a>
-	<?php Benlumia007\Backdrop\View\display( 'menu', [ 'primary' ] ); ?>
+	<div id="masthead" class="main-navigation">
+		<?php Benlumia007\Backdrop\View\display( 'menu', [ 'primary' ] ); ?>
+	</div>
 	<?php $is_front = ( is_front_page() && ! is_home() ); ?>
 		<header id="header" class="site-header <?php echo $is_front ? 'custom' : 'header'; ?>-image">
 			<?php if ( $is_front ) { ?>
