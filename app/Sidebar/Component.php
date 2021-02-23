@@ -21,11 +21,20 @@ class Component extends SidebarContract {
         return array(
             'primary' => [
                 'name' => esc_html__( 'Primary Sidebar', 'camaraderie' ),
-                'desc' => esc_html__( 'test', 'camaraderie' ),
+                'desc' => esc_html__( 'Displays Only on Posts', 'camaraderie' ),
             ],
             'secondary' => [
                 'name' => esc_html__( 'Secondary Sidebar', 'camaraderie' ),
-                'desc' => esc_html__( 'test', 'camaraderie' ),
+                'desc' => esc_html__( 'Displays Only on Pages', 'camaraderie' ),
+            ],
+            'custom' => [
+                'name' => esc_html__( 'Custom Sidebar', 'camaraderie' ),
+                'desc' => 
+                esc_html__( 'Displays only custom templates', 'camaraderie' )
+            ],
+            'portflio' => [
+                'name' => esc_html__( 'Portfolio Sidebar', 'camaraderie' ),
+                'desc' => esc_html__( 'Displays only on Portfolio', 'camaraderie' )
             ]
         );
     }
