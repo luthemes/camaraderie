@@ -325,3 +325,11 @@
         display: none
     }
 }
+
+.menu-toggle.hide {
+	display: none;
+}
+
+.toggled .menu-toggle.hide {
+	display: block;
+}
