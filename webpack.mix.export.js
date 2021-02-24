@@ -23,7 +23,7 @@ let exportPath = 'camaraderie';
 // Theme root-level files to include.
 let files = [
 	'404.php',
-	'archive-portfolio.php',
+	'archive-backdrop-portfolio.php',
 	'archive.php',
 	'comments.php',
 	'footer.php',
@@ -35,7 +35,7 @@ let files = [
 	'screenshot.png',
 	'search.php',
 	'single.php',
-	'single-portfolio.php',
+	'single-backdrop-portfolio.php',
 	'style.css'
 ];
 
