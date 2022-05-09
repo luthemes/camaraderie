@@ -1,0 +1,26 @@
+
+////
+/// Elements imports
+///
+/// Settings handle the configuration and odn't output CSS. This is a
+/// good place to define things like variables.
+///
+/// @group  Elements
+/// @author Benjamin Lu <benlumia007@gmail.com>
+/// @link   https://github.com/benlumia007/benjlu
+////
+
+//
+// Initiator ( elements/_index.scss )
+//
+// @package   Initiator
+// @copyright Copyright (C) 2019-2021. Benjamin Lu
+// @license   GNU General Public License v2 or later ( https://www.gnu.org/licenses/gpl-2.0.html )
+// @author    Benjamin Lu ( https://getbenonit.com )
+//
+
+body {
+	background: color( silver );
+    font-family: font-family( primary );
+    margin: 0;
+}

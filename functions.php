@@ -23,18 +23,18 @@
  * 1.0 - Compatibility Check
  */
 function camaraderie_compatibility_check() {
-	if ( version_compare( $GLOBALS['wp_version'], '5.0', '<' ) ) {
+	if ( version_compare( $GLOBALS['wp_version'], '4.9', '<' ) ) {
 		return sprintf(
 			// translators: 1 =  a version string, 2 = current wp version string.
 			__( 'camaraderie requires at least WordPress version %1$s. You are currently running %2$s. Please upgrade and try again.', 'camaraderie' ),
-			'5.0',
+			'4.9',
 			$GLOBALS['wp_version']
 		);
-	} elseif ( version_compare( PHP_VERSION, '5.6', '<' ) ) {
+	} elseif ( version_compare( PHP_VERSION, '7.4', '<' ) ) {
 		return sprintf(
 			// translators: 1 =  a version string, 2 = current wp version string.
 			__( 'camaraderie requires at least PHP version %1$s. You are currently running %2$s. Please upgrade and try again.', 'camaraderie' ),
-			'5.6',
+			'7.4',
 			PHP_VERSION
 		);
 	}
@@ -45,7 +45,7 @@ function camaraderie_compatibility_check() {
  * Triggered after switch themes and check if it meets the requirements.
  */
 function camaraderie_switch_theme() {
-	if ( version_compare( $GLOBALS['wp_version'], '5.0', '<' ) || version_compare( PHP_VERSION, '5.6', '<' ) ) {
+	if ( version_compare( $GLOBALS['wp_version'], '4.9', '<' ) || version_compare( PHP_VERSION, '7.4', '<' ) ) {
 		switch_theme( get_option( 'theme_switched' ) );
 		add_action( 'admin_notices', 'camaraderie_upgrade_notice' );
 	}

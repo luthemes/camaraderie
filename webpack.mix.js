@@ -18,21 +18,6 @@
  const mix = require( 'laravel-mix' );
 
  /*
- * -----------------------------------------------------------------------------
- * Theme Export Process
- * -----------------------------------------------------------------------------
- * Configure the export process in `webpack.mix.export.js`. This bit of code
- * should remain at the top of the file here so that it bails early when the
- * `export` command is run.
- * -----------------------------------------------------------------------------
- */
-
-if ( process.env.export ) {
-	const exportTheme = require( './webpack.mix.export.js' );
-	return;
-}
-
- /*
  * Sets the development path to assets. By default, this is the `/resources`
  * folder in the theme.
  */
@@ -71,8 +56,9 @@ mix.version();
  *
  * @link https://laravel.com/docs/5.6/mix#working-with-scripts
  */
-mix.js( `${devPath}/js/app.js`, 'js' )
-	.js( `${devPath}/js/image-radio.js`, 'js' );
+mix.js( `${devPath}/js/app.js`, 'assets/js' )
+	.js( `${devPath}/js/image-radio.js`, 'assets/js' )
+	.js( `${devPath}/js/navigation.js`, 'assets/js' );
 
 /*
  * Compile CSS. Mix supports Sass, Less, Stylus, and plain CSS, and has functions
@@ -84,7 +70,7 @@ mix.js( `${devPath}/js/app.js`, 'js' )
  */
 
 // Compile SASS/CSS.
-mix.sass( `${devPath}/scss/screen.scss`, 'css', )
-   .sass( `${devPath}/scss/editor.scss`, 'css', )
-   .sass( `${devPath}/scss/admin.scss`, 'css', )
-   .sass( `${devPath}/scss/image-radio.scss`, 'css', );
+mix.sass( `${devPath}/scss/screen.scss`, 'assets/css', )
+   .sass( `${devPath}/scss/editor.scss`, 'assets/css', )
+   .sass( `${devPath}/scss/admin.scss`, 'assets/css', )
+   .sass( `${devPath}/scss/image-radio.scss`, 'assets/css', );

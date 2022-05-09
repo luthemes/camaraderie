@@ -1,0 +1,255 @@
+body {
+  background: #eeeeee;
+  font-family: "Merriweather", serif;
+  font-family: var(--font-family-primary, "Merriweather", serif);
+  margin: 0;
+}
+
+h1 {
+  display: block;
+  font-family: "Fira Sans", sans-serif;
+  font-family: var(--font-family-heading, "Fira Sans", sans-serif);
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0.67em 0;
+}
+
+h2 {
+  display: block;
+  font-family: "Fira Sans", sans-serif;
+  font-family: var(--font-family-heading, "Fira Sans", sans-serif);
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0.83em 0;
+}
+
+h3 {
+  display: block;
+  font-family: "Fira Sans", sans-serif;
+  font-family: var(--font-family-heading, "Fira Sans", sans-serif);
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 1em 0;
+}
+
+h4 {
+  display: block;
+  font-family: "Fira Sans", sans-serif;
+  font-family: var(--font-family-heading, "Fira Sans", sans-serif);
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 1.33em 0;
+}
+
+h5 {
+  display: block;
+  font-family: "Fira Sans", sans-serif;
+  font-family: var(--font-family-heading, "Fira Sans", sans-serif);
+  font-size: 1.125rem;
+  font-weight: 700;
+  margin: 1.67em 0;
+}
+
+h6 {
+  display: block;
+  font-family: "Fira Sans", sans-serif;
+  font-family: var(--font-family-heading, "Fira Sans", sans-serif);
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 2.33em 0;
+}
+
+.site-header .site-branding {
+  text-align: center;
+}
+.site-header .site-branding .site-title {
+  font-size: 3rem;
+  margin: 0;
+  padding: 0;
+}
+.site-header .site-branding .site-title a {
+  color: #000000;
+  text-decoration: none;
+}
+.site-header .site-branding .site-description {
+  margin: 0;
+  padding: 0;
+}
+
+@media screen and (max-width: 375px) {
+  .primary-menu {
+    width: 100%;
+  }
+  .primary-menu .menu-toggle {
+    background: #000000;
+    border: none;
+    bottom: 1.125rem;
+    color: #ffffff;
+    font-family: "Merriweather", serif;
+    font-family: var(--font-family-primary, "Merriweather", serif);
+    left: 1.125rem;
+    padding: 0.5rem 1rem;
+    position: fixed;
+  }
+  .primary-menu .menu-items {
+    background: #000000;
+    left: -9999rem;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+  }
+  .primary-menu .menu-items .menu-item {
+    padding: 0.5rem 1rem;
+  }
+  .primary-menu .menu-items .menu-item a {
+    background: #000000;
+    border-bottom: none;
+    box-sizing: border-box;
+    color: #ffffff;
+    display: block;
+    padding: 0.5rem 0;
+    text-decoration: none;
+    width: 100%;
+  }
+  .primary-menu .menu-items .menu-item a:hover {
+    text-decoration: underline;
+  }
+  .primary-menu .menu-items .menu-item .dropdown-toggle {
+    background: transparent;
+    border-bottom: none;
+    border-left: 0.063rem dashed #ffffff;
+    border-right: none;
+    border-top: none;
+    padding: 0.938rem;
+    position: absolute;
+    right: 0.063rem;
+    top: 0.063rem;
+  }
+  .primary-menu .menu-items .menu-item .dropdown-toggle .fontawesome {
+    color: #ffffff;
+    font-family: "Font Awesome 5 Free";
+    font-size: 1.24rem;
+  }
+  .primary-menu .menu-items .menu-item .dropdown-toggle .fontawesome:before {
+    content: "\f077";
+  }
+  .primary-menu .menu-items .menu-item .sub-menu {
+    left: -9999rem;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+  }
+  .primary-menu .menu-items .toggled-on .dropdown-toggle {
+    background: transparent;
+    border-bottom: none;
+    border-left: 0.063rem dashed #ffffff;
+    border-right: none;
+    border-top: none;
+    padding: 0.938rem;
+    position: absolute;
+    right: 0.063rem;
+    top: 0.063rem;
+  }
+  .primary-menu .menu-items .toggled-on .dropdown-toggle .fontawesome {
+    color: #ffffff;
+    font-family: "Font Awesome 5 Free";
+    font-size: 1.24rem;
+  }
+  .primary-menu .menu-items .toggled-on .dropdown-toggle .fontawesome:before {
+    content: "\f078";
+  }
+  .primary-menu .menu-items .toggled-on .sub-menu {
+    background: #000000;
+    bottom: 3.4rem;
+    left: 0;
+    right: 0;
+    padding-left: 1rem;
+  }
+
+  .toggled .primary-menu .menu-items {
+    bottom: 3.6rem;
+    left: 1.125rem;
+    right: 1.125rem;
+    position: fixed;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .primary-menu {
+    background: #000000;
+    padding: 1.125rem;
+  }
+  .primary-menu .menu-toggle {
+    display: none;
+  }
+  .primary-menu .menu-items {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position: static;
+    justify-content: center;
+  }
+  .primary-menu .menu-items .menu-item {
+    left: unset;
+    position: relative;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+  }
+  .primary-menu .menu-items .menu-item.menu-item-has-children > a:after {
+    color: #ffffff;
+    content: "\f078";
+    font-family: "Font Awesome 5 Free";
+    text-decoration: none;
+    margin-left: 0.5rem;
+  }
+  .primary-menu .menu-items .menu-item a {
+    color: #ffffff;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+  }
+  .primary-menu .menu-items .menu-item .dropdown-toggle {
+    display: none;
+  }
+  .primary-menu .menu-items .menu-item .sub-menu {
+    background: #000000;
+    box-shadow: 0 0 3px 3px #ffffff;
+    left: -9999rem;
+    list-style-type: none;
+    margin: 0.563rem 0;
+    padding: 0;
+    position: absolute;
+  }
+  .primary-menu .menu-items .menu-item .sub-menu .menu-item {
+    padding: 0.5rem;
+    width: 15rem;
+  }
+  .primary-menu .menu-items .menu-item:hover .sub-menu, .primary-menu .menu-items .menu-item.focus .sub-menu {
+    left: 0;
+  }
+}
+.screen-reader-text {
+  clip: rect(1px, 1px, 1px, 1px);
+  -webkit-clip-path: inset(50%);
+          clip-path: inset(50%);
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  word-wrap: normal;
+  border: none;
+}
+.screen-reader-text:active, .screen-reader-text:focus {
+  clip: auto;
+  -webkit-clip-path: none;
+          clip-path: none;
+  display: block;
+  height: auto;
+  width: auto;
+  z-index: 100000;
+  text-decoration: none;
+}

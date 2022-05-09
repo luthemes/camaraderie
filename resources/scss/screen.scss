@@ -1,20 +1,48 @@
-//
-// Initiator ( _screen.scss )
-//
-// @package     Initiator
-// @copyright   Copyright (C) 2019-2020. Benjamin Lu
-// @license     GNU General Public License v2 or later ( https://www.gnu.org/licenses/gpl-2.0.html )
-// @author      Benjamin Lu ( https://benjlu.com )
-//
+////
+/// Primary Screen Stylesheet
+///
+/// This is the primary stylesheet. We don't actually write any styles here.
+/// Instead, we import all of our styles from partials within the sub-folders.
+///
+/// @group  Styles
+/// @author Benjamin Lu <benlumia007@gmail.com>
+/// @link   https://getbenonit.com/themes/initiator
+////
 
+// -----------------------------------------------------------------------------
+// Import settings.
+// -----------------------------------------------------------------------------
 //
-// Table of screen
-//
-// 1.0 - screen
-//
+// Settings handle the configuration and variables.
 
+@import '01.settings/index';
+
+// -----------------------------------------------------------------------------
+// Import element styles.
+// -----------------------------------------------------------------------------
 //
-// 1.0 - screen
+// Elements are (or should be) class-less designs for the base HTML elements.
+// The styles in this folder should only handle the defaults. More specific
+// styles should be handled later in the cascade.
+
+@import '02.elements/index';
+
+// -----------------------------------------------------------------------------
+// Import component styles.
+// -----------------------------------------------------------------------------
 //
-@import 'base/index';
-@import 'components/index';
+// This is the first point that real CSS is output. Resets, normalization,
+// fonts, etc. are best handled here. These are the base styles that other
+// styles will build upon.
+
+@import '04.components/index';
+
+// -----------------------------------------------------------------------------
+// Import utility styles.
+// -----------------------------------------------------------------------------
+//
+// Utilities are helper classes and overrides. This gets loaded last. If
+// necessary, this is the only place where `!important` rules should go, but
+// only if necessary.
+
+@import '05.utilities/index';

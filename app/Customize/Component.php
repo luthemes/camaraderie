@@ -12,7 +12,7 @@
 
 
  namespace Camaraderie\Customize;
- use Benlumia007\Backdrop\Component\Customize as CustomizeContract;
+ use Benlumia007\Backdrop\Customize\Component as CustomizeContract;
  use WP_Customize_Image_Control;
 
  class Component extends CustomizeContract {

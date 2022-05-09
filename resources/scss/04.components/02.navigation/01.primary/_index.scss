@@ -1,0 +1,194 @@
+@media screen and ( max-width: 375px ) {
+	.primary-menu {
+
+		width: 100%;
+	
+		.menu-toggle {
+			background: color( black );
+			border: none;
+			bottom: 1.125rem;
+			color: color( white );
+			font-family: font-family( primary );
+			left: 1.125rem;
+			padding: 0.5rem 1rem;
+			position: fixed;
+		}
+	
+		.menu-items {
+			background: color( black );
+			left: -9999rem;
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+			position: absolute;
+	
+			.menu-item {
+				padding: 0.5rem 1rem;
+	
+				a {
+					background: #000000;
+					border-bottom: none;
+					box-sizing: border-box;
+					color: #ffffff;
+					display: block;
+					padding: 0.5rem 0;
+					text-decoration: none;
+					width: 100%;
+	
+					&:hover {
+						text-decoration: underline;
+					}
+				}
+	
+				.dropdown-toggle {
+					background: transparent;
+					border-bottom: none;
+					border-left: 0.063rem dashed color( white );
+					border-right: none;
+					border-top: none;
+					padding: 0.938rem;
+					position: absolute;
+					right: 0.063rem;
+					top: 0.063rem;
+	
+					.fontawesome {
+						color: color( white );
+						font-family: 'Font Awesome 5 Free';
+						font-size: 1.24rem;
+	
+						&:before {
+							content: "\f077";
+						}
+					}
+				}
+	
+				.sub-menu {
+					left: -9999rem;
+					list-style-type: none;
+					margin: 0;
+					padding: 0;
+					position: absolute;
+				}
+			}
+	
+			.toggled-on {
+				.dropdown-toggle {
+					background: transparent;
+					border-bottom: none;
+					border-left: 0.063rem dashed color( white );
+					border-right: none;
+					border-top: none;
+					padding: 0.938rem;
+					position: absolute;
+					right: 0.063rem;
+					top: 0.063rem;
+	
+					.fontawesome {
+						color: color( white );
+						font-family: 'Font Awesome 5 Free';
+						font-size: 1.24rem;
+	
+						&:before {
+							content: "\f078";
+						}
+					}
+				}
+	
+				.sub-menu {
+					background: color( black );
+					bottom: 3.4rem;
+					left: 0;
+					right: 0;
+					padding-left: 1rem;
+				}
+			}
+		}
+	}
+	
+	.toggled {
+		.primary-menu {
+			.menu-items {
+				bottom: 3.6rem;
+				left: 1.125rem;
+				right: 1.125rem;
+				position: fixed;
+	
+	
+			}
+		}
+	} 
+}
+
+@media screen and ( min-width: 1025px ) {
+	.primary-menu {
+		background: color( black );
+		padding: 1.125rem;
+
+		.menu-toggle {
+			display: none;
+		}
+
+		.menu-items {
+			display: flex;
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+			position: static;
+			justify-content: center;
+
+			.menu-item {
+				left: unset;
+				position: relative;
+				width: max-content;
+
+				&.menu-item-has-children {
+					> {
+						a {
+							&:after {
+								color: color( white );
+								content: "\f078";
+								font-family: 'Font Awesome 5 Free';
+								text-decoration: none;
+								margin-left: 0.5rem;
+						   }
+						}
+					}
+				}
+
+				a {
+					color: color( white );
+					padding: 0.5rem 1rem;
+					text-decoration: none;
+				}
+
+				.dropdown-toggle {
+					display: none;
+				}
+
+				.sub-menu {
+					background: color( black );
+					box-shadow: 0 0 3px 3px color( white );
+					left: -9999rem;
+					list-style-type: none;
+					margin: 0.563rem 0;
+					padding: 0;
+					position: absolute;
+
+					.menu-item {
+						padding: 0.5rem;
+						width: 15rem;
+					}
+				}
+
+				&:hover,
+				&.focus {
+					.sub-menu {
+						left: 0;
+					}
+				}
+			}
+		}
+
+
+	}
+}

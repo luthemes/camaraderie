@@ -125,3 +125,25 @@ add_action( 'after_setup_theme', function() {
 			)
 		);
 } );
+
+/**
+ * Registers custom templates with WordPress.
+ *
+ * @since  1.0.0
+ * @access public
+ * @param  object  $templates
+ * @return void
+ */
+add_action( 'backdrop/templates/register', function( $templates ) {
+	$templates->add( 'template-home.php', [
+		'label' => esc_html__( 'Home', 'camaraderie' )
+	] );
+
+	$templates->add( 'template-left-sidebar.php', [
+		'label' => esc_html__( 'Left Sidebar', 'camaraderie' )
+	] );
+
+	$templates->add( 'template-right-sidebar.php', [
+		'label' => esc_html__( 'Right Sidebar', 'camaraderie' )
+	] );
+} );

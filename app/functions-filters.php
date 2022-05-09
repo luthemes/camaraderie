@@ -96,3 +96,12 @@ add_filter(
 		return $title;
 	}
 );
+
+/**
+ * Change Tempalate Path
+ * 
+ * @since  1.0.0
+ */
+add_filter( 'backdrop/template/path', function() {
+	return 'public/views';
+} );

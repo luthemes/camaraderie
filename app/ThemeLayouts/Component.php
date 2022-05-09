@@ -12,7 +12,7 @@
 
 
  namespace Camaraderie\ThemeLayouts;
- use Benlumia007\Backdrop\Component\Customize as CustomizeContract;
+ use Benlumia007\Backdrop\Customize\Component as CustomizeContract;
  use Camaraderie\ThemeLayouts\Control\ImageRadio;
 
 class Component extends CustomizeContract {

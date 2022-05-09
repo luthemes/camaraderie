@@ -12,7 +12,7 @@
 
 
  namespace Camaraderie\Admin;
- use Benlumia007\Backdrop\Component\Admin as AdminContract;
+ use Benlumia007\Backdrop\Theme\Admin\Component as AdminContract;
 
 class Component extends AdminContract {
 	/**

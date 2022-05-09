@@ -12,6 +12,7 @@
  * Define namespace
  */
 namespace Camaraderie;
+use function Benlumia007\Backdrop\Mix\asset;
 
 /**
  * Enqueue Scripts and Styles
@@ -30,12 +31,12 @@ add_action(
 		 * Rather than enqueue the main stylesheet, we are going to enqueue sceen.css since all of the styles will
 		 * go here. We only need parse the information for the Theme in style.css so that it can be activated.
 		 */
-		wp_enqueue_style( 'camaraderie-screen', get_parent_theme_file_uri( 'public/css/screen.css' ), array(), '1.0.0' );
+		wp_enqueue_style( 'camaraderie-screen', asset( 'assets/css/screen.css' ), null, null );
 
 		/**
 		 * We will be enqueue the app.js file, which mainly be for the navigation only.
 		 */
-		wp_enqueue_script( 'camaraderie-app', get_parent_theme_file_uri( 'public/js/app.js' ), array('jquery'), '1.0.0', true );
+		wp_enqueue_script( 'camaraderie-app', asset( 'assets/js/app.js' ), [ 'jquery' ], null, true );
 
 		/**
 		 * This allows users to comment by clicking on reply so that it gets nested.
@@ -46,23 +47,20 @@ add_action(
 	}
 );
 
-add_action(
-	'wp_enqueue_scripts',
-	function() {
-		$text_color = get_header_textcolor();
-		if ( get_theme_support( 'custom-header', 'default-text-color' ) === $text_color ) {
-			return;
-		}
-		$value      = display_header_text() ? sprintf( 'color: #%s', esc_html( $text_color ) ) : 'display: none;';
-		$custom_css = "
-			.site-branding .site-title a,
-			.site-description {
-				{$value}
-			}
-		";
-		wp_add_inline_style( 'camaraderie-screen', $custom_css );
+add_action( 'wp_enqueue_scripts', function() {
+	$text_color = get_header_textcolor();
+	if ( get_theme_support( 'custom-header', 'default-text-color' ) === $text_color ) {
+		return;
 	}
-);
+	$value      = display_header_text() ? sprintf( 'color: #%s', esc_html( $text_color ) ) : 'display: none;';
+	$custom_css = "
+		.site-branding .site-title a,
+		.site-description {
+			{$value}
+		}
+	";
+	wp_add_inline_style( 'camaraderie-screen', $custom_css );
+} );
 
 add_action(
 	'wp_enqueue_scripts', function() {
@@ -74,8 +72,8 @@ add_action(
 				background: url( {$header_image} );
 				background-position: center;
 				background-repeat: no-repeat;
-				min-height: 5.5em;
-				padding: 10em 0;
+				background-size: cover !important;
+				padding: 9rem 0;
 			}
 		";
 		wp_add_inline_style( 'camaraderie-screen', $custom_css );
@@ -88,11 +86,6 @@ add_action(
 		$avatar_image = esc_url( get_theme_mod( 'custom_avatar', get_theme_file_uri( '/public/images/avatar.jpg' ) ) );
 	
 		$custom_css = "      
-			.site-header {
-				padding-top: 10em;
-				min-height: 100vh;
-			}
-
 			.site-header.custom-image {
 				background: url({$custom_image});
 				background-attachment: fixed;

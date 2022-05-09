@@ -26,7 +26,7 @@
 		]
     },
     "require": {
-        "php": ">=5.6",
-        "benlumia007/backdrop-core": "^2.0.0"
+        "php": ">=7.4",
+        "benlumia007/backdrop": "^2.0.0"
 	}
 }
