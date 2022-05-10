@@ -155,6 +155,16 @@
 					}
 				}
 
+				&.current-menu-item {
+					a {
+						color: color( white );
+						padding: 0.5rem 1rem;
+						text-decoration: underline;
+						text-decoration-thickness: 2px;
+						text-underline-offset: 4px;
+					}
+				}
+
 				a {
 					color: color( white );
 					padding: 0.5rem 1rem;
@@ -167,23 +177,36 @@
 
 				.sub-menu {
 					background: color( black );
-					box-shadow: 0 0 3px 3px color( white );
-					left: -9999rem;
+					left: 0;
 					list-style-type: none;
-					margin: 0.563rem 0;
-					padding: 0;
+					margin: 0.7rem 0;
+					opacity: 0;
+					padding: 0.5rem 0;
 					position: absolute;
+					transform: translateY( -1em );
+					visibility: hidden;
+					transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s;
 
 					.menu-item {
+						margin: 0 0 0.5rem 0;
 						padding: 0.5rem;
-						width: 15rem;
+
+						&:last-child {
+							margin: 0;
+						}
 					}
 				}
 
 				&:hover,
+				&:focus-within,
 				&.focus {
 					.sub-menu {
 						left: 0;
+						visibility: visible; /* shows sub-menu */
+						opacity: 1;
+						z-index: 1;
+						transform: translateY(0%);
+						transition-delay: 0s, 0s, 0.3s
 					}
 				}
 			}

@@ -1,0 +1,17 @@
+.site-footer {
+	background: color( black );
+	line-height: 1.8rem;
+	padding: 1.125rem;
+
+	.site-info {
+		color: color( white );
+		text-align: center;
+
+		a {
+			color: color( white );
+			text-decoration: underline;
+			text-decoration-thickness: 2px;
+			text-underline-offset: 4px;
+		}
+	}
+}

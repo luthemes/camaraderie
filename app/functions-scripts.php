@@ -73,6 +73,9 @@ add_action(
 				background-position: center;
 				background-repeat: no-repeat;
 				background-size: cover !important;
+			}
+
+			.site-header.header-image .site-branding {
 				padding: 9rem 0;
 			}
 		";
@@ -85,11 +88,12 @@ add_action(
 		$custom_image = esc_url( get_theme_mod( 'custom_image', get_theme_file_uri( '/public/images/header-image.jpg' ) ) );
 		$avatar_image = esc_url( get_theme_mod( 'custom_avatar', get_theme_file_uri( '/public/images/avatar.jpg' ) ) );
 	
-		$custom_css = "      
+		$custom_css = " 
 			.site-header.custom-image {
 				background: url({$custom_image});
-				background-attachment: fixed;
-				background-position: center;
+				background-size: cover !important;
+				box-sizing: border-box;
+				min-height: 100vh;  
 			}
 			
 			.site-avatar {
@@ -98,7 +102,7 @@ add_action(
 				border-radius: 50%;
 				display: block;
 				height: 15.625em;
-				margin: 1em auto;
+				margin: 10rem auto 0 auto;
 				width: 15.625em;
 			}
 

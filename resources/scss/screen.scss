@@ -28,6 +28,16 @@
 @import '02.elements/index';
 
 // -----------------------------------------------------------------------------
+// Import layouts styles.
+// -----------------------------------------------------------------------------
+//
+// This is the first point that real CSS is output. Resets, normalization,
+// fonts, etc. are best handled here. These are the base styles that other
+// styles will build upon.
+
+@import '03.layouts/index';
+
+// -----------------------------------------------------------------------------
 // Import component styles.
 // -----------------------------------------------------------------------------
 //

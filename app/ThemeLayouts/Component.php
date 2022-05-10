@@ -59,7 +59,7 @@ class Component extends CustomizeContract {
 		$manager->add_setting( 'global_layout',
 			[
 				'default'           => 'left-sidebar',
-				'sanitize_callback' => 'Benlumia007\Backdrop\Helpers\Sanitize::layouts',
+				'sanitize_callback' => 'Benlumia007\Backdrop\Customize\Helpers\Sanitize::layouts',
 			]
 		);
 	}
@@ -85,7 +85,6 @@ class Component extends CustomizeContract {
 						[
 							'left-sidebar'  => get_theme_file_uri( '/public/images/2cl.png' ),
 							'right-sidebar' => get_theme_file_uri( '/public/images/2cr.png' ),
-							'no-sidebar'    => get_theme_file_uri( '/public/images/1col.png' ),
 						],
 				]
 			)

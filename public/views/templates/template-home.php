@@ -13,7 +13,8 @@ $portfolio_display = get_theme_mod( 'custom_portfolio_display' );
 $blog_display      = get_theme_mod( 'custom_blog_display' );
 $contact_display   = get_theme_mod( 'custom_contact_display' );
 ?>
-<?php get_header(); ?>
+<?php $engine = Benlumia007\Backdrop\App::resolve( 'view/engine' ); ?>
+<?php $engine->display( 'header' ); ?>
     <?php if ( 0 != $portfolio_display && isset( $portfolio_display ) ) { // phpcs:ignore ?>
         <?php Benlumia007\Backdrop\Template\get_template_part( 'section/content', 'portfolio' ); ?>
     <?php } ?>
@@ -23,4 +24,4 @@ $contact_display   = get_theme_mod( 'custom_contact_display' );
     <?php if ( 0 != $contact_display && isset( $contact_display ) ) { // phpcs:ignore ?>
         <?php Benlumia007\Backdrop\Template\get_template_part( 'section/content', 'contact' ); ?>
     <?php } ?>
-<?php get_footer(); ?>
+	<?php $engine->display( 'footer' ); ?>
