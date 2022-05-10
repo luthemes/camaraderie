@@ -16,7 +16,7 @@
 <?php $engine = Benlumia007\Backdrop\App::resolve( 'view/engine' ); ?>
 <?php $engine->display( 'header' ); ?>
 	<section id="content" class="site-content">
-		<div id="layout" class="<?php echo esc_attr( get_theme_mod( 'global_layout', 'no-sidebar' ) ); ?>">
+		<div id="layout" class="<?php echo esc_attr( get_theme_mod( 'global_layout', 'left-sidebar' ) ); ?>">
 			<main id="main" class="content-area">
 				<?php
 					if ( have_posts() ) :

@@ -302,6 +302,22 @@ h6 {
   margin: 0;
   padding: 0;
 }
+.content-area .post {
+  background: #ffffff;
+  border: 0.063rem solid #cccccc;
+  padding: 1.125rem;
+}
+.content-area .post .entry-header {
+  text-align: center;
+}
+.content-area .post .entry-header .entry-title {
+  margin: 0;
+  padding: 0;
+}
+.content-area .post .entry-header .entry-title a {
+  color: #000000;
+  text-decoration: none;
+}
 
 .widget {
   background: #ffffff;
@@ -347,7 +363,7 @@ h6 {
   width: 100%;
 }
 .widget.widget_calendar #wp-calendar a {
-  color: #ffffff;
+  color: #000080;
 }
 .widget.widget_calendar #wp-calendar caption {
   font-weight: 700;
@@ -356,6 +372,7 @@ h6 {
 }
 .widget.widget_calendar #wp-calendar #today {
   background: #000000;
+  color: #ffffff;
   font-weight: 700;
 }
 

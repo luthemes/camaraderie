@@ -51,7 +51,7 @@
 		}
 		
 		#wp-calendar a {
-			color: color( white );
+			color: color( navy );
 		}
 		
 		#wp-calendar caption {
@@ -60,9 +60,12 @@
 			text-align: center;
 		}
 		
-		#wp-calendar #today {
-			background: color( black );
-			font-weight: 700;
+		#wp-calendar { 
+			#today {
+				background: color( black );
+				color: color( white );
+				font-weight: 700;
+			}
 		}
 	}
 }

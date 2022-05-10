@@ -15,11 +15,11 @@
 		<?php } ?>
 	</picture>
 	<header class="entry-header">
-		<?php Benlumia007\Backdrop\Entry\display_title(); ?>
+		<?php Benlumia007\Backdrop\Theme\Entry\display_title(); ?>
 		<div class="entry-metadata">
-			<?php Benlumia007\Backdrop\Entry\display_author(); ?>
-			<?php Benlumia007\Backdrop\Entry\display_date(); ?>
-			<?php Benlumia007\Backdrop\Entry\display_comments_link(); ?>
+			<?php Benlumia007\Backdrop\Theme\Entry\display_author(); ?>
+			<?php Benlumia007\Backdrop\Theme\Entry\display_date(); ?>
+			<?php Benlumia007\Backdrop\Theme\Entry\display_comments_link(); ?>
 		</div>
 	</header>
 	<div class="entry-content">
@@ -38,7 +38,7 @@
 			?>
 	</div>
 	<div class="entry-taxonomies">
-		<?php Benlumia007\Backdrop\Entry\display_categories(); ?>
-		<?php Benlumia007\Backdrop\Entry\display_tags(); ?>
+		<?php Benlumia007\Backdrop\Theme\Entry\display_categories(); ?>
+		<?php Benlumia007\Backdrop\Theme\Entry\display_tags(); ?>
 	</div>
 </article>
