@@ -14,11 +14,11 @@
             <h1 class="blog-title"><?php esc_html_e( 'Blog', 'camaraderie' ); ?></h1>
             <span class="blog-description"><?php esc_html_e( 'Latest News', 'camaraderie' ); ?></span>
         </header>
-        <div class="entry-content">
-            <ul class="blog-grid">
+        <div class="blog-content">
+            <ul class="blog-items">
                 <?php
                     $posts_per_page = 2;
-                    $query          = new \WP_Query(
+                    $query          = new WP_Query(
                         array(
                             'post_type'           => 'post',
                             'ignore_sticky_posts' => 1,
@@ -30,14 +30,14 @@
                         while ( $query->have_posts() ) {
                             $query->the_post();
                             ?>
-                                <li>
+                                <li class="blog-item">
                                     <?php the_post_thumbnail( 'camaraderie-medium-thumbnails' ); ?>
                                     <header class="entry-header">
                                         <h1 class="entry-title"><a href="<?php echo esc_url( get_permalink() ); ?>"><?php the_title(); ?></a></h1>
                                         <div class="entry-metadata">
-                                            <?php Benlumia007\Backdrop\Entry\display_author(); ?>
-                                            <?php Benlumia007\Backdrop\Entry\display_date(); ?>
-                                            <?php Benlumia007\Backdrop\Entry\display_comments_link(); ?>
+                                            <?php Benlumia007\Backdrop\Theme\Entry\display_author(); ?>
+                                            <?php Benlumia007\Backdrop\Theme\Entry\display_date(); ?>
+                                            <?php Benlumia007\Backdrop\Theme\Entry\display_comments_link(); ?>
                                         </div>
                                     </header>
                                     <div class="entry-excerpt">

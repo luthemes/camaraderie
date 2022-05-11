@@ -314,6 +314,7 @@ img {
 .content-area .post {
   background: #ffffff;
   border: 0.063rem solid #cccccc;
+  margin-top: 1.125rem;
   padding: 1.125rem;
 }
 .content-area .post .entry-header {
@@ -326,6 +327,9 @@ img {
 .content-area .post .entry-header .entry-title a {
   color: #000000;
   text-decoration: none;
+}
+.content-area .post:first-child {
+  margin-top: 0;
 }
 
 .content-area {
@@ -411,6 +415,37 @@ img {
 .site-portfolio .content-area .portfolio-content .portfolio-items .portfolio-item .wp-caption .wp-caption-text a {
   color: #000080;
   text-decoration: none;
+}
+
+.site-blog .content-area {
+  margin: 0 auto;
+  padding: 1.125rem;
+  max-width: 1134px;
+}
+.site-blog .content-area .blog-header {
+  text-align: center;
+}
+.site-blog .content-area .blog-header .blog-title {
+  margin: 0;
+  padding: 0;
+}
+.site-blog .content-area .blog-content {
+  margin-top: 1.125rem;
+}
+.site-blog .content-area .blog-content .blog-items {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1.125rem;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.site-blog .content-area .blog-content .blog-items .blog-item .entry-header {
+  text-align: center;
+}
+.site-blog .content-area .blog-content .blog-items .blog-item .entry-header .entry-title {
+  margin: 0;
+  padding: 0;
 }
 
 .comments-header {

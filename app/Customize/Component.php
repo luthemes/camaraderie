@@ -59,7 +59,7 @@
 	 * Register settings
 	 */
 	public function settings( $manager ) {
-        $manager->add_setting( 'custom-image', array(
+        $manager->add_setting( 'custom_image', array(
 			'default'	        => get_theme_file_uri( '/public/images/header-image.jpg' ),
 			'sanitize_callback' => 'esc_url_raw',
 		) );
@@ -100,11 +100,11 @@
 	 */
 	public function controls( $manager ) {
         $manager->add_control( new WP_Customize_Image_Control(
-			$manager, 'custom-image', array(
+			$manager, 'custom_image', array(
 				'label' => esc_html__( 'Background Image', 'camaraderie' ),
 				'description' => esc_html__( 'Please set background image to 2000 by 1200 to fit properly', 'camaraderie' ),
 				'section' => 'header_section',
-				'settings' => 'custom-image',
+				'settings' => 'custom_image',
 			)
 		) );
 
