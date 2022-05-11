@@ -1,4 +1,4 @@
-@media screen and ( max-width: 375px ) {
+@media screen and ( max-width: 768px ) {
 	.primary-menu {
 
 		width: 100%;
@@ -119,7 +119,7 @@
 	} 
 }
 
-@media screen and ( min-width: 1025px ) {
+@media screen and ( min-width: 769px ) {
 	.primary-menu {
 		background: color( black );
 		padding: 1.125rem;

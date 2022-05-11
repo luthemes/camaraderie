@@ -39,3 +39,73 @@
 
 @import '02.portfolio/index';
 @import '03.section/index';
+
+@media screen and ( max-width: 1024px ) {
+    .no-sidebar {
+        .content-area {
+			.post {
+				background: color( white );
+				margin: 1.125rem;
+
+				&.has-post-thumbnail {
+					position: unset;
+			
+					.post-thumbnail {
+						left: 0;
+						position: unset;
+						top: 0;
+
+						.size-camaraderie-small-thumbnails {
+							height: auto;
+							margin-bottom: 1.125em;
+							width: auto;
+						}
+					}
+				}
+			}
+        };       
+    }
+}
+
+@media screen and ( min-width: 1025px ) and ( max-width: 1170px ) {
+    .no-sidebar {
+        .content-area {
+			.post {
+				margin: 1.125rem;
+				min-height: 18rem;
+
+				&.has-post-thumbnail {
+					position: relative;
+					padding-left: 21.375em;
+			
+					.post-thumbnail {
+						left: 0;
+						position: absolute;
+						top: 0;
+					}
+				}
+			}
+        };       
+    }
+}
+
+@media screen and (min-width: 1171px) {
+    .no-sidebar {
+        .content-area {
+			.post {
+				min-height: 18rem;
+
+				&.has-post-thumbnail {
+					position: relative;
+					padding-left: 21.375em;
+			
+					.post-thumbnail {
+						left: 0;
+						position: absolute;
+						top: 0;
+					}
+				}
+			}
+        };       
+    }
+}

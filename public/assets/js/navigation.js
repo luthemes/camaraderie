@@ -1,3 +1,8 @@
+/******/ (() => { // webpackBootstrap
+var __webpack_exports__ = {};
+/*!************************************!*\
+  !*** ./resources/js/navigation.js ***!
+  \************************************/
 /**
  * Primary front-end script.
  *
@@ -10,4 +15,185 @@
  * @license   https://www.gnu.org/licenses/gpl-2.0.html GPL-2.0-or-later
  * @link      https://github.com/benlumia007/initiator
  */
-!function(e){var t,a,n,r,s,d,l;if((t=document.getElementById("masthead"))&&void 0!==(a=t.getElementsByTagName("button")[0])){for(r=t.getElementsByTagName("nav")[0],(u=document.createElement("span")).classList.add("screen-reader-text"),u.textContent=camaraderieScreenReaderText.expandMain,a.appendChild(u),d=0,l=(n=t.querySelectorAll(".menu-item-has-children, .page_item_has_children")).length;d<l;d++){var i=document.createElement("button"),c=n[d].querySelector(".sub-menu"),o=document.createElement("span"),u=document.createElement("span");o.classList.add("fontawesome","arrow"),o.setAttribute("aria-hidden","true"),u.classList.add("screen-reader-text"),u.textContent=camaraderieScreenReaderText.expandChild,n[d].insertBefore(i,c),i.classList.add("dropdown-toggle"),i.setAttribute("aria-expanded","false"),i.appendChild(o),i.appendChild(u),i.onclick=function(){var e=this.parentElement,t=e.querySelector(".sub-menu"),a=this.querySelector(".screen-reader-text");-1!==e.className.indexOf("toggled-on")?(e.className=e.className.replace(" toggled-on",""),this.setAttribute("aria-expanded","false"),t.setAttribute("aria-expanded","false"),a.textContent=camaraderieScreenReaderText.expandChild):(e.className+=" toggled-on",this.setAttribute("aria-expanded","true"),t.setAttribute("aria-expanded","true"),a.textContent=camaraderieScreenReaderText.collapseChild)}}if(void 0!==r){for(r.setAttribute("aria-expanded","false"),-1===r.className.indexOf("nav-menu")&&(r.className+=" nav-menu"),a.onclick=function(){u=this.querySelector(".screen-reader-text"),-1!==t.className.indexOf("toggled")?(t.className=t.className.replace(" toggled",""),a.setAttribute("aria-expanded","false"),u.textContent=camaraderieScreenReaderText.expandMain,r.setAttribute("aria-expanded","false")):(t.className+=" toggled",a.setAttribute("aria-expanded","true"),u.textContent=camaraderieScreenReaderText.collapseMain,r.setAttribute("aria-expanded","true"))},d=0,l=(s=r.getElementsByTagName("a")).length;d<l;d++)s[d].addEventListener("focus",h,!0),s[d].addEventListener("blur",h,!0);var m,p,f;!function(e){var t,a,n=e.querySelectorAll(".menu-item-has-children > a, .page_item_has_children > a");if("ontouchstart"in window)for(t=function(e){var t,a=this.parentNode;if(a.classList.contains("focus"))a.classList.remove("focus");else{for(e.preventDefault(),t=0;t<a.parentNode.children.length;++t)a!==a.parentNode.children[t]&&a.parentNode.children[t].classList.remove("focus");a.classList.add("focus")}},a=0;a<n.length;++a)n[a].addEventListener("touchstart",t,!1)}(t),e(window).scroll((function(){e(this).scrollTop()>=m?(p="down")!==f&&(e(".menu-toggle").addClass("hide"),f=p):(p="up")!==f&&(e(".menu-toggle").removeClass("hide"),f=p),m=e(this).scrollTop()}))}else a.style.display="none"}function h(){for(var e=this;-1===e.className.indexOf("nav-menu");)"li"===e.tagName.toLowerCase()&&(-1!==e.className.indexOf("focus")?e.className=e.className.replace(" focus",""):e.className+=" focus"),e=e.parentElement}}(jQuery);
+
+/**
+ * A simple immediately-invoked function expression to kick-start
+ * things and encapsulate our code.
+ *
+ * @since  1.0.0 
+ * @access public
+ * @return void
+ */
+(function ($) {
+  var container, button, dropdown, icon, screenreadertext, parentLink, menu, submenu, links, i, len;
+  container = document.getElementById('masthead');
+
+  if (!container) {
+    return;
+  }
+
+  button = container.getElementsByTagName('button')[0];
+
+  if ('undefined' === typeof button) {
+    return;
+  }
+
+  menu = container.getElementsByTagName('nav')[0];
+  screenreadertext = document.createElement('span');
+  screenreadertext.classList.add('screen-reader-text');
+  screenreadertext.textContent = camaraderieScreenReaderText.expandMain;
+  button.appendChild(screenreadertext);
+  parentLink = container.querySelectorAll('.menu-item-has-children, .page_item_has_children');
+
+  for (i = 0, len = parentLink.length; i < len; i++) {
+    var dropdown = document.createElement('button'),
+        submenu = parentLink[i].querySelector('.sub-menu'),
+        icon = document.createElement('span'),
+        screenreadertext = document.createElement('span');
+    icon.classList.add('fontawesome', 'arrow');
+    icon.setAttribute('aria-hidden', 'true');
+    screenreadertext.classList.add('screen-reader-text');
+    screenreadertext.textContent = camaraderieScreenReaderText.expandChild;
+    parentLink[i].insertBefore(dropdown, submenu);
+    dropdown.classList.add('dropdown-toggle');
+    dropdown.setAttribute('aria-expanded', 'false');
+    dropdown.appendChild(icon);
+    dropdown.appendChild(screenreadertext);
+
+    dropdown.onclick = function () {
+      var parentLink = this.parentElement,
+          submenu = parentLink.querySelector('.sub-menu'),
+          screenreadertext = this.querySelector('.screen-reader-text');
+
+      if (-1 !== parentLink.className.indexOf('toggled-on')) {
+        parentLink.className = parentLink.className.replace(' toggled-on', '');
+        this.setAttribute('aria-expanded', 'false');
+        submenu.setAttribute('aria-expanded', 'false');
+        screenreadertext.textContent = camaraderieScreenReaderText.expandChild;
+      } else {
+        parentLink.className += ' toggled-on';
+        this.setAttribute('aria-expanded', 'true');
+        submenu.setAttribute('aria-expanded', 'true');
+        screenreadertext.textContent = camaraderieScreenReaderText.collapseChild;
+      }
+    };
+  } // Hide menu toggle button if menu is empty and return early.
+
+
+  if ('undefined' === typeof menu) {
+    button.style.display = 'none';
+    return;
+  }
+
+  menu.setAttribute('aria-expanded', 'false');
+
+  if (-1 === menu.className.indexOf('nav-menu')) {
+    menu.className += ' nav-menu';
+  }
+
+  button.onclick = function () {
+    screenreadertext = this.querySelector('.screen-reader-text');
+
+    if (-1 !== container.className.indexOf('toggled')) {
+      container.className = container.className.replace(' toggled', '');
+      button.setAttribute('aria-expanded', 'false');
+      screenreadertext.textContent = camaraderieScreenReaderText.expandMain;
+      menu.setAttribute('aria-expanded', 'false');
+    } else {
+      container.className += ' toggled';
+      button.setAttribute('aria-expanded', 'true');
+      screenreadertext.textContent = camaraderieScreenReaderText.collapseMain;
+      menu.setAttribute('aria-expanded', 'true');
+    }
+  }; // Get all the link elements within the primary menu.
+
+
+  links = menu.getElementsByTagName('a'); // Each time a menu link is focused or blurred, toggle focus.
+
+  for (i = 0, len = links.length; i < len; i++) {
+    links[i].addEventListener('focus', toggleFocus, true);
+    links[i].addEventListener('blur', toggleFocus, true);
+  }
+  /**
+   * Sets or removes .focus class on an element.
+   */
+
+
+  function toggleFocus() {
+    var self = this; // Move up through the ancestors of the current link until we hit .nav-menu.
+
+    while (-1 === self.className.indexOf('nav-menu')) {
+      // On li elements toggle the class .focus.
+      if ('li' === self.tagName.toLowerCase()) {
+        if (-1 !== self.className.indexOf('focus')) {
+          self.className = self.className.replace(' focus', '');
+        } else {
+          self.className += ' focus';
+        }
+      }
+
+      self = self.parentElement;
+    }
+  }
+  /**
+   * Toggles `focus` class to allow submenu access on tablets.
+   */
+
+
+  (function (container) {
+    var touchStartFn,
+        i,
+        parentLink = container.querySelectorAll('.menu-item-has-children > a, .page_item_has_children > a');
+
+    if ('ontouchstart' in window) {
+      touchStartFn = function touchStartFn(e) {
+        var menuItem = this.parentNode,
+            i;
+
+        if (!menuItem.classList.contains('focus')) {
+          e.preventDefault();
+
+          for (i = 0; i < menuItem.parentNode.children.length; ++i) {
+            if (menuItem === menuItem.parentNode.children[i]) {
+              continue;
+            }
+
+            menuItem.parentNode.children[i].classList.remove('focus');
+          }
+
+          menuItem.classList.add('focus');
+        } else {
+          menuItem.classList.remove('focus');
+        }
+      };
+
+      for (i = 0; i < parentLink.length; ++i) {
+        parentLink[i].addEventListener('touchstart', touchStartFn, false);
+      }
+    }
+  })(container); // Hide/show toggle button on scroll
+
+
+  var position, direction, previous;
+  $(window).scroll(function () {
+    if ($(this).scrollTop() >= position) {
+      direction = 'down';
+
+      if (direction !== previous) {
+        $('.menu-toggle').addClass('hide');
+        previous = direction;
+      }
+    } else {
+      direction = 'up';
+
+      if (direction !== previous) {
+        $('.menu-toggle').removeClass('hide');
+        previous = direction;
+      }
+    }
+
+    position = $(this).scrollTop();
+  });
+})(jQuery);
+/******/ })()
+;
