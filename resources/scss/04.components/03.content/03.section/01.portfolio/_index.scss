@@ -1,0 +1,52 @@
+.site-portfolio {
+	background: color( white );
+	padding: 1.125rem;
+
+	.content-area {
+		margin: 0 auto;
+		padding: 1.125rem;
+		max-width: 1134px;
+
+		.portfolio-header {
+			text-align: center;
+
+			.portfolio-title {
+				margin: 0;
+				padding: 0;
+			}
+		}
+
+		.portfolio-content {
+			margin: 1.125rem 0;
+
+			.portfolio-items {
+				display: grid;
+				grid-gap: 1.125rem;
+				grid-template-columns: 1fr 1fr 1fr;
+				list-style-type: none;
+				margin: 0;
+				padding: 0;
+
+				.portfolio-item {
+					.wp-caption {
+						background: #eeeeee;
+						line-height: 1.8rem;
+						padding: 0.5rem;
+						text-align: center;
+
+						.wp-caption-text {
+							font-size: 1.625rem;
+							margin: 0;
+							padding: 0;
+
+							a {
+								color: color( navy );
+								text-decoration: none;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

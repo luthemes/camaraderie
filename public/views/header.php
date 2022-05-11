@@ -21,14 +21,14 @@
 <div id="container" class="site-container">
 	<a class="skip-link screen-reader-text" href="#main"><?php esc_html_e( 'Skip to content', 'camaraderie' ) ?></a>
 	<?php $is_front = ( is_front_page() && ! is_home() ); ?>
+		<section id="masthead" class="primary-navigation">
+			<?php Benlumia007\Backdrop\Theme\Menu\display( 'menu', [ 'primary' ] ); ?>
+		</section>
 		<header id="header" class="site-header <?php echo $is_front ? 'custom' : 'header'; ?>-image">
-			<section id="masthead" class="primary-navigation">
-				<?php Benlumia007\Backdrop\Theme\Menu\display( 'menu', [ 'primary' ] ); ?>
-			</section>
-			<?php if ( $is_front ) { ?>
-				<div class="site-avatar"></div>
-			<?php } ?>
-			<div class="site-branding">
+				<div class="site-branding">
+				<?php if ( $is_front ) { ?>
+					<div class="site-avatar"></div>
+				<?php } ?>
 				<?php Benlumia007\Backdrop\Theme\Site\display_site_title(); ?>
 				<?php Benlumia007\Backdrop\Theme\Site\display_site_description(); ?>
 			</div>

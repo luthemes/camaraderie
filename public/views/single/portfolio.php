@@ -14,14 +14,7 @@
             <?php the_post_thumbnail( 'camaraderie-large-thumbnails' ); ?>
 	    </picture>
     <?php } ?>
-	<header class="entry-header">
-		<?php Benlumia007\Backdrop\Entry\display_title(); ?>
-	</header>
 	<div class="entry-content">
 		<?php the_content(); ?>
-	</div>
-	<div class="entry-taxonomies">
-		<?php Benlumia007\Backdrop\Entry\display_categories(); ?>
-		<?php Benlumia007\Backdrop\Entry\display_tags(); ?>
 	</div>
 </article>

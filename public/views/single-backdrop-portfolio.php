@@ -10,18 +10,19 @@
 
  $related_display = get_theme_mod( 'related_display' );
 ?>
-<?php get_header(); ?>
+<?php $engine = Benlumia007\Backdrop\App::resolve( 'view/engine' ); ?>
+<?php $engine->display( 'header' ); ?>
 	<section id="content" class="site-content">
 		<div id="global-layout" class="right-sidebar">
 			<main id="main" class="content-area">
 				<?php
 					while ( have_posts() ) : the_post();
-						Benlumia007\Backdrop\Template\get_template_part( 'single/content', 'backdrop-portfolio' );
+						$engine->display( 'single', 'portfolio' );
 					endwhile;
 					comments_template();
 				?>
 			</main>
-			<?php Benlumia007\Backdrop\View\display( 'sidebar', [ 'portfolio' ] ); ?>
+			<?php Benlumia007\Backdrop\Theme\Sidebar\display( 'sidebar', [ 'portfolio' ] ); ?>
 		</div>
 	</section>
 	<?php if ( isset( $related_display)  && $related_display != 0 ) { ?>
@@ -61,4 +62,4 @@
 			</div>
 		</div>
 	<?php } ?>
-<?php get_footer(); ?>
+<?php $engine->display( 'footer' ); ?>

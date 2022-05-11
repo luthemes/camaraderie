@@ -96,21 +96,26 @@ add_action(
 				min-height: 100vh;  
 			}
 			
-			.site-avatar {
+			.site-header.custom-image .site-branding {
+				padding: 12rem;
+			}
+
+			.site-header.custom-image .site-avatar {
 				background: url({$avatar_image});
 				border: 0.625em solid #cccccc;
 				border-radius: 50%;
 				display: block;
 				height: 15.625em;
-				margin: 10rem auto 0 auto;
+				margin: 0 auto;
 				width: 15.625em;
 			}
 
-			@media screen and (max-width: 30em) {
-				.site-header {
-					padding-top: 10em;
+			@media screen and ( max-width: 23.438rem ) {
+				.site-header.custom-image .site-branding {
+					padding: 12rem 0;
 				}
 			}
+
 			@media screen and ( min-width: 30.063em ) and ( max-width: 37.5em ) {
 				.site-header {
 					padding-top: 15em;

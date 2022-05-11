@@ -10,12 +10,13 @@
 
 use Benlumia007\Backdrop\View\View as sidebar;
 ?>
-<?php get_header(); ?>
+<?php $engine = Benlumia007\Backdrop\App::resolve( 'view/engine' ); ?>
+<?php $engine->display( 'header' ); ?>
 	<section id="content" class="site-content">
 		<main id="main" class="content-area">
 			<?php
 				if ( have_posts() ) :
-					Benlumia007\Backdrop\Template\get_template_part( 'archive/content', 'portfolio' );
+					$engine->display( 'archive', 'portfolio' );
 					the_posts_navigation( array(
 						'prev_text' => '<span class="post-previous" aria-hidden="true">' . esc_html__( 'Older', 'camaraderie' ) . '</span>' . '<span class="post-title">Projects</span>',
 						'next_text' => '<span class="post-next" aria-hiddent="true">' . esc_html__( 'Newer', 'camaraderie' ) . '</span>' . '<span class="post-title">Projects</span>',
@@ -26,4 +27,4 @@ use Benlumia007\Backdrop\View\View as sidebar;
 			?>
 		</main>
 	</section>
-<?php get_footer(); ?>
+<?php $engine->display( 'footer' ); ?>

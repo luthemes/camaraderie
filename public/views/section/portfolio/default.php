@@ -24,8 +24,8 @@
 			<h1 class="portfolio-title"><?php esc_html_e( 'Portfolio', 'camaraderie' ); ?></h1>
 			<span class="portfolio-description"><?php esc_html_e( 'Some of my recent works', 'camaraderie' ); ?></span>
 		</header>
-		<div class="entry-content">
-			<div class="portfolio-grid">
+		<div class="portfolio-content">
+			<ul class="portfolio-items">
 				<?php
 					$posts_per_page = get_theme_mod( 'custom_portfolio_items', 9 );
 					$query          = new WP_Query( array(
@@ -39,24 +39,22 @@
 
 							if ( has_post_thumbnail() ) {
 								?>
-									<div class="portfolio-items">
+									<li class="portfolio-item">
 										<a href="<?php echo esc_url( get_permalink() ); ?>">
 											<?php the_post_thumbnail( 'camaraderie-large-thumbnails' ); ?>
 										</a>
 										<div class="wp-caption">
-											<div class="wp-caption-text">
-												<h2 class="portfolio-title"><a href="<?php echo esc_url( get_permalink() ); ?>"><?php the_title(); ?></a></h2>
-												<span><?php echo wptexturize( wp_strip_all_tags( get_post( get_post_thumbnail_id() )->post_content ) ); // phpcs:ignore ?></span>
-											</div>
+											<h2 class="wp-caption-text"><a href="<?php echo esc_url( get_permalink() ); ?>"><?php the_title(); ?></a></h2>
+											<span><?php echo wptexturize( wp_strip_all_tags( get_post( get_post_thumbnail_id() )->post_content ) ); // phpcs:ignore ?></span>
 										</div>
-									</div>
+									</li>
 								<?php
 							}
 						}
 					}
 					wp_reset_postdata();
 				?>
-			</div>
+			</ul>
 		</div>
 	</div>
 </section>

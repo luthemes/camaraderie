@@ -69,9 +69,9 @@
 			'sanitize_callback' => 'esc_url_raw',
 		) );
 
-		$manager->add_setting( 'custom_portfolio_display', array(
-			'sanitize_callback' => 'Benlumia007\Backdrop\Helpers\Sanitize::checkbox',
-		) );
+		$manager->add_setting( 'custom_portfolio_display', [
+			'sanitize_callback' => 'Benlumia007\Backdrop\Customize\Helpers\Sanitize::checkbox',
+		] );
 
 		$manager->add_setting( 'custom_portfolio_items', array(
 			'default' => 9,
@@ -79,19 +79,19 @@
 		) );
 
 		$manager->add_setting( 'related_display', array(
-			'sanitize_callback' => 'Benlumia007\Backdrop\Helpers\Sanitize::checkbox',
+			'sanitize_callback' => 'Benlumia007\Backdrop\Customize\Helpers\Sanitize::checkbox',
 		) );
 
 		$manager->add_setting( 'custom_blog_display', array(
-			'sanitize_callback' => 'Benlumia007\Backdrop\Helpers\Sanitize::checkbox',
+			'sanitize_callback' => 'Benlumia007\Backdrop\Customize\Helpers\Sanitize::checkbox',
 		) );
 
 		$manager->add_setting( 'custom_contact_display', array(
-			'sanitize_callback' => 'Benlumia007\Backdrop\Helpers\Sanitize::checkbox',
+			'sanitize_callback' => 'Benlumia007\Backdrop\Customize\Helpers\Sanitize::checkbox',
 		) );
 
 		$manager->add_setting('custom_contact_dropdown', array(
-			'sanitize_callback' => 'Benlumia007\Backdrop\Helpers\Sanitize::dropdown',
+			'sanitize_callback' => 'Benlumia007\Backdrop\Customize\Helpers\Sanitize::dropdown',
 		) );
     }
 
