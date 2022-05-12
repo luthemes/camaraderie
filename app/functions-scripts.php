@@ -69,7 +69,7 @@ add_action(
 		$custom_css = "
 			.site-header.header-image {
 				background-attachment: scroll;
-				background: url( {$header_image} );
+				background: url({$header_image});
 				background-position: center;
 				background-repeat: no-repeat;
 				background-size: cover !important;

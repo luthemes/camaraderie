@@ -15,11 +15,11 @@ $contact_display   = get_theme_mod( 'custom_contact_display' );
 ?>
 <?php $engine = Benlumia007\Backdrop\App::resolve( 'view/engine' ); ?>
 <?php $engine->display( 'header' ); ?>
-    <?php if ( 0 != $portfolio_display && isset( $portfolio_display ) ) { // phpcs:ignore ?>
+    <?php if ( 0 != $portfolio_display && isset( $portfolio_display ) ) { ?>
         <?php $engine->display( 'section/portfolio' ); ?>
     <?php } ?>
-    <?php if ( 0 != $blog_display && isset( $blog_display ) ) { // phpcs:ignore ?>
-        <?php Benlumia007\Backdrop\Template\get_template_part( 'section/content', 'blog' ); ?>
+    <?php if ( 0 != $blog_display && isset( $blog_display ) ) { ?>
+        <?php $engine->display( 'section/blog' ); ?>
     <?php } ?>
     <?php if ( 0 != $contact_display && isset( $contact_display ) ) { // phpcs:ignore ?>
         <?php Benlumia007\Backdrop\Template\get_template_part( 'section/content', 'contact' ); ?>
