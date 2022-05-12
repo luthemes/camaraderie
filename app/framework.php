@@ -25,7 +25,6 @@ $camaraderie->provider( Camaraderie\Sidebar\Provider::class );
 $camaraderie->provider( Camaraderie\Customize\Provider::class );
 $camaraderie->provider( Camaraderie\ThemeLayouts\Provider::class );
 $camaraderie->provider( Camaraderie\Admin\Provider::class );
-$camaraderie->provider( Camaraderie\Update\Provider::class );
 
 /**
  * Boot the framework
