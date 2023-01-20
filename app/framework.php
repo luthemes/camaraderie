@@ -10,21 +10,43 @@
  * @author      Benjamin Lu ( https://benjlu.com )
  */
 
-/**
- * Create a new framework instance
- *
- * This will create an instance of the framework allowing you to initialize the theme.
- */
-$camaraderie = new Benlumia007\Backdrop\Framework();
+# ------------------------------------------------------------------------------
+# Create a new application.
+# ------------------------------------------------------------------------------
+#
+# Creates the one true instance of the Hybrid Core application. You may access
+# this instance via the `Backdrop\app()` function or `Backdrop\App` static class
+# after the application has booted.
+$camaraderie = Backdrop\booted() ? Backdrop\app() : new Backdrop\Core\Application();
 
-/**
- * Register Service Provider with the Framework
- */
-$camaraderie->provider( Camaraderie\Menu\Provider::class );
-$camaraderie->provider( Camaraderie\Sidebar\Provider::class );
-$camaraderie->provider( Camaraderie\Customize\Provider::class );
-$camaraderie->provider( Camaraderie\ThemeLayouts\Provider::class );
+# ------------------------------------------------------------------------------
+# Register default service providers with the application.
+# ------------------------------------------------------------------------------
+#
+# Before booting the application, default service providers that are necessary
+# for running the theme. Service providers are essentially the backbone of the
+# bootstrapping process.
+$camaraderie->provider( Backdrop\FontAwesome\Provider::class );
+$camaraderie->provider( Backdrop\Fonts\Provider::class );
+$camaraderie->provider( Backdrop\Template\Hierarchy\Provider::class );
+$camaraderie->provider( Backdrop\Template\Manager\Provider::class );
+$camaraderie->provider( Backdrop\Template\View\Provider::class );
+
+
+# ------------------------------------------------------------------------------
+# Register additional service providers with the theme.
+# ------------------------------------------------------------------------------
+#
+# Before booting the application, add any additional service providers that are
+# necessary for running the theme. Service providers are essentially the backbone
+# of the bootstrapping process.
 $camaraderie->provider( Camaraderie\Admin\Provider::class );
+$camaraderie->provider( Camaraderie\Customize\Provider::class );
+$camaraderie->provider( Camaraderie\Menu\Provider::class );
+$camaraderie->provider( Camaraderie\Mix\Provider::class );
+$camaraderie->provider( Camaraderie\Sidebar\Provider::class );
+$camaraderie->provider( Camaraderie\ThemeLayouts\Provider::class );
+
 
 /**
  * Boot the framework

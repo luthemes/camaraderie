@@ -12,8 +12,9 @@
 
 
  namespace Camaraderie\ThemeLayouts;
- use Benlumia007\Backdrop\Customize\Component as CustomizeContract;
- use Camaraderie\ThemeLayouts\Control\ImageRadio;
+ 
+ use Backdrop\Theme\Customize\Component as CustomizeContract;
+  use Camaraderie\ThemeLayouts\Control\ImageRadio;
 
 class Component extends CustomizeContract {
 	/**
@@ -23,7 +24,7 @@ class Component extends CustomizeContract {
 	 * @access public
 	 * @param  object $manager customizer object.
 	 */
-	public function panels( $manager ) {
+	public function panels( $manager ): void {
 		$manager->add_panel( 'theme_options', array(
 			'title' => esc_html( 'Theme Options', 'camaraderie' ),
 			'priority' => 15,
@@ -37,7 +38,7 @@ class Component extends CustomizeContract {
 	 * @access public
 	 * @param  object $manager customizer object.
 	 */
-	public function sections( $manager ) {
+	public function sections( $manager ): void {
 		/**
 		 * Home Section
 		 */
@@ -55,11 +56,11 @@ class Component extends CustomizeContract {
 	 * @access public
 	 * @param  object $manager customizer object.
 	 */
-	public function settings( $manager ) {
+	public function settings( $manager ): void {
 		$manager->add_setting( 'global_layout',
 			[
 				'default'           => 'left-sidebar',
-				'sanitize_callback' => 'Benlumia007\Backdrop\Customize\Helpers\Sanitize::layouts',
+				'sanitize_callback' => 'Backdrop\Theme\Customize\Helpers\Sanitize::layouts',
 			]
 		);
 	}
@@ -71,7 +72,7 @@ class Component extends CustomizeContract {
 	 * @access public
 	 * @param  object $manager customizer object.
 	 */
-	public function controls( $manager ) {
+	public function controls( $manager ): void {
 		$manager->add_control(
 			new ImageRadio(
 				$manager,

@@ -12,8 +12,8 @@
  * Define namespace
  */
 namespace Camaraderie\Customize;
-use Benlumia007\Backdrop\Tools\ServiceProvider;
-use Camaraderie\Customize\Component;
+
+use Backdrop\Core\ServiceProvider;
 
 class Provider extends ServiceProvider {
 	/**
@@ -23,11 +23,11 @@ class Provider extends ServiceProvider {
 	 * @access public
 	 * @return void
 	 */
-	public function register() {
+	public function register(): void {
 		$this->app->singleton( 'customize', Component::class );
     }
     
-    public function boot() {
+    public function boot(): void {
         $this->app->resolve( 'customize' )->boot();
     }
 }

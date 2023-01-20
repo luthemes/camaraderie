@@ -12,8 +12,8 @@
  * Define namespace
  */
 namespace Camaraderie\Sidebar;
-use Benlumia007\Backdrop\Tools\ServiceProvider;
-use Camaraderie\Sidebar\Component;
+
+use Backdrop\Core\ServiceProvider;
 
 /**
  * Attr provider class.
@@ -30,12 +30,12 @@ class Provider extends ServiceProvider {
 	 * @access public
 	 * @return void
 	 */
-	public function register() {
+	public function register(): void {
 		$this->app->singleton( 'sidebar', Component::class );
 
     }
     
-    public function boot() {
+    public function boot(): void {
         $this->app->resolve( 'sidebar' )->boot();
     }
 }

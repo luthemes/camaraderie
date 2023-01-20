@@ -12,8 +12,9 @@
  * Define namespace
  */
 namespace Camaraderie\Menu;
-use Benlumia007\Backdrop\Theme\Menu\Component as MenuContract;
-use function Benlumia007\Backdrop\Mix\asset;
+
+use Backdrop\Theme\Menu\Component as MenuContract;
+use function Camaraderie\Mix\asset;
 
 /**
  * Menus

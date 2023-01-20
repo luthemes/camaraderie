@@ -12,7 +12,8 @@
  * Define namespace
  */
 namespace Camaraderie;
-use function Benlumia007\Backdrop\Mix\asset;
+
+use function Camaraderie\Mix\asset;
 
 /**
  * Enqueue Scripts and Styles

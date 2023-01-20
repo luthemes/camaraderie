@@ -9,7 +9,7 @@
  */
 
 // Access the view template engine.
-$engine = Benlumia007\Backdrop\App::resolve( 'view/engine' );
+$engine = Backdrop\App::resolve( 'view/engine' );
 
 // Load the index template.
 $engine->display( 'index' );

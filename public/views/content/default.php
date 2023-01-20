@@ -19,11 +19,11 @@
 		<?php if ( is_sticky() && is_home() && ! is_paged() ) { ?>
 			<?php printf( '<span class="sticky-post">%1$s</span>', esc_html__( 'Featured', 'camaraderie' ) ); ?>
 		<?php } ?>
-		<?php Benlumia007\Backdrop\Theme\Entry\display_title(); ?>
+		<?php Camaraderie\Entry\display_title(); ?>
 		<div class="entry-metadata">
-			<?php Benlumia007\Backdrop\Theme\Entry\display_author(); ?>
-			<?php Benlumia007\Backdrop\Theme\Entry\display_date(); ?>
-			<?php Benlumia007\Backdrop\Theme\Entry\display_comments_link(); ?>
+			<?php Camaraderie\Entry\display_author(); ?>
+			<?php Camaraderie\Entry\display_date(); ?>
+			<?php Camaraderie\Entry\display_comments_link(); ?>
 		</div>
 	</header>
 	<div class="entry-excerpt">

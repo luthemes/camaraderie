@@ -12,8 +12,8 @@
  * Define namespace
  */
 namespace Camaraderie\Admin;
-use Benlumia007\Backdrop\Tools\ServiceProvider;
-use Camaraderie\Admin\Component;
+
+use Backdrop\Core\ServiceProvider;
 
 class Provider extends ServiceProvider {
 	/**

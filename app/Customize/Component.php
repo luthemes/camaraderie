@@ -12,14 +12,15 @@
 
 
  namespace Camaraderie\Customize;
- use Benlumia007\Backdrop\Customize\Component as CustomizeContract;
+ 
+ use Backdrop\Theme\Customize\Component as CustomizeContract;
  use WP_Customize_Image_Control;
 
  class Component extends CustomizeContract {
 	/**
 	 * Register panels
 	 */
-	public function panels( $manager ) {
+	public function panels( $manager ): void {
         $manager->add_panel( 'home_section', array(
 			'title' => esc_html( 'Home Section', 'camaraderie' ),
 			'priority' => 15,
@@ -29,7 +30,7 @@
 	/**
 	 * Register sections
 	 */
-	public function sections( $manager ) {
+	public function sections( $manager ): void {
         $manager->add_section( 'header_section', array(
 			'title'    => esc_html__( 'Header Section', 'camaraderie' ),
 			'panel'    => 'home_section',
@@ -58,7 +59,7 @@
 	/**
 	 * Register settings
 	 */
-	public function settings( $manager ) {
+	public function settings( $manager ): void {
         $manager->add_setting( 'custom_image', array(
 			'default'	        => get_theme_file_uri( '/public/images/header-image.jpg' ),
 			'sanitize_callback' => 'esc_url_raw',
@@ -70,7 +71,7 @@
 		) );
 
 		$manager->add_setting( 'custom_portfolio_display', [
-			'sanitize_callback' => 'Benlumia007\Backdrop\Customize\Helpers\Sanitize::checkbox',
+			'sanitize_callback' => 'Backdrop\Theme\Customize\Helpers\Sanitize::checkbox',
 		] );
 
 		$manager->add_setting( 'custom_portfolio_items', array(
@@ -79,26 +80,26 @@
 		) );
 
 		$manager->add_setting( 'related_display', array(
-			'sanitize_callback' => 'Benlumia007\Backdrop\Customize\Helpers\Sanitize::checkbox',
+			'sanitize_callback' => 'Backdrop\Theme\Customize\Helpers\Sanitize::checkbox',
 		) );
 
 		$manager->add_setting( 'custom_blog_display', array(
-			'sanitize_callback' => 'Benlumia007\Backdrop\Customize\Helpers\Sanitize::checkbox',
+			'sanitize_callback' => 'Backdrop\Theme\Customize\Helpers\Sanitize::checkbox',
 		) );
 
 		$manager->add_setting( 'custom_contact_display', array(
-			'sanitize_callback' => 'Benlumia007\Backdrop\Customize\Helpers\Sanitize::checkbox',
+			'sanitize_callback' => 'Backdrop\Theme\Customize\Helpers\Sanitize::checkbox',
 		) );
 
 		$manager->add_setting('custom_contact_dropdown', array(
-			'sanitize_callback' => 'Benlumia007\Backdrop\Customize\Helpers\Sanitize::dropdown',
+			'sanitize_callback' => 'Backdrop\Theme\Customize\Helpers\Sanitize::dropdown',
 		) );
     }
 
 	/**
 	 * Register controls
 	 */
-	public function controls( $manager ) {
+	public function controls( $manager ): void {
         $manager->add_control( new WP_Customize_Image_Control(
 			$manager, 'custom_image', array(
 				'label' => esc_html__( 'Background Image', 'camaraderie' ),

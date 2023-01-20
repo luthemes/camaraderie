@@ -1,8 +1,6 @@
 <?php
 /**
  * Camaraderie ( template-home.php )
- * 
- * Template Name: Home
  *
  * @package     Camaraderie
  * @copyright   Copyright (C) 2017-2020. Benjamin Lu
@@ -13,7 +11,7 @@ $portfolio_display = get_theme_mod( 'custom_portfolio_display' );
 $blog_display      = get_theme_mod( 'custom_blog_display' );
 $contact_display   = get_theme_mod( 'custom_contact_display' );
 ?>
-<?php $engine = Benlumia007\Backdrop\App::resolve( 'view/engine' ); ?>
+<?php $engine = Backdrop\App::resolve( 'view/engine' ); ?>
 <?php $engine->display( 'header' ); ?>
     <?php if ( 0 != $portfolio_display && isset( $portfolio_display ) ) { ?>
         <?php $engine->display( 'section/portfolio' ); ?>

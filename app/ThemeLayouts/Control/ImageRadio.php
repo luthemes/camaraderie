@@ -12,6 +12,7 @@
  * Define namespace
  */
 namespace Camaraderie\ThemeLayouts\Control;
+
 use WP_Customize_Control;
 
 /**
@@ -25,7 +26,7 @@ class ImageRadio extends WP_Customize_Control {
 	 * @access public
 	 * @var string
 	 */
-     public static $version = '1.0.0';
+     public static string $version = '1.0.0';
 
      /**
 	 * The type of customize control being rendered.
@@ -35,15 +36,6 @@ class ImageRadio extends WP_Customize_Control {
 	 * @var    string
 	 */
 	public $type = 'radio-image';
-
-    /**
-	 * The path to the backdrop directory.
-	 *
-	 * @since  1.0.0
-	 * @access public
-	 * @var    string
-	 */
-	public $backdrop_path = '/vendor/benlumia007/backdrop-core/';
 
     /**
 	 * Add our JavaScript and CSS to the Customizer.

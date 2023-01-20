@@ -12,7 +12,8 @@
 
 
  namespace Camaraderie\Admin;
- use Benlumia007\Backdrop\Theme\Admin\Component as AdminContract;
+ 
+ use Backdrop\Theme\Admin\Component as AdminContract;
 
 class Component extends AdminContract {
 	/**
@@ -95,9 +96,9 @@ class Component extends AdminContract {
 		<?php esc_html_e( 'Hope you are enjoying the theme. ', 'camaraderie' ); ?>
 		<h2 class="admin-title"><?php esc_html_e( 'Recommended Plugins', 'camaraderie' ); ?></h2>
 		<ul>
-			<li><a href="<?php esc_url( 'https://wordpress.org/plugins/backdrop-post-types' ); ?>"><?php esc_html_e( 'Backdrop Post Types', 'camaraderie' ); ?></a></li>
-			<li><a href="<?php esc_url( 'https://wordpress.org/plugins/contact-form-7' ); ?>"><?php esc_html_e( 'Contact Form 7', 'camaraderie' ); ?></a></li>
-			<li><a href="<?php esc_url( 'https://wordpress.org/plugins/regenerate-thumbnails' ); ?>"><?php esc_html_e( 'Regenerate Thumbnails', 'camaraderie' ); ?></a></li>
+			<li><a href="<?php echo esc_url( 'https://wordpress.org/plugins/jetpack' ); ?>"><?php esc_html_e( 'Jetpack Portfolio', 'camaraderie' ); ?></a></li>
+			<li><a href="<?php echo esc_url( 'https://wordpress.org/plugins/contact-form-7' ); ?>"><?php esc_html_e( 'Contact Form 7', 'camaraderie' ); ?></a></li>
+			<li><a href="<?php echo esc_url( 'https://wordpress.org/plugins/regenerate-thumbnails' ); ?>"><?php esc_html_e( 'Regenerate Thumbnails', 'camaraderie' ); ?></a></li>
 		</ul>
 	<?php }
 
