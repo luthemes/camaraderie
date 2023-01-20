@@ -2,23 +2,37 @@
 /**
  * Theme - Entry
  *
- * @package   Succotash
+ * @package   Camaraderie
  * @author    Benjamin Lu <benlumia007@gmail.com>
- * @copyright Copyright (C) 2022. Benjamin Lu
+ * @copyright 2017-2023. Benjamin Lu
  * @license   https://www.gnu.org/licenses/gpl-2.0.html
- * @link      https://github.com/benlumia007/luthemes.com
+ * @link      https://benjlu.com/portfolio/camaraderie
  */
 
-/**
- * Define namespace
- */
 namespace Camaraderie\Entry;
 
+/**
+ * Outputs the post title HTML.
+ *
+ * @since  1.0.0
+ * @access public
+ * @param  array  $args
+ * @return void
+ */
 function display_title( array $args = [] ) {
-	echo render_title( $args ); // phpcs:ignore
+	
+	echo render_title( $args );
 }
 
-function render_title( array $args = [] ) {
+/**
+ * Returns the post title HTML.
+ *
+ * @since  1.0.0
+ * @access public
+ * @param  array  $args
+ * @return string
+ */
+function render_title( array $args = [] ): string {
 	
 	$post_id = get_the_ID();
 	$is_single = is_single( $post_id ) || is_page( $post_id ) || is_attachment( $post_id );
@@ -51,7 +65,7 @@ function render_title( array $args = [] ) {
 /**
  * Outputs the post permalink HTML.
  *
- * @since  3.0.0
+ * @since  1.0.0
  * @access public
  * @param  array  $args
  * @return void

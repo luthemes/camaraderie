@@ -8,14 +8,12 @@
  * @author    Benjamin Lu ( https://getbenonit.com )
  */
 
-/**
- * Define namespace
- */
 namespace Camaraderie\Admin;
 
 use Backdrop\Core\ServiceProvider;
 
 class Provider extends ServiceProvider {
+	
 	/**
 	 * Binds the implementation of the attributes contract to the container.
 	 *

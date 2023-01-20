@@ -17,6 +17,7 @@
  use WP_Customize_Image_Control;
 
  class Component extends CustomizeContract {
+	 
 	/**
 	 * Register panels
 	 */
