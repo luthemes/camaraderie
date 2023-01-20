@@ -14,7 +14,9 @@
  namespace Camaraderie\ThemeLayouts;
  
  use Backdrop\Theme\Customize\Component as CustomizeContract;
-  use Camaraderie\ThemeLayouts\Control\ImageRadio;
+ use Camaraderie\ThemeLayouts\Control\ImageRadio;
+ 
+ use WP_Customize_Manager;
 
 class Component extends CustomizeContract {
 	/**
@@ -22,9 +24,9 @@ class Component extends CustomizeContract {
 	 *
 	 * @since  1.0.0
 	 * @access public
-	 * @param  object $manager customizer object.
+	 * @param  WP_Customize_Manager $manager
 	 */
-	public function panels( $manager ): void {
+	public function panels( WP_Customize_Manager $manager ) {
 		$manager->add_panel( 'theme_options', array(
 			'title' => esc_html( 'Theme Options', 'camaraderie' ),
 			'priority' => 15,
@@ -36,9 +38,9 @@ class Component extends CustomizeContract {
 	 *
 	 * @since  1.0.0
 	 * @access public
-	 * @param  object $manager customizer object.
+	 * @param  WP_Customize_Manager $manager
 	 */
-	public function sections( $manager ): void {
+	public function sections( WP_Customize_Manager $manager ) {
 		/**
 		 * Home Section
 		 */
@@ -54,9 +56,9 @@ class Component extends CustomizeContract {
 	 *
 	 * @since  1.0.0
 	 * @access public
-	 * @param  object $manager customizer object.
+	 * @param  WP_Customize_Manager $manager
 	 */
-	public function settings( $manager ): void {
+	public function settings( WP_Customize_Manager $manager ) {
 		$manager->add_setting( 'global_layout',
 			[
 				'default'           => 'left-sidebar',
@@ -70,9 +72,9 @@ class Component extends CustomizeContract {
 	 *
 	 * @since  1.0.0
 	 * @access public
-	 * @param  object $manager customizer object.
+	 * @param  WP_Customize_Manager $manager
 	 */
-	public function controls( $manager ): void {
+	public function controls( WP_Customize_Manager $manager ) {
 		$manager->add_control(
 			new ImageRadio(
 				$manager,

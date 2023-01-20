@@ -23,11 +23,12 @@ class Provider extends ServiceProvider {
 	 * @access public
 	 * @return void
 	 */
-	public function register(): void {
+	public function register() {
 		$this->app->singleton( 'layouts', Component::class );
     }
     
-    public function boot(): void {
+    public function boot() {
+		
         $this->app->resolve( 'layouts' )->boot();
     }
 }

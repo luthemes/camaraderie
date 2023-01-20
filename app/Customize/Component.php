@@ -14,14 +14,16 @@
  namespace Camaraderie\Customize;
  
  use Backdrop\Theme\Customize\Component as CustomizeContract;
+ 
  use WP_Customize_Image_Control;
+ use WP_Customize_Manager;
 
  class Component extends CustomizeContract {
 	 
 	/**
 	 * Register panels
 	 */
-	public function panels( $manager ): void {
+	public function panels( WP_Customize_Manager $manager ) {
         $manager->add_panel( 'home_section', array(
 			'title' => esc_html( 'Home Section', 'camaraderie' ),
 			'priority' => 15,
@@ -31,7 +33,7 @@
 	/**
 	 * Register sections
 	 */
-	public function sections( $manager ): void {
+	public function sections( WP_Customize_Manager $manager ) {
         $manager->add_section( 'header_section', array(
 			'title'    => esc_html__( 'Header Section', 'camaraderie' ),
 			'panel'    => 'home_section',
@@ -60,7 +62,7 @@
 	/**
 	 * Register settings
 	 */
-	public function settings( $manager ): void {
+	public function settings( WP_Customize_Manager $manager ) {
         $manager->add_setting( 'custom_image', array(
 			'default'	        => get_theme_file_uri( '/public/images/header-image.jpg' ),
 			'sanitize_callback' => 'esc_url_raw',
@@ -100,7 +102,7 @@
 	/**
 	 * Register controls
 	 */
-	public function controls( $manager ): void {
+	public function controls( WP_Customize_Manager $manager ) {
         $manager->add_control( new WP_Customize_Image_Control(
 			$manager, 'custom_image', array(
 				'label' => esc_html__( 'Background Image', 'camaraderie' ),
