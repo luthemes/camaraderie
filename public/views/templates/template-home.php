@@ -11,15 +11,11 @@ $portfolio_display = get_theme_mod( 'custom_portfolio_display' );
 $blog_display      = get_theme_mod( 'custom_blog_display' );
 $contact_display   = get_theme_mod( 'custom_contact_display' );
 ?>
-<?php $engine = Backdrop\App::resolve( 'view/engine' ); ?>
-<?php $engine->display( 'header' ); ?>
+<?php Backdrop\Template\View\display( 'header' ); ?>
     <?php if ( 0 != $portfolio_display && isset( $portfolio_display ) ) { ?>
-        <?php $engine->display( 'section/portfolio' ); ?>
+        <?php Backdrop\Template\View\display( 'section/portfolio' ); ?>
     <?php } ?>
     <?php if ( 0 != $blog_display && isset( $blog_display ) ) { ?>
-        <?php $engine->display( 'section/blog' ); ?>
+	<?php Backdrop\Template\View\display( 'section/blog' ); ?>
     <?php } ?>
-    <?php if ( 0 != $contact_display && isset( $contact_display ) ) { // phpcs:ignore ?>
-        <?php Benlumia007\Backdrop\Template\get_template_part( 'section/content', 'contact' ); ?>
-    <?php } ?>
-	<?php $engine->display( 'footer' ); ?>
+<?php Backdrop\Template\View\display( 'footer' ); ?>
