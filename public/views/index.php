@@ -9,22 +9,21 @@
  * @link      https://github.com/benlumia007/luthemes.com
  */
 ?>
-<?php $engine = Backdrop\App::resolve( 'view/engine' ); ?>
-<?php $engine->display( 'header' ); ?>
+<?php Backdrop\Template\View\display( 'header' ); ?>
 <section id="content" class="site-content">
 	<div id="layout" class="no-sidebar">
 		<main id="main" class="content-area">
 			<?php
 			if ( have_posts() ) :
 				while ( have_posts() ) : the_post();
-					$engine->display( 'content' );
+					Backdrop\Template\View\display( 'content' );
 				endwhile;
 				the_posts_pagination();
 			else :
-				$engine->display( 'content/none' );
+				Backdrop\Template\View\display( 'content/none' );
 			endif;
 			?>
 		</main>
 	</div>
 </section>
-<?php $engine->display( 'footer' ); ?>
+<?php Backdrop\Template\View\display( 'footer' ); ?>

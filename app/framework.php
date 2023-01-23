@@ -28,9 +28,7 @@ $camaraderie = Backdrop\booted() ? Backdrop\app() : new Backdrop\Core\Applicatio
 # bootstrapping process.
 $camaraderie->provider( Backdrop\FontAwesome\Provider::class );
 $camaraderie->provider( Backdrop\Fonts\Provider::class );
-$camaraderie->provider( Backdrop\Template\Hierarchy\Provider::class );
-$camaraderie->provider( Backdrop\Template\Manager\Provider::class );
-$camaraderie->provider( Backdrop\Template\View\Provider::class );
+$camaraderie->provider( Backdrop\Template\Provider::class );
 
 
 # ------------------------------------------------------------------------------

@@ -75,10 +75,6 @@ add_action(
 				background-repeat: no-repeat;
 				background-size: cover !important;
 			}
-
-			.site-header.header-image .site-branding {
-				padding: 9rem 0;
-			}
 		";
 		wp_add_inline_style( 'camaraderie-screen', $custom_css );
 	}
@@ -94,12 +90,18 @@ add_action(
 				background: url({$custom_image});
 				background-size: cover !important;
 				box-sizing: border-box;
-				min-height: 100vh;  
+				background-size: cover;
+				background-position: center center;
+				background-repeat: no-repeat;
+				background-attachment: fixed;
+				width: 100%;
+				height: 100vh;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+
 			}
 			
-			.site-header.custom-image .site-branding {
-				padding: 12rem;
-			}
 
 			.site-header.custom-image .site-avatar {
 				background: url({$avatar_image});

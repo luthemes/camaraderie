@@ -4,27 +4,26 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "fdc5b5986829772de7f8fd947543ff97",
+    "content-hash": "3dbb2d81cb4c65c0a47e07ed2a6f800a",
     "packages": [
         {
             "name": "benlumia007/backdrop",
-            "version": "v2.0.0.x-dev",
+            "version": "2.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/benlumia007/backdrop.git",
-                "reference": "1c515c0a0b7da28d6dd12af067de7540b2c81e94"
+                "reference": "c6db51d6a886e196b545d5dae18b3e25fd447b36"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/benlumia007/backdrop/zipball/1c515c0a0b7da28d6dd12af067de7540b2c81e94",
-                "reference": "1c515c0a0b7da28d6dd12af067de7540b2c81e94",
+                "url": "https://api.github.com/repos/benlumia007/backdrop/zipball/c6db51d6a886e196b545d5dae18b3e25fd447b36",
+                "reference": "c6db51d6a886e196b545d5dae18b3e25fd447b36",
                 "shasum": ""
             },
             "require": {
                 "benlumia007/backdrop-contracts": "^1.0",
                 "php": ">=7.0"
             },
-            "default-branch": true,
             "type": "library",
             "autoload": {
                 "files": [
@@ -53,9 +52,9 @@
             ],
             "support": {
                 "issues": "https://github.com/benlumia007/backdrop/issues",
-                "source": "https://github.com/benlumia007/backdrop/tree/v2.0.0"
+                "source": "https://github.com/benlumia007/backdrop/tree/2.0.0"
             },
-            "time": "2023-01-19T22:49:51+00:00"
+            "time": "2023-01-22T09:08:30+00:00"
         },
         {
             "name": "benlumia007/backdrop-contracts",
@@ -199,6 +198,60 @@
             "time": "2023-01-20T15:49:36+00:00"
         },
         {
+            "name": "benlumia007/backdrop-template",
+            "version": "dev-develop",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/benlumia007/backdrop-template.git",
+                "reference": "1f5ae67ad71ce1dd9395f28cde81940d73c38185"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/benlumia007/backdrop-template/zipball/1f5ae67ad71ce1dd9395f28cde81940d73c38185",
+                "reference": "1f5ae67ad71ce1dd9395f28cde81940d73c38185",
+                "shasum": ""
+            },
+            "require": {
+                "benlumia007/backdrop": "^2.0",
+                "benlumia007/backdrop-template-helpers": "^1.0",
+                "benlumia007/backdrop-tools": "^1.0",
+                "php": ">=7.0"
+            },
+            "default-branch": true,
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "src/View/functions-view.php"
+                ],
+                "psr-4": {
+                    "Backdrop\\Template\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Benjamin Lu",
+                    "email": "benlumia007@gmail.com",
+                    "homepage": "https://benjlu.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A system for providing flexible template hierarchy and custom templates for ClassicPress and WordPress.",
+            "homepage": "https://github.com/benlumia007/backdrop-template",
+            "keywords": [
+                "classicpress",
+                "wordpress"
+            ],
+            "support": {
+                "issues": "https://github.com/benlumia007/backdrop-template/issues",
+                "source": "https://github.com/benlumia007/backdrop-template/tree/develop"
+            },
+            "time": "2023-01-23T03:36:08+00:00"
+        },
+        {
             "name": "benlumia007/backdrop-template-helpers",
             "version": "1.0.0",
             "source": {
@@ -246,152 +299,6 @@
                 "source": "https://github.com/benlumia007/backdrop-template-helpers/tree/1.0.0"
             },
             "time": "2023-01-19T23:23:48+00:00"
-        },
-        {
-            "name": "benlumia007/backdrop-template-hierarchy",
-            "version": "v1.0.0.x-dev",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/benlumia007/backdrop-template-hierarchy.git",
-                "reference": "2d00aaea4558c3d8671cdfa6a4cd053c13391c75"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/benlumia007/backdrop-template-hierarchy/zipball/2d00aaea4558c3d8671cdfa6a4cd053c13391c75",
-                "reference": "2d00aaea4558c3d8671cdfa6a4cd053c13391c75",
-                "shasum": ""
-            },
-            "require": {
-                "benlumia007/backdrop-template-helpers": "^1.0",
-                "php": ">=7.0"
-            },
-            "default-branch": true,
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Backdrop\\Template\\Hierarchy\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "Benjamin Lu",
-                    "email": "benlumia007@gmail.com",
-                    "homepage": "https://benjlu.com",
-                    "role": "Developer"
-                }
-            ],
-            "description": "A core that helps you build amazing themes",
-            "homepage": "https://github.com/benlumia007/backdrop-template-hierarchy",
-            "keywords": [
-                "wordpress"
-            ],
-            "support": {
-                "issues": "https://github.com/benlumia007/backdrop-template-hierarchy/issues",
-                "source": "https://github.com/benlumia007/backdrop-template-hierarchy/tree/v1.0.0"
-            },
-            "time": "2023-01-20T00:24:32+00:00"
-        },
-        {
-            "name": "benlumia007/backdrop-template-manager",
-            "version": "v1.0.0.x-dev",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/benlumia007/backdrop-template-manager.git",
-                "reference": "ea0e21c445b9065772539fb255781494bb5be6a7"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/benlumia007/backdrop-template-manager/zipball/ea0e21c445b9065772539fb255781494bb5be6a7",
-                "reference": "ea0e21c445b9065772539fb255781494bb5be6a7",
-                "shasum": ""
-            },
-            "require": {
-                "benlumia007/backdrop-template-helpers": "^1.0",
-                "benlumia007/backdrop-tools": "^1.0",
-                "php": ">=7.0"
-            },
-            "default-branch": true,
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Backdrop\\Template\\Manager\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "Benjamin Lu",
-                    "email": "benlumia007@gmail.com",
-                    "homepage": "https://benjlu.com",
-                    "role": "Developer"
-                }
-            ],
-            "description": "A core that helps you build amazing themes",
-            "homepage": "https://github.com/benlumia007/backdrop-template-manager",
-            "keywords": [
-                "wordpress"
-            ],
-            "support": {
-                "issues": "https://github.com/benlumia007/backdrop-template-manager/issues",
-                "source": "https://github.com/benlumia007/backdrop-template-manager/tree/v1.0.0"
-            },
-            "time": "2023-01-20T00:31:43+00:00"
-        },
-        {
-            "name": "benlumia007/backdrop-template-view",
-            "version": "v1.0.0.x-dev",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/benlumia007/backdrop-template-view.git",
-                "reference": "916f0b6175d9bddfea2dde19081afa818bdbdc04"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/benlumia007/backdrop-template-view/zipball/916f0b6175d9bddfea2dde19081afa818bdbdc04",
-                "reference": "916f0b6175d9bddfea2dde19081afa818bdbdc04",
-                "shasum": ""
-            },
-            "require": {
-                "benlumia007/backdrop-template-helpers": "^1.0",
-                "benlumia007/backdrop-tools": "^1.0",
-                "php": ">=7.0"
-            },
-            "default-branch": true,
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Backdrop\\Template\\View\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "Benjamin Lu",
-                    "email": "benlumia007@gmail.com",
-                    "homepage": "https://benjlu.com",
-                    "role": "Developer"
-                }
-            ],
-            "description": "A core that helps you build amazing themes",
-            "homepage": "https://github.com/benlumia007/backdrop-template-view",
-            "keywords": [
-                "wordpress"
-            ],
-            "support": {
-                "issues": "https://github.com/benlumia007/backdrop-template-view/issues",
-                "source": "https://github.com/benlumia007/backdrop-template-view/tree/v1.0.0"
-            },
-            "time": "2023-01-20T15:43:20+00:00"
         },
         {
             "name": "benlumia007/backdrop-theme",
@@ -497,12 +404,9 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "benlumia007/backdrop": 20,
         "benlumia007/backdrop-fontawesome": 20,
         "benlumia007/backdrop-fonts": 20,
-        "benlumia007/backdrop-template-hierarchy": 20,
-        "benlumia007/backdrop-template-manager": 20,
-        "benlumia007/backdrop-template-view": 20,
+        "benlumia007/backdrop-template": 20,
         "benlumia007/backdrop-theme": 20
     },
     "prefer-stable": false,

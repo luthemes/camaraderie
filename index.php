@@ -8,8 +8,4 @@
  * All it does is correctly load up our `public/views/index.php` template.
  */
 
-// Access the view template engine.
-$engine = Backdrop\App::resolve( 'view/engine' );
-
-// Load the index template.
-$engine->display( 'index' );
+Backdrop\Template\View\display( 'index' );

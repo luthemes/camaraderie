@@ -35,7 +35,6 @@ mix.setPublicPath( 'public' );
  * @link https://laravel.com/docs/5.6/mix#url-processing
  */
 mix.options( {
-	postCss        : [ require( 'postcss-preset-env' )() ],
 	processCssUrls : false,
 	terser: {
 		extractComments: false,
