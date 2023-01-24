@@ -1,11 +1,12 @@
 <?php
 /**
- * Camaraderie ( header.php )
+ * Default header template
  *
- * @package     Camaraderie
- * @copyright   Copyright (C) 2018-2020. Benjamin Lu
- * @license     GNU General Public License v2 or later ( https://www.gnu.org/licenses/gpl-2.0.html )
- * @author      Benjamin Lu ( https://benjlu.com )
+ * @package   Camaraderie
+ * @author    Benjamin Lu <benlumia007@gmail.com>
+ * @copyright 2017-2023. Benjamin Lu
+ * @license   https://www.gnu.org/licenses/gpl-2.0.html
+ * @link      https://github.com/benlumia007/camaraderie
  */
 ?>
 <!doctype html>
@@ -21,7 +22,7 @@
 <div id="container" class="site-container">
 	<a class="skip-link screen-reader-text" href="#main"><?php esc_html_e( 'Skip to content', 'camaraderie' ) ?></a>
 	<?php $is_front = ( is_front_page() && ! is_home() ); ?>
-		<section id="masthead" class="primary-navigation">
+		<section id="masthead" class="primary-naviggation">
 			<?php Backdrop\Template\View\display( 'nav/menu', 'primary', [ 'location' => 'primary' ] ); ?>
 		</section>
 		<header id="header" class="site-header <?php echo $is_front ? 'custom' : 'header'; ?>-image">

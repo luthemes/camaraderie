@@ -1,28 +1,28 @@
 /**
- * Primary front-end script.
+ * Primary navigation script.
  *
- * Primary JavaScript file. Any includes or anything imported should be filtered through this file 
+ * Primary JavaScript file. Any includes or anything imported should be filtered through this file
  * and eventually saved back into the `/assets/js/app.js` file.
  *
- * @package   Initiator
+ * @package   Succotash
  * @author    Benjamin Lu <benlumia007@gmail.com>
- * @copyright 2019-2020 Benjamin Lu
- * @license   https://www.gnu.org/licenses/gpl-2.0.html GPL-2.0-or-later
- * @link      https://github.com/benlumia007/initiator
+ * @copyright 2014-2022 Benjamin Lu
+ * @license   https://www.gnu.org/licenses/gpl-2.0.html
+ * @link      https://github.com/benlumia007/succotash.com
  */
 
 /**
  * A simple immediately-invoked function expression to kick-start
  * things and encapsulate our code.
  *
- * @since  1.0.0 
+ * @since  1.0.0
  * @access public
  * @return void
  */
- ( function( $ ) {
+( function( $ ) {
 	var container, button, dropdown, icon, screenreadertext, parentLink, menu, submenu, links, i, len;
 
-	container = document.getElementById( 'masthead' );
+	container = document.getElementById( 'primaire' );
 	if ( ! container ) {
 		return;
 	}
@@ -32,7 +32,7 @@
 		return;
 	}
 
-	menu = container.getElementsByTagName( 'nav' )[0];
+	menu = container.getElementsByTagName( 'ul' )[0];
 
 	screenreadertext = document.createElement( 'span' );
 	screenreadertext.classList.add( 'screen-reader-text' );
@@ -84,11 +84,6 @@
 		return;
 	}
 
-	menu.setAttribute( 'aria-expanded', 'false' );
-		if ( -1 === menu.className.indexOf( 'nav-menu' ) ) {
-			menu.className += ' nav-menu';
-		}
-
 	button.onclick = function() {
 		screenreadertext = this.querySelector( '.screen-reader-text' );
 		if ( -1 !== container.className.indexOf( 'toggled' ) ) {
@@ -121,11 +116,11 @@
 		var self = this;
 
 		// Move up through the ancestors of the current link until we hit .nav-menu.
-		while ( -1 === self.className.indexOf( 'nav-menu' ) ) {
+		while ( -1 === self.className.indexOf( 'menu-items' ) ) {
 
 			// On li elements toggle the class .focus.
 			if ( 'li' === self.tagName.toLowerCase() ) {
-				
+
 				if ( -1 !== self.className.indexOf( 'focus' ) ) {
 					self.className = self.className.replace( ' focus', '' );
 				} else {
