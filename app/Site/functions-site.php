@@ -110,6 +110,7 @@ function render_site_description( array $args = [] ) {
  * @return void
  */
 function display_site_link( array $args = [] ) {
+	
 	echo render_site_link( $args ); // phpcs:ignore
 }
 
@@ -171,8 +172,8 @@ function render_wp_link( array $args = [] ) {
 	$html = sprintf(
 		'<a class="%1$s" href="%2$s">%3$s</a>',
 		esc_attr( $args['class'] ),
-		esc_url( __( 'https://wordpress.org', 'succotash' ) ),
-		sprintf( $args['text'], esc_html__( 'WordPress', 'succotash' ) )
+		esc_url( __( 'https://wordpress.org', 'camaraderie' ) ),
+		sprintf( $args['text'], esc_html__( 'WordPress', 'camaraderie' ) )
 	);
 	return apply_filters( 'succotash/render/wp/link', $html );
 }
@@ -287,8 +288,8 @@ function render_cp_link( array $args = [] ) {
 	$html = sprintf(
 		'<a class="%1$s" href="%2$s">%3$s</a>',
 		esc_attr( $args['class'] ),
-		esc_url( __( 'https://classicpress.net', 'succotash' ) ),
-		sprintf( $args['text'], esc_html__( 'ClassicPress', 'succotash' ) )
+		esc_url( __( 'https://classicpress.net', 'camaraderie' ) ),
+		sprintf( $args['text'], esc_html__( 'ClassicPress', 'camaraderie' ) )
 	);
 	return apply_filters( 'succotash/render/cp/link', $html );
 }

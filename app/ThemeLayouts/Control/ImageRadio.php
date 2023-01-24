@@ -26,7 +26,7 @@ class ImageRadio extends WP_Customize_Control {
 	 * @access public
 	 * @var string
 	 */
-     public static string $version = '1.0.0';
+     public static $version = '1.0.0';
 
      /**
 	 * The type of customize control being rendered.

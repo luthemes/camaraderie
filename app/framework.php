@@ -1,15 +1,13 @@
 <?php
 /**
- * Camaraderie ( framework.php )
+ * Boot the Framework
  *
- * This file is used to create a new framework instance and adds specific features to the theme.
- *
- * @package     Camaraderie
- * @copyright   Copyright (C) 2019. Benjamin Lu
- * @license     GNU General Public License v2 or later ( https://www.gnu.org/licenses/gpl-2.0.html )
- * @author      Benjamin Lu ( https://benjlu.com )
+ * @package   Camaraderie
+ * @author    Benjamin Lu <benlumia007@gmail.com>
+ * @copyright 2017-2023. Benjamin Lu
+ * @license   https://www.gnu.org/licenses/gpl-2.0.html
+ * @link      https://github.com/benlumia007/camaraderie
  */
-
 # ------------------------------------------------------------------------------
 # Create a new application.
 # ------------------------------------------------------------------------------

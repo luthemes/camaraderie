@@ -74,65 +74,61 @@ add_action(
 				background-position: center;
 				background-repeat: no-repeat;
 				background-size: cover !important;
+				padding: 8rem;
 			}
 		";
 		wp_add_inline_style( 'camaraderie-screen', $custom_css );
 	}
 );
 
-add_action(
-	'wp_enqueue_scripts', function() {
-		$custom_image = esc_url( get_theme_mod( 'custom_image', get_theme_file_uri( '/public/images/header-image.jpg' ) ) );
-		$avatar_image = esc_url( get_theme_mod( 'custom_avatar', get_theme_file_uri( '/public/images/avatar.jpg' ) ) );
-	
-		$custom_css = " 
-			.site-header.custom-image {
-				background: url({$custom_image});
-				background-size: cover !important;
-				box-sizing: border-box;
-				background-size: cover;
-				background-position: center center;
-				background-repeat: no-repeat;
-				background-attachment: fixed;
-				width: 100%;
-				height: 100vh;
-				display: flex;
-				justify-content: center;
-				align-items: center;
+add_action( 'wp_enqueue_scripts', function() {
+	$custom_image = esc_url( get_theme_mod( 'custom_image', get_theme_file_uri( '/public/images/header-image.jpg' ) ) );
+	$avatar_image = esc_url( get_theme_mod( 'custom_avatar', get_theme_file_uri( '/public/images/avatar.jpg' ) ) );
 
+	$custom_css = " 
+		.site-header.custom-image {
+			background: url({$custom_image});
+			background-size: cover !important;
+			box-sizing: border-box;
+			background-size: cover;
+			background-position: center center;
+			background-repeat: no-repeat;
+			background-attachment: fixed;
+			width: 100%;
+			height: 100vh;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+		}
+		
+
+		.site-header.custom-image .site-avatar {
+			background: url({$avatar_image});
+			border: 0.625em solid #cccccc;
+			border-radius: 50%;
+			display: block;
+			height: 15.625em;
+			margin: 0 auto;
+			width: 15.625em;
+		}
+
+		@media screen and ( max-width: 23.438rem ) {
+			.site-header.custom-image .site-branding {
+				padding: 12rem 0;
 			}
-			
+		}
 
-			.site-header.custom-image .site-avatar {
-				background: url({$avatar_image});
-				border: 0.625em solid #cccccc;
-				border-radius: 50%;
-				display: block;
-				height: 15.625em;
-				margin: 0 auto;
-				width: 15.625em;
+		@media screen and ( min-width: 30.063em ) and ( max-width: 37.5em ) {
+			.site-header {
+				padding-top: 15em;
 			}
-
-			@media screen and ( max-width: 23.438rem ) {
-				.site-header.custom-image .site-branding {
-					padding: 12rem 0;
-				}
-			}
-
-			@media screen and ( min-width: 30.063em ) and ( max-width: 37.5em ) {
-				.site-header {
-					padding-top: 15em;
-				}
-			}
-		";
-		wp_add_inline_style( 'camaraderie-screen', $custom_css );
-	}
-);
+		}
+	";
+	wp_add_inline_style( 'camaraderie-screen', $custom_css );
+} );
 
 
-add_action(
-	'enqueue_block_editor_assets',
-	function() {
-		wp_enqueue_style( 'camaraderie-custom-fonts', get_theme_file_uri( '/vendor/benlumia007/backdrop-core/assets/fonts/custom-fonts.css' ), array(), '1.0.0' );
-	}
-);
+add_action( 'enqueue_block_editor_assets', function() {
+	wp_enqueue_style( 'camaraderie-custom-fonts', get_theme_file_uri( '/vendor/benlumia007/backdrop-core/assets/fonts/custom-fonts.css' ), array(), '1.0.0' );
+} );
