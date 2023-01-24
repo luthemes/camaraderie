@@ -69,7 +69,8 @@ function render_site_title( array $args = [] ) {
  * @return void
  */
 function display_site_description( array $args = [] ) {
-	echo render_site_description( $args ); // phpcs:ignore
+	
+	echo render_site_description(  $args );
 }
 
 /**

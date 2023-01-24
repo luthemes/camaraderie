@@ -22,7 +22,7 @@
 	<a class="skip-link screen-reader-text" href="#main"><?php esc_html_e( 'Skip to content', 'camaraderie' ) ?></a>
 	<?php $is_front = ( is_front_page() && ! is_home() ); ?>
 		<section id="masthead" class="primary-navigation">
-			<?php Backdrop\Theme\Menu\display( 'menu', [ 'primary' ] ); ?>
+			<?php Backdrop\Template\View\display( 'nav/menu', 'primary', [ 'location' => 'primary' ] ); ?>
 		</section>
 		<header id="header" class="site-header <?php echo $is_front ? 'custom' : 'header'; ?>-image">
 				<div class="site-branding">

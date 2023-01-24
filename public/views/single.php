@@ -14,7 +14,7 @@
 			<main id="main" class="content-area">
 				<?php
 					while ( have_posts() ) : the_post();
-						Backdrop\Template\View\display( 'single' );
+						Backdrop\Template\View\display( 'content/single' );
 					endwhile;
 						the_post_navigation(
 							array(
@@ -25,7 +25,7 @@
 				comments_template();
 				?>
 			</main>
-			<?php Backdrop\Theme\Menu\display( 'sidebar', [ 'primary' ] ); ?>
+			<?php Backdrop\Template\View\display( 'sidebar', 'primary', [ 'location' => 'primary' ] ); ?>
 		</div>
 	</section>
 <?php Backdrop\Template\View\display( 'footer' ); ?>
