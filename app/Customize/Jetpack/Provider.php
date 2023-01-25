@@ -11,7 +11,7 @@
 /**
  * Define namespace
  */
-namespace Camaraderie\Customize;
+namespace Camaraderie\Customize\Jetpack;
 
 use Backdrop\Core\ServiceProvider;
 
@@ -24,10 +24,10 @@ class Provider extends ServiceProvider {
 	 * @return void
 	 */
 	public function register() {
-		$this->app->singleton( 'camaraderie/customize', Component::class );
-    }
-    
-    public function boot() {
-        $this->app->resolve( 'camaraderie/customize' )->boot();
-    }
+		$this->app->singleton( 'camaraderie/customize/jetpack', Component::class );
+	}
+
+	public function boot() {
+		$this->app->resolve( 'camaraderie/customize/jetpack' )->boot();
+	}
 }

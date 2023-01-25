@@ -19,6 +19,7 @@
             "Camaraderie\\": "app/"
 		},
 		"files":[
+			"app/Customize/Jetpack/functions-helpers.php",
 			"app/Entry/functions-entry.php",
 			"app/Mix/functions-helpers.php",
 			"app/Site/functions-site.php",

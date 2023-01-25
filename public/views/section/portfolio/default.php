@@ -1,15 +1,5 @@
 <?php
 /**
- * Camaraderie ( content-single.php )
- *
- * @package     Camaraderie
- * @copyright   Copyright (C) 2017-2020. Benjamin Lu
- * @license     GNU General Public License v2 or later ( https://www.gnu.org/licenses/gpl-2.0.html )
- * @author      Benjamin Lu ( https://benjlu.com )
- */
-?>
-<?php
-/**
  * Camaraderie ( home-portfolio.php )
  *
  * @package     Camaraderie
@@ -21,17 +11,17 @@
 <section id="portfolio" class="site-portfolio">
 	<div class="content-area">
 		<header class="portfolio-header">
-			<h1 class="portfolio-title"><?php esc_html_e( 'Portfolio', 'camaraderie' ); ?></h1>
-			<span class="portfolio-description"><?php esc_html_e( 'Some of my recent works', 'camaraderie' ); ?></span>
+			<h1 class="portfolio-title"><?php Camaraderie\Customize\Jetpack\display_portfolio_title(); ?></h1>
+			<span class="portfolio-description"><?php Camaraderie\Customize\Jetpack\display_portfolio_content(); ?></span>
 		</header>
 		<div class="portfolio-content">
 			<ul class="portfolio-items">
 				<?php
 					$posts_per_page = get_theme_mod( 'custom_portfolio_items', 9 );
-					$query          = new WP_Query( array(
-						'post_type'      => 'backdrop-portfolio',
+					$query          = new WP_Query( [
+						'post_type'      => 'jetpack-portfolio',
 						'posts_per_page' => $posts_per_page,
-					) );
+					] );
 
 					if ( $query->have_posts() ) {
 						while ( $query->have_posts() ) {

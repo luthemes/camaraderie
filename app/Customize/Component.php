@@ -34,17 +34,16 @@
 	 * Register sections
 	 */
 	public function sections( WP_Customize_Manager $manager ) {
+		
+		
+		
         $manager->add_section( 'header_section', array(
 			'title'    => esc_html__( 'Header Section', 'camaraderie' ),
 			'panel'    => 'home_section',
 			'priority' => 5,
 		) );
 
-		$manager->add_section( 'custom_portfolio', array(
-			'title' => esc_html__( 'Custom Portfolio', 'camaraderie' ),
-			'panel' => 'home_section',
-			'priority' => 10
-		) );
+
 
 		$manager->add_section( 'custom_blog', array(
 			'title' => esc_html__( 'Custom Blog', 'camaraderie' ),
@@ -124,16 +123,16 @@
 		$manager->add_control( 'custom_portfolio_display', array(
 			'label' => esc_html__( 'Enable Portfolio', 'camaraderie' ),
 			'type' => 'checkbox',
-			'section' => 'custom_portfolio',
+			'section' => 'jetpack_portfolio',
 			'settings' => 'custom_portfolio_display',
 		) );
 
 		$manager->add_control( 'custom_portfolio_items', array(
 			'label'    => esc_html__( 'Number of Items', 'camaraderie' ),
 			'type'     => 'number',
-			'section'  => 'custom_portfolio',
+			'section'  => 'jetpack_portfolio',
 			'settings' => 'custom_portfolio_items',
-			'priority' => 20,
+			'priority' => 10,
 		) );
 
 		$manager->add_control( 'related_display', array(
@@ -166,4 +165,11 @@
 			'section' => 'custom_contact',
 		) );
     }
+	
+	public function boot() {
+		add_action( 'customize_register', [ $this, 'panels' ] );
+		add_action( 'customize_register', [ $this, 'sections' ] );
+		add_action( 'customize_register', [ $this, 'settings' ] );
+		add_action( 'customize_register', [ $this, 'controls' ] );
+	}
  }

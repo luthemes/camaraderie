@@ -88,6 +88,9 @@ add_action( 'after_setup_theme', function() {
 		add_theme_support( 'editor-styles' );
 		add_editor_style( 'public/css/editor.css' );
 
+		// Add Jetpack Portfolio
+		add_theme_support( 'jetpack-portfolio', [ 'title' => true, 'content' => true ] );
+
 		/**
 		 * Load theme translation.
 		 */
