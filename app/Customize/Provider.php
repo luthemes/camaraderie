@@ -14,8 +14,10 @@
 namespace Camaraderie\Customize;
 
 use Backdrop\Core\ServiceProvider;
+use ReflectionException;
 
 class Provider extends ServiceProvider {
+	
 	/**
 	 * Binds the implementation of the attributes contract to the container.
 	 *
@@ -26,8 +28,17 @@ class Provider extends ServiceProvider {
 	public function register() {
 		$this->app->singleton( 'camaraderie/customize', Component::class );
     }
-    
+
+	/**
+	 * Binds the implementation of the attributes contract to the container.
+	 *
+	 * @since  2.0.0
+	 * @access public
+	 * @throws ReflectionException
+	 * @return void
+	 */
     public function boot() {
+		
         $this->app->resolve( 'camaraderie/customize' )->boot();
     }
 }
