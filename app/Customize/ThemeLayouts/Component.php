@@ -11,14 +11,13 @@
  */
 
 
- namespace Camaraderie\ThemeLayouts;
+ namespace Camaraderie\Customize\ThemeLayouts;
  
- use Backdrop\Theme\Customize\Component as CustomizeContract;
- use Camaraderie\ThemeLayouts\Control\ImageRadio;
- 
+ use Backdrop\Customize\Component as Customize;
+ use Backdrop\Customize\Controls\RadioImage;
  use WP_Customize_Manager;
 
-class Component extends CustomizeContract {
+ class Component implements Customize {
 	/**
 	 * Register panels
 	 *
@@ -76,7 +75,7 @@ class Component extends CustomizeContract {
 	 */
 	public function controls( WP_Customize_Manager $manager ) {
 		$manager->add_control(
-			new ImageRadio(
+			new RadioImage(
 				$manager,
 				'global_layout',
 				[
@@ -92,5 +91,12 @@ class Component extends CustomizeContract {
 				]
 			)
 		);
+	}
+	
+	public function boot() {
+		add_action( 'customize_register', [ $this, 'panels' ] );
+		add_action( 'customize_register', [ $this, 'sections' ] );
+		add_action( 'customize_register', [ $this, 'settings' ] );
+		add_action( 'customize_register', [ $this, 'controls' ] );
 	}
 }

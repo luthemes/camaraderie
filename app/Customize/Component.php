@@ -13,12 +13,12 @@
 
  namespace Camaraderie\Customize;
  
- use Backdrop\Theme\Customize\Component as CustomizeContract;
+ use Backdrop\Customize\Component as CustomizeContract;
  
  use WP_Customize_Image_Control;
  use WP_Customize_Manager;
 
- class Component extends CustomizeContract {
+ class Component implements CustomizeContract {
 	 
 	/**
 	 * Register panels

@@ -32,6 +32,7 @@
     "require": {
         "php": ">=7.0",
         "benlumia007/backdrop": "^2.0.0",
+		"benlumia007/backdrop-customize": "v1.0.0.x-dev",
 		"benlumia007/backdrop-fontawesome": "v1.0.0.x-dev",
 		"benlumia007/backdrop-fonts": "v1.0.0.x-dev",
 		"benlumia007/backdrop-template": "dev-develop",

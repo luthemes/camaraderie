@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3dbb2d81cb4c65c0a47e07ed2a6f800a",
+    "content-hash": "cc78cd70f56ac009fb7afb748a3714ed",
     "packages": [
         {
             "name": "benlumia007/backdrop",
@@ -102,6 +102,54 @@
                 "source": "https://github.com/benlumia007/backdrop-contracts/tree/1.0.0"
             },
             "time": "2023-01-19T21:53:55+00:00"
+        },
+        {
+            "name": "benlumia007/backdrop-customize",
+            "version": "v1.0.0.x-dev",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/benlumia007/backdrop-customize.git",
+                "reference": "be5182e5270afb106775a85d55a0ee82d7504835"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/benlumia007/backdrop-customize/zipball/be5182e5270afb106775a85d55a0ee82d7504835",
+                "reference": "be5182e5270afb106775a85d55a0ee82d7504835",
+                "shasum": ""
+            },
+            "require": {
+                "benlumia007/backdrop": "^2.0",
+                "php": ">=7.0"
+            },
+            "default-branch": true,
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Backdrop\\Customize\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Benjamin Lu",
+                    "email": "benlumia007@gmail.com",
+                    "homepage": "https://benjlu.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A core that helps you build amazing themes",
+            "homepage": "https://github.com/benlumia007/backdrop-customize",
+            "keywords": [
+                "wordpress"
+            ],
+            "support": {
+                "issues": "https://github.com/benlumia007/backdrop-customize/issues",
+                "source": "https://github.com/benlumia007/backdrop-customize/tree/v1.0.0"
+            },
+            "time": "2023-01-26T00:46:38+00:00"
         },
         {
             "name": "benlumia007/backdrop-fontawesome",
@@ -306,12 +354,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/benlumia007/backdrop-theme.git",
-                "reference": "4c27227ec3c24caee6e238402dc67ac9a07dae75"
+                "reference": "79e80c6fd1d71269af5fc8e7e4c9f924f2bdbd97"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/benlumia007/backdrop-theme/zipball/4c27227ec3c24caee6e238402dc67ac9a07dae75",
-                "reference": "4c27227ec3c24caee6e238402dc67ac9a07dae75",
+                "url": "https://api.github.com/repos/benlumia007/backdrop-theme/zipball/79e80c6fd1d71269af5fc8e7e4c9f924f2bdbd97",
+                "reference": "79e80c6fd1d71269af5fc8e7e4c9f924f2bdbd97",
                 "shasum": ""
             },
             "require": {
@@ -351,7 +399,7 @@
                 "issues": "https://github.com/benlumia007/backdrop-theme/issues",
                 "source": "https://github.com/benlumia007/backdrop-theme/tree/v1.0.0"
             },
-            "time": "2023-01-20T15:53:40+00:00"
+            "time": "2023-01-26T00:30:13+00:00"
         },
         {
             "name": "benlumia007/backdrop-tools",
@@ -404,6 +452,7 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
+        "benlumia007/backdrop-customize": 20,
         "benlumia007/backdrop-fontawesome": 20,
         "benlumia007/backdrop-fonts": 20,
         "benlumia007/backdrop-template": 20,

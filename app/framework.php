@@ -39,10 +39,10 @@ $camaraderie->provider( Backdrop\Template\Provider::class );
 $camaraderie->provider( Camaraderie\Admin\Provider::class );
 $camaraderie->provider( Camaraderie\Customize\Provider::class );
 $camaraderie->provider( Camaraderie\Customize\Jetpack\Provider::class );
+$camaraderie->provider( Camaraderie\Customize\ThemeLayouts\Provider::class );
 $camaraderie->provider( Camaraderie\Menu\Provider::class );
 $camaraderie->provider( Camaraderie\Mix\Provider::class );
 $camaraderie->provider( Camaraderie\Sidebar\Provider::class );
-$camaraderie->provider( Camaraderie\ThemeLayouts\Provider::class );
 
 
 /**
