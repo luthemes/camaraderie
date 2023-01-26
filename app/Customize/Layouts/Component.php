@@ -11,7 +11,7 @@
  */
 
 
- namespace Camaraderie\Customize\ThemeLayouts;
+ namespace Camaraderie\Customize\Layouts;
  
  use Backdrop\Customize\Component as Customize;
  use Backdrop\Customize\Controls\RadioImage;

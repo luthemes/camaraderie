@@ -11,7 +11,7 @@
 /**
  * Define namespace
  */
-namespace Camaraderie\Customize\ThemeLayouts;
+namespace Camaraderie\Customize\Layouts;
 
 use Backdrop\Core\ServiceProvider;
 
@@ -24,11 +24,11 @@ class Provider extends ServiceProvider {
 	 * @return void
 	 */
 	public function register() {
-		$this->app->singleton( 'camaraderie/layouts', Component::class );
+		$this->app->singleton( 'camaraderie/customize/layouts', Component::class );
     }
     
     public function boot() {
 		
-        $this->app->resolve( 'camaraderie/layouts' )->boot();
+        $this->app->resolve( 'camaraderie/customize/layouts' )->boot();
     }
 }
