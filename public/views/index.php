@@ -4,26 +4,16 @@
  *
  * @package   Camaraderie
  * @author    Benjamin Lu <benlumia007@gmail.com>
- * @copyright 2019-2023. Benjamin Lu
+ * @copyright 2017-2023. Benjamin Lu
  * @license   https://www.gnu.org/licenses/gpl-2.0.html
- * @link      https://github.com/benlumia007/luthemes.com
+ * @link      https://github.com/benlumia007/camaraderie
  */
-?>
-<?php Backdrop\Template\View\display( 'header' ); ?>
-<section id="content" class="site-content">
-	<div id="layout" class="no-sidebar">
-		<main id="main" class="content-area">
-			<?php
-			if ( have_posts() ) :
-				while ( have_posts() ) : the_post();
-					Backdrop\Template\View\display( 'content' );
-				endwhile;
-				the_posts_pagination();
-			else :
-				Backdrop\Template\View\display( 'content/none' );
-			endif;
-			?>
-		</main>
-	</div>
-</section>
-<?php Backdrop\Template\View\display( 'footer' ); ?>
+
+// Loads header/*.php templates
+Backdrop\Template\View\display( 'header', Backdrop\Template\Hierarchy\hierarchy() );
+
+// Loads content/*.php templates
+Backdrop\Template\View\display( 'content', Backdrop\Template\Hierarchy\hierarchy() );
+
+// Loads footer/*.php templates
+Backdrop\Template\View\display( 'footer', Backdrop\Template\Hierarchy\hierarchy() );
